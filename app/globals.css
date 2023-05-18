@@ -5,6 +5,13 @@
 :root {
   --main: #2c2c32;
   --background: #ffffff;
+  --table: #f0eff8;
+}
+body {
+  color: var(--main);
+  border-style: solid;
+  border-color: var(--main);
+  /* font-weight: 500; */
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -15,12 +22,10 @@
   }
 } */
 
-/* table {
-  border-radius: 10px;
+table {
   border-spacing: 0;
-  border: 1px solid var(--main);
 }
- */
+
 /* tr {
   :last-child {
     td {
@@ -29,33 +34,36 @@
   }
 } */
 
-th,
-td {
-  margin: 0;
-  padding: 4px;
-  text-align: left;
-
-  width: 20%;
-  /* border-bottom: 1px solid black;
-  border-right: 1px solid black; */
-}
 /* td :last-child {
   border-right: 0;
 } */
 
 th {
+  margin: 0;
+  padding: 4px;
   text-align: left;
+  font-weight: 800;
   width: 20%;
   height: 50px;
-  border-right: 1px solid black;
+  font-size: small;
+  border-right: 1px solid var(--table);
 }
 th:last-child {
   border-right: 0;
 }
 
 td {
+  margin: 0;
+  padding: 4px;
+  text-align: left;
+  width: 20%;
   height: 100px;
-  border-right: 1px solid black;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-weight: 500;
+  font-size: small;
+  inline-size: min-content;
+  /* border-right: 1px solid var(--table); */
   align-items: end;
   align-content: end;
   vertical-align: top;
@@ -64,8 +72,66 @@ td:last-child {
   border-right: 0;
 }
 
-body {
-  color: var(--main);
-  border-style: solid;
-  border-color: var(--main);
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--light) inset !important;
+}
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--main) !important;
+}
+input:focus {
+  outline: none !important;
+}
+input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--placeholder);
+  opacity: 1; /* Firefox */
+}
+
+input:-ms-input-placeholder {
+  color: var(--placeholder); /* Internet Explorer 10-11 */
+}
+
+input::-ms-input-placeholder {
+  color: var(--placeholder); /* Microsoft Edge */
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+::selection {
+  background: rgb(255, 230, 225);
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #efeef2;
+  border-radius: 50px;
+}
+
+.hideScrollBar {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+.hideScrollBar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }

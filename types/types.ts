@@ -1,15 +1,16 @@
 export interface TimetableType {
-  monday: LessonType[]
-  tuesday: LessonType[]
-  wednesday: LessonType[]
-  thursday: LessonType[]
-  friday: LessonType[]
+  eight: (LessonType | null)[]
+  ten: (LessonType | null)[]
+  twelve: (LessonType | null)[]
+  two: (LessonType | null)[]
+  four: (LessonType | null)[]
+  six: (LessonType | null)[]
 }
 
 export interface LessonType {
   name: string
-  startTime: Date
-  endTime: Date
+  startTime: string
+  endTime: string
   place: string
   lecture: boolean
 }

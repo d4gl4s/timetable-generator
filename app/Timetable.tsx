@@ -1,16 +1,12 @@
 import { TimetableType } from "@/types/types"
 import Lesson from "./Lesson"
 
-const Timetable = (/* { timetable }: { timetable: TimetableType } */) => {
-  /* const { monday, tuesday, wednesday, thursday, friday } = timetable */
+const Timetable = ({ timetable }: { timetable: TimetableType }) => {
+  const { eight, ten, twelve, two, four, six } = timetable
   return (
-    <div className="bg-red-300">
-      {/*  <div className="mr-2 bg-blue-200">Ajad</div> 
-      https://preline.co/docs/tables.html
-      */}
-
-      <div className="w-[80%] m-auto  border rounded-lg overflow-hidden border-current">
-        <table className="min-w-[100%] divide-y divide-current">
+    <>
+      <div className="border border-[2px] rounded-lg overflow-hidden border-[#f0eff8] ">
+        <table className="min-w-[100%] divide-y divide-[#f0eff8] ">
           <thead>
             <tr>
               <th>Monday</th>
@@ -20,101 +16,62 @@ const Timetable = (/* { timetable }: { timetable: TimetableType } */) => {
               <th>Friday</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-current">
+          <tbody className="divide-y divide-[#f0eff8]">
             <tr>
-              <td>John Brown</td>
-              <td>45</td>
-              <td>New York No. 1 Lake Park</td>
-              <td></td>
-              <td></td>
+              {eight.map((lesson, i) => {
+                if (eight[i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
+                else return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td className="border-solid border-r-[1px]" key={i}></td>
+              })}
             </tr>
 
             <tr>
-              <td>Jim Green</td>
-              <td>27</td>
-              <td>London No. 1 Lake Park</td>
-              <td></td>
-              <td></td>
+              {ten.map((lesson, i) => {
+                if (ten[i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
+                else return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td className="border-solid border-r-[1px]" key={i}></td>
+              })}
             </tr>
 
             <tr>
-              <td>Joe Black</td>
-              <td>31</td>
-              <td>Sidney No. 1 Lake Park</td>
-              <td></td>
-              <td></td>
+              {twelve.map((lesson, i) => {
+                if (twelve[i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
+                else return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td className="border-solid border-r-[1px]" key={i}></td>
+              })}
+            </tr>
+
+            <tr>
+              {two.map((lesson, i) => {
+                if (two[i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
+                else return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td className="border-solid border-r-[1px]" key={i}></td>
+              })}
+            </tr>
+
+            <tr>
+              {four.map((lesson, i) => {
+                if (four[i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
+                else return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td className="border-solid border-r-[1px]" key={i}></td>
+              })}
+            </tr>
+
+            <tr>
+              {six.map((lesson, i) => {
+                if (six[i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
+                else return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td className="border-solid border-r-[1px]" key={i}></td>
+              })}
             </tr>
           </tbody>
         </table>
       </div>
-
-      {/* <table className="bg-blue-200 w-[80%] m-auto border-[1px] border-current rounded-2xl ">
-        <tbody>
-          <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Age</th>
-            <th>Gender</th>
-          </tr>
-          <tr>
-            <td>Anom asdfgds sdjkgh ksdgalh sdlkghjasgdklh skdlagh kdsghk</td>
-            <td>19</td>
-            <td>Male</td>
-            <td>Male</td>
-            <td>Male</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Megha</td>
-            <td>Megha</td>
-            <td>19</td>
-            <td>Female</td>
-          </tr>
-          <tr>
-            <td>Subham</td>
-            <td>25</td>
-            <td>Male</td>
-            <td>Male</td>
-            <td>Male</td>
-          </tr>
-        </tbody>
-      </table> */}
-      {/*  <div className="flex w-full bg-yellow-300">
-        <div className="w-[20%] border-solid border-x-[1px] border-current">
-          <div className="border-solid border-y-[1px] border-current p-2 font-semibold">Monday</div>
-
-          <Lesson />
-          <Lesson />
-          <Lesson />
-          <Lesson />
+      <div className="flex justify-end mt-8">
+        <div className="font-medium text-[0.8em]">
+          <div className="flex items-center">
+            <div className="w-2 h-2 rounded-[50px] bg-purple-400 mr-2"></div> Lecture
+          </div>
+          <div className="flex items-center">
+            <div className="w-2 h-2 rounded-[50px] bg-green-400 mr-2"></div> Lab Practise
+          </div>
         </div>
-        <div className="w-[20%] border-solid border-x-[1px] border-current">
-          <div className="border-solid border-y-[1px] border-current p-2 font-semibold">Monday</div>
-          <div></div>
-          <div>Tund</div>
-          <div>Tund</div>
-        </div>
-        <div className="w-[20%] border-solid border-x-[1px] border-current">
-          <div className="border-solid border-y-[1px] border-current p-2 font-semibold">Monday</div>
-          <div>Tund</div>
-          <div>Tund</div>
-          <div>Tund</div>
-        </div>
-        <div className="w-[20%] border-solid border-x-[1px] border-current">
-          <div className="border-solid border-y-[1px] border-current p-2 font-semibold">Tuesday dfsdf</div>
-          <div>Tund</div>
-          <div>Tund</div>
-          <div>Tund</div>
-        </div>
-        <div className="w-[20%] border-solid border-x-[1px] border-current">
-          <div className="border-solid border-y-[1px] border-current p-2 font-semibold">Monday</div>
-          <div>Tund</div>
-          <div>Tund</div>
-          <div>Tund</div>
-        </div>
-      </div> */}
-    </div>
+      </div>
+    </>
   )
 }
 
