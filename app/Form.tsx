@@ -1,6 +1,6 @@
 import { TimetableType } from "@/types/types"
 import { table } from "console"
-import { use, useState } from "react"
+import { use, useRef, useState } from "react"
 import { FaRegTimesCircle } from "react-icons/fa"
 
 const Form = ({ setTimetables }: { setTimetables: any }) => {
@@ -48,10 +48,14 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
 
   const course: string[] = []
   const [selectedCourses, setSelectedCourses] = useState<string[]>(course)
-  const [freeDays, setFreeDays] = useState<boolean[]>([false, true, false, false, false])
+  const [freeDays, setFreeDays] = useState<boolean[]>([false, false, false, false, false])
+  const [freeLessons, setFreeLessons] = useState<boolean[]>([false, false, false, false, false, false])
+   const [value, setValue] = useState({ min: 0, max: 100 })
   const [courseInput, setCourseInput] = useState<string>("")
   const [formOpen, setFormOpen] = useState<boolean>(true)
   const [timetableGenerated, setTimetableGenerated] = useState<boolean>(false)
+
+
 
   const submitForm = (e: any) => {
     e.preventDefault()
@@ -65,11 +69,17 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
     setCourseInput(e.target.value)
   }
 
+
+
+
   const handleCoursesAdd = () => {
     //Kursuse nimi?
     setSelectedCourses((oldArray: any) => [...oldArray, courseInput])
     setCourseInput("")
+    //Siia cursor tagasi input fieldile
+    addCourseInputRef.current!.focus()
   }
+  const addCourseInputRef = useRef<HTMLInputElement>(null)
 
   const handleCourseDelete = (id: string) => {
     setSelectedCourses((current: string[]) =>
@@ -87,23 +97,41 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
     setFreeDays(newFreeDays)
 
   }
+  const handleFreeLesson = (i: number) => {
+    const newFreeLesson = freeLessons!.map((lesson, indeks: any) => {
+      if (indeks === i) return !lesson
+      return lesson
+    })
+    setFreeLessons(newFreeLesson)
+  }
 
   return (
     <div>
       {formOpen ? (
-        <div className="flex flex-col items-start mt-16">
-          <h1 className="font-bold text-[1.1em] mb-8">Generate All Possible Timetables</h1>
-          <div className="flex flex-col w-full">
+        <div className="flex w-[95%] m-auto sm:w-full flex-col items-start mt-16">
+          <h1 className="font-bold text-[1.1em] mb-16">Generate All Possible Timetables</h1>
+          <div className="flex flex-col w-full mb-8">
             <label className="w-full flex justify-between">
-              Enter the code of the course <div className="mb-2 font-semibold">Selected: {selectedCourses.length}</div>
+              Enter the code of the course{" "}
+              <div className="mb-2 font-normal">
+                Selected: <span className="font-bold">{selectedCourses.length}</span>
+              </div>
             </label>
             <div className="h-8 w-full  flex">
-              <input className="h-full w-full rounded bg-gray-100 mr-2" type="text" name="name" value={courseInput} onChange={handleCourseInputChange} />{" "}
-              <button className="bg-orange-400 text-white w-[4em] h-full font-semibold text-[0.85em] rounded unselectable" onClick={handleCoursesAdd}>
+              <input
+                ref={addCourseInputRef}
+                placeholder="LTAT.00.000"
+                className="h-full w-full rounded   placeholder-gray-300 font-medium bg-gray-100 mr-2"
+                type="text"
+                name="name"
+                value={courseInput}
+                onChange={handleCourseInputChange}
+              />{" "}
+              <button className="bg-orange-400 text-white w-[6em] h-full font-semibold text-[0.85em] rounded-[50px] unselectable" onClick={handleCoursesAdd}>
                 ADD
               </button>{" "}
             </div>
-            <ul className="text-[0.95em] mt-5">
+            <ul className="text-[0.95em] font-medium mt-5">
               {selectedCourses?.map((course, i) => (
                 <li key={i} className="flex w-full  items-start">
                   <span className="w-full">{course}</span> <FaRegTimesCircle onClick={() => handleCourseDelete(course)} size={18} className="text-gray-300 cursor-pointer w-5 mt-[2px]" />
@@ -112,14 +140,36 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
             </ul>
           </div>
           <div className="w-full mt-8">
+            <label>At what times do you want your practises to take place at?</label>
+            <div className="flex flex-wrap font-medium text-[0.8em] mt-4">
+              {freeLessons.map((lessonValue, i) => {
+                const lessons = ["08:15-09:45", "10:15-11:45", "12:15-13:45", "14:15-15:45", "16:15-17:45", "18:15-19:45"]
+                return (
+                  <div
+                    key={i}
+                    className={"p-[9px] px-6 unselectable rounded-[50px] mr-2 cursor-pointer flex items-center mb-2 " + (lessonValue ? "bg-orange-200 text-orange-600" : "bg-gray-100 text-gray-400")}
+                    onClick={() => handleFreeLesson(i)}
+                  >
+                    {lessons[i]}
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          <div className="w-full mt-10">
             <label>If you want to have days without practicals, select them here</label>
-            <div className="flex flex-wrap font-medium text-[0.85em] mt-4">
+            <div className="flex flex-wrap font-medium text-[0.8em] mt-4">
               {freeDays.map((dayValue, i) => {
                 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
                 return (
-                  <div key={i} className={"p-[9px] px-6 rounded-[50px] mr-2 cursor-pointer flex items-center mb-2 " + (dayValue ? "bg-orange-200" : "bg-gray-100")} onClick={() => handleFreeDay(i)} >
+                  <div
+                    key={i}
+                    className={"p-[9px] px-6 rounded-[50px] mr-2 cursor-pointer flex items-center unselectable mb-2 " + (dayValue ? "bg-orange-200 text-orange-600" : "bg-gray-100 text-gray-400")}
+                    onClick={() => handleFreeDay(i)}
+                  >
                     {days[i]}
-                  </div>)
+                  </div>
+                )
               })}
             </div>
           </div>
@@ -131,14 +181,14 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
               </div>
             ) : null}
 
-            <button onClick={submitForm} className="bg-blue-400 font-medium p-3 px-8 text-white rounded-[50px]">
+            <button onClick={submitForm} className="bg-blue-400 font-medium p-3 px-8 text-white rounded-[50px] unselectable">
               Generate
             </button>
           </div>
         </div>
       ) : (
         <div className="w-full flex justify-end mt-10 mb-10">
-          <button onClick={() => setFormOpen(true)} className="bg-gray-200 font-medium p-[10px] px-6  text-[0.8em] rounded-[50px]">
+          <button onClick={() => setFormOpen(true)} className="bg-gray-200 font-medium p-[10px] px-6  text-[0.8em] rounded-[50px] unselectable">
             Generate New
           </button>
         </div>
