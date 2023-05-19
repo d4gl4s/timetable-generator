@@ -3,6 +3,7 @@ import { useState } from "react"
 import Timetable from "./Timetable"
 import { HiOutlineArrowCircleRight, HiOutlineArrowCircleLeft } from "react-icons/hi"
 import { TimetableType } from "@/types/types"
+import Form from "./Form"
 
 export default function Home() {
   const lessontest = {
@@ -47,31 +48,39 @@ export default function Home() {
     },
   ]
 
-  const [timetables, setTimetables] = useState<TimetableType[]>(tabledata)
+  const [timetables, setTimetables] = useState<TimetableType[] | null>(null)
   const [current, setCurrent] = useState<number>(0)
 
   return (
     <main className="w-[96%] sm:w-[90%] md:w-[80%] md:max-w-[700px]  2xl:max-w-[1000px] m-auto mb-48">
-      <div className="w-[90%] m-auto md:w-full flex justify-between mt-16 mb-6">
-        <div className="flex text-[0.9em] font-medium unselectable">
-          <button className={"flex mr-8 items-center " + (current == 0 ? "text-gray-300 cursor-default" : " ")} onClick={() => setCurrent(Math.max(current - 1, 0))}>
-            <HiOutlineArrowCircleLeft size={18} className="mr-1" /> Previous
-          </button>
+      <Form setTimetables={setTimetables} />
+      {timetables ? (
+        <div>
+          <div className="w-[90%] m-auto md:w-full flex justify-between mt-16 mb-6">
+            <div className="flex text-[0.9em] font-medium unselectable">
+              <button className={"flex mr-8 items-center " + (current == 0 ? "text-gray-300 cursor-default" : " ")} onClick={() => setCurrent(Math.max(current - 1, 0))}>
+                <HiOutlineArrowCircleLeft size={18} className="mr-1" /> Previous
+              </button>
 
-          <button className={"flex items-center " + (current == timetables.length - 1 ? "text-gray-300 cursor-default" : " ")} onClick={() => setCurrent(Math.min(current + 1, timetables.length - 1))}>
-            Next <HiOutlineArrowCircleRight size={18} className="ml-1" />
-          </button>
+              <button
+                className={"flex items-center " + (current == timetables.length - 1 ? "text-gray-300 cursor-default" : " ")}
+                onClick={() => setCurrent(Math.min(current + 1, timetables.length - 1))}
+              >
+                Next <HiOutlineArrowCircleRight size={18} className="ml-1" />
+              </button>
+            </div>
+
+            <div className="text-[0.85em]">
+              Timetable{" "}
+              <span className="font-bold ml-1">
+                {current + 1}/{timetables.length}
+              </span>
+            </div>
+          </div>
+
+          <Timetable timetable={timetables[current]} />
         </div>
-
-        <div className="text-[0.85em]">
-          Timetable{" "}
-          <span className="font-bold ml-1">
-            {current + 1}/{timetables.length}
-          </span>
-        </div>
-      </div>
-
-      <Timetable timetable={timetables[current]} />
+      ) : null}
     </main>
   )
 }

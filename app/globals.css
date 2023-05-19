@@ -38,6 +38,16 @@ table {
   border-right: 0;
 } */
 
+label {
+  font-weight: 600;
+  font-size: medium;
+  margin-bottom: 4px;
+}
+input {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
 th {
   margin: 0;
   padding: 4px;
