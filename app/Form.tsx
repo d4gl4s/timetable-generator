@@ -68,28 +68,14 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
           freeDays: freeDays,
           freeLessons: freeLessons,
         }
-        console.log(body)
         const response = await fetch("../api/generate", {
           method: "GET",
           headers: { "Content-Type": "application/json" },
           /* body: JSON.stringify(body), */
         })
+        const tekst = await response.text()
         console.log("get req tehtud")
-        response.text
-        response.body
-        response.json
-        const tekst = response.text
-        const json = response.text
-        console.log("tekst: " + tekst)
-        console.log("tekst: " + json)
-        console.log(response)
-        console.log(response.text())
-        console.log(response.body)
-        console.log(response.json())
-        response.arrayBuffer
-        console.log(response.arrayBuffer().toString())
-        console.log(response.arrayBuffer)
-        console.log(response.blob)
+        console.log(tekst)
 
         /* fetch("/ws/invoice/checkDoublon", {
           method: "POST",
