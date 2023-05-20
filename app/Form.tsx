@@ -79,6 +79,10 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
         console.log(response.text)
         console.log(response.body)
         console.log(response.json)
+        response.arrayBuffer
+        console.log(response.arrayBuffer.toString)
+        console.log(response.arrayBuffer)
+        console.log(response.blob)
 
         /* fetch("/ws/invoice/checkDoublon", {
           method: "POST",
