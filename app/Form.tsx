@@ -102,7 +102,7 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
   return (
     <div>
       {formOpen ? (
-        <div className="flex w-[95%] m-autos sm:w-full flex-col items-start mt-16 text-[0.9em]">
+        <div className="flex w-[93%] m-auto sm:w-full flex-col items-start mt-16 text-[0.9em]">
           <h1 className="font-bold text-[1.1em] mb-16">Generate All Possible Timetables</h1>
           <div className="flex flex-col w-full mb-8">
             <label className="w-full flex justify-between">
