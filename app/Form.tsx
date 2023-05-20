@@ -74,8 +74,10 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
           /* body: JSON.stringify(body), */
         })
         const tekst = await response.text()
+        const responseJson = await response.json()
         console.log("get req tehtud")
         console.log(tekst)
+        console.log(responseJson)
 
         /* fetch("/ws/invoice/checkDoublon", {
           method: "POST",
@@ -89,7 +91,7 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
           }),
         }).then(function (response) {
           console.log(response)
-        })
+    })
  */
         /* if (response.ok) {
 
