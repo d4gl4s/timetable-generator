@@ -76,6 +76,9 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
         })
         console.log("get req tehtud")
         console.log(response)
+        console.log(response.text)
+        console.log(response.body)
+        console.log(response.json)
 
         /* fetch("/ws/invoice/checkDoublon", {
           method: "POST",
