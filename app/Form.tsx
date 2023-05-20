@@ -1,9 +1,9 @@
 import { TimetableType } from "@/types/types"
-import { table } from "console"
+import { Console, table } from "console"
 import { use, useRef, useState } from "react"
 import { FaTimes } from "react-icons/fa"
 
-const Form = ({ setTimetables }: { setTimetables: any }) => {
+const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: any }) => {
   const lessontest = {
     name: "Sissejuhatus Erialasse",
     startTime: "8:15",
@@ -52,16 +52,68 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
   const [selectedCourses, setSelectedCourses] = useState<string[]>(course)
   const [freeDays, setFreeDays] = useState<boolean[]>([false, false, false, false, false])
   const [freeLessons, setFreeLessons] = useState<boolean[]>([false, false, false, false, false, false])
-  const [value, setValue] = useState({ min: 0, max: 100 })
   const [courseInput, setCourseInput] = useState<string>("")
   const [formOpen, setFormOpen] = useState<boolean>(true)
   const [timetableGenerated, setTimetableGenerated] = useState<boolean>(false)
+  const [error, setError] = useState<string>("")
 
-  const submitForm = (e: any) => {
+  const submitForm = async (e: any) => {
     e.preventDefault()
-    setFormOpen(false)
-    setTimetables(tabledata)
-    setTimetableGenerated(true)
+    if (selectedCourses.length == 0) setError("Please enter at least one course code!")
+    else {
+      setLoading(true)
+      try {
+        const body = {
+          selectedCourses: selectedCourses,
+          freeDays: freeDays,
+          freeLessons: freeLessons,
+        }
+        console.log(body)
+        const response = await fetch("../api/generate", {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+          /* body: JSON.stringify(body), */
+        })
+        console.log("get req tehtud")
+        console.log(response)
+
+        /* fetch("/ws/invoice/checkDoublon", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            invoiceNumber: invoiceNumber.val(),
+            vatNumber: vatNumber.val(),
+            id: $("#pdfId").val(),
+          }),
+        }).then(function (response) {
+          console.log(response)
+        })
+ */
+        /* if (response.ok) {
+
+          setFormOpen(false)
+          setTimetables(tabledata)
+          setTimetableGenerated(true)
+
+
+          const data = await response.json()
+          if (data.success) {
+            setEmail(email.trim())
+            setAuth(true)
+            clearCart()
+          }
+        } else setError("Midagi läks valesti, proovi hiljem uuesti!") */
+      } catch (error) {
+        console.log(error)
+        setError("Midagi läks valesti, proovi hiljem uuesti!")
+      }
+      /* setFormOpen(false)
+      setTimetables(tabledata)
+      setTimetableGenerated(true)
+      setLoading(false) */
+    }
   }
 
   const handleCourseInputChange = (e: any) => {
@@ -70,10 +122,14 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
 
   const handleCoursesAdd = () => {
     //Kursuse nimi?
-    setSelectedCourses((oldArray: any) => [...oldArray, courseInput])
-    setCourseInput("")
-    //Siia cursor tagasi input fieldile
-    addCourseInputRef.current!.focus()
+    if (courseInput.trim().length < 8 || courseInput.trim().length > 15) setError("Course not found!")
+    else {
+      setSelectedCourses((oldArray: any) => [...oldArray, courseInput])
+      setError("")
+      setCourseInput("")
+      //Siia cursor tagasi input fieldile
+      addCourseInputRef.current!.focus()
+    }
   }
   const addCourseInputRef = useRef<HTMLInputElement>(null)
 
@@ -117,6 +173,7 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
                 placeholder="LTAT.00.000"
                 className="h-full w-full rounded   placeholder-gray-300 font-medium bg-gray-100 mr-2"
                 type="text"
+                maxLength={11}
                 name="name"
                 value={courseInput}
                 onChange={handleCourseInputChange}
@@ -125,6 +182,7 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
                 ADD
               </button>{" "}
             </div>
+            {error != "" ? <div className="mt-2 text-[0.85em] font-medium text-red-500">{error}</div> : null}
             <ul className="text-[0.95em] font-medium mt-5">
               {selectedCourses?.map((course, i) => (
                 <li key={i} className="flex w-full  items-start">

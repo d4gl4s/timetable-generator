@@ -6,41 +6,14 @@ import { TimetableType } from "@/types/types"
 import Form from "./Form"
 
 export default function Home() {
-  /* s */
-
-  /*  const tabledata: TimetableType[] = [
-    {
-      eight: [lessontest2, null, lessontest, null, null],
-      ten: [null, null, null, null, null],
-      twelve: [null, lessontest, lessontest2, null, null],
-      two: [lessontest, null, null, null, null],
-      four: [null, lessontest2, null, lessontest, null],
-      six: [lessontest, null, null, null, null],
-    },
-    {
-      eight: [null, null, lessontest, null, null],
-      ten: [null, null, null, null, lessontest2],
-      twelve: [null, lessontest2, null, null, null],
-      two: [lessontest, null, null, null, null],
-      four: [null, null, null, lessontest2, null],
-      six: [lessontest2, null, null, null, null],
-    },
-    {
-      eight: [lessontest2, null, lessontest, lessontest, null],
-      ten: [null, lessontest2, null, null, lessontest2],
-      twelve: [null, null, null, null, lessontest],
-      two: [null, lessontest, lessontest, null, null],
-      four: [null, null, null, null, null],
-      six: [null, lessontest, null, lessontest2, null],
-    },
-  ] */
-
   const [timetables, setTimetables] = useState<TimetableType[] | null>(null)
+  const [loading, setLoading] = useState<boolean>(false)
   const [current, setCurrent] = useState<number>(0)
 
   return (
     <main className="w-[96%] sm:w-[90%] md:w-[80%] md:max-w-[700px]  2xl:max-w-[1000px] m-auto mb-48 overflow-visible">
-      <Form setTimetables={setTimetables} />
+      <Form setTimetables={setTimetables} setLoading={setLoading} />
+      {loading ? "loading..." : null}
       {timetables ? (
         <div className="overflow-visible">
           <div className="w-[90%] m-auto md:w-full flex justify-between mt-16 mb-6">
