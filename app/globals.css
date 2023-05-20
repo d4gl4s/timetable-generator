@@ -24,6 +24,11 @@ body {
 
 table {
   border-spacing: 0;
+  overflow: visible;
+}
+tr,
+tbody {
+  overflow: visible;
 }
 
 /* tr {
@@ -64,7 +69,6 @@ th:last-child {
 
 td {
   margin: 0;
-  padding: 4px;
   text-align: left;
   width: 20%;
   height: 100px;
@@ -77,6 +81,7 @@ td {
   align-items: end;
   align-content: end;
   vertical-align: top;
+  overflow: visible;
 }
 td:last-child {
   border-right: 0;

@@ -1,7 +1,7 @@
 import { TimetableType } from "@/types/types"
 import { table } from "console"
 import { use, useRef, useState } from "react"
-import { FaRegTimesCircle } from "react-icons/fa"
+import { FaTimes } from "react-icons/fa"
 
 const Form = ({ setTimetables }: { setTimetables: any }) => {
   const lessontest = {
@@ -10,6 +10,7 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
     endTime: "8:15",
     place: "Narva mnt 27 - 1025",
     lecture: false,
+    lecturer: "Kati Ain",
   }
   const lessontest2 = {
     name: "Programmeerimine II",
@@ -17,6 +18,7 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
     endTime: "14:15",
     place: "Narva mnt 27 - 1025",
     lecture: true,
+    lecturer: "Mergot Robbie",
   }
 
   const tabledata: TimetableType[] = [
@@ -50,27 +52,21 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
   const [selectedCourses, setSelectedCourses] = useState<string[]>(course)
   const [freeDays, setFreeDays] = useState<boolean[]>([false, false, false, false, false])
   const [freeLessons, setFreeLessons] = useState<boolean[]>([false, false, false, false, false, false])
-   const [value, setValue] = useState({ min: 0, max: 100 })
+  const [value, setValue] = useState({ min: 0, max: 100 })
   const [courseInput, setCourseInput] = useState<string>("")
   const [formOpen, setFormOpen] = useState<boolean>(true)
   const [timetableGenerated, setTimetableGenerated] = useState<boolean>(false)
-
-
 
   const submitForm = (e: any) => {
     e.preventDefault()
     setFormOpen(false)
     setTimetables(tabledata)
     setTimetableGenerated(true)
-    
   }
 
   const handleCourseInputChange = (e: any) => {
     setCourseInput(e.target.value)
   }
-
-
-
 
   const handleCoursesAdd = () => {
     //Kursuse nimi?
@@ -89,13 +85,11 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
     )
   }
   const handleFreeDay = (i: number) => {
-  
     const newFreeDays = freeDays!.map((day, indeks: any) => {
       if (indeks === i) return !day
       return day
     })
     setFreeDays(newFreeDays)
-
   }
   const handleFreeLesson = (i: number) => {
     const newFreeLesson = freeLessons!.map((lesson, indeks: any) => {
@@ -108,7 +102,7 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
   return (
     <div>
       {formOpen ? (
-        <div className="flex w-[95%] m-auto sm:w-full flex-col items-start mt-16">
+        <div className="flex w-[95%] m-autos sm:w-full flex-col items-start mt-16 text-[0.9em]">
           <h1 className="font-bold text-[1.1em] mb-16">Generate All Possible Timetables</h1>
           <div className="flex flex-col w-full mb-8">
             <label className="w-full flex justify-between">
@@ -134,7 +128,7 @@ const Form = ({ setTimetables }: { setTimetables: any }) => {
             <ul className="text-[0.95em] font-medium mt-5">
               {selectedCourses?.map((course, i) => (
                 <li key={i} className="flex w-full  items-start">
-                  <span className="w-full">{course}</span> <FaRegTimesCircle onClick={() => handleCourseDelete(course)} size={18} className="text-gray-300 cursor-pointer w-5 mt-[2px]" />
+                  <span className="w-full">{i + 1 + ".  " + course}</span> <FaTimes onClick={() => handleCourseDelete(course)} size={14} className="text-gray-300 cursor-pointer w-5 mt-[2px]" />
                 </li>
               ))}
             </ul>

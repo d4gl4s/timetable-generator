@@ -13,6 +13,7 @@ export interface LessonType {
   endTime: string
   place: string
   lecture: boolean
+  lecturer: string
 }
 
 export interface CourseType {

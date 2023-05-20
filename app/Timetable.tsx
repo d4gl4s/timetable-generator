@@ -5,7 +5,7 @@ const Timetable = ({ timetable }: { timetable: TimetableType }) => {
   const { eight, ten, twelve, two, four, six } = timetable
   return (
     <>
-      <div className="border border-[2px] rounded-lg overflow-hidden border-[#f0eff8]">
+      <div className="border border-[2px] rounded-lg overflow-hidden border-[#f0eff8] overflow-visible">
         <table className="min-w-[100%] divide-y divide-[#f0eff8] ">
           <thead>
             <tr>
