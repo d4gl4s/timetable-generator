@@ -1,38 +1,36 @@
 {
   "courses": [
     {
-      "id": 1,
       "name": "Sissejuhatus erialasse",
       "code": "LTAT.00.579",
+      "eap": 6,
       "lecture": [
         {
           "weekday": 0,
           "startTime": "10:15",
           "endTime": "12:00",
-          "place": "Narva mnt 27 - 1037",
-          "lecturer": "Margot Robbie"
+          "place": "Narva mnt 27 - 1037"
         }
       ],
-
       "groups": [
-        [
-          {
-            "name": "inf 2",
-            "weekday": 0,
-            "startTime": "14:15",
-            "endTime": "15:45",
-            "place": "Narva mnt 27 - 2006",
-            "lecturer": "Margot Robbie"
-          },
-          {
-            "name": "inf 2",
-            "weekday": 0,
-            "startTime": "14:15",
-            "endTime": "15:45",
-            "place": "Narva mnt 27 - 2006",
-            "lecturer": "Margot Robbie"
-          }
-        ],
+        {
+          "group": "inf2",
+          "lecturer": "Margot Robbie",
+          "practicalSessions": [
+            {
+              "weekday": 0,
+              "startTime": "14:15",
+              "endTime": "15:45",
+              "place": "Narva mnt 27 - 2006"
+            },
+            {
+              "weekday": 0,
+              "startTime": "14:15",
+              "endTime": "15:45",
+              "place": "Narva mnt 27 - 2006"
+            }
+          ]
+        },
         [
           {
             "name": "inf 2",
