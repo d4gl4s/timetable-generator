@@ -4,13 +4,15 @@
       "id": 1,
       "name": "Sissejuhatus erialasse",
       "code": "LTAT.00.579",
-      "lecture": {
-        "weekday": 0,
-        "startTime": "10:15",
-        "endTime": "12:00",
-        "place": "Narva mnt 27 - 1037",
-        "lecturer": "Margot Robbie"
-      },
+      "lecture": [
+        {
+          "weekday": 0,
+          "startTime": "10:15",
+          "endTime": "12:00",
+          "place": "Narva mnt 27 - 1037",
+          "lecturer": "Margot Robbie"
+        }
+      ],
 
       "groups": [
         [
@@ -47,13 +49,15 @@
       "id": 2,
       "name": "Sissejuhatus erialasse",
       "code": "LTAT.00.579",
-      "lecture": {
-        "weekday": 4,
-        "startTime": "14:15",
-        "endTime": "15:00",
-        "place": "Narva mnt 27 - 1037",
-        "lecturer": "Kati Ain"
-      },
+      "lecture": [
+        {
+          "weekday": 4,
+          "startTime": "14:15",
+          "endTime": "15:00",
+          "place": "Narva mnt 27 - 1037",
+          "lecturer": "Kati Ain"
+        }
+      ],
       "groups": [
         [
           {

@@ -67,6 +67,6 @@ export async function generateTimetables(selected: string[], freeDays: boolean[]
 
     return tabledata
   } catch (error) {
-    return error
+    return null
   }
 }
