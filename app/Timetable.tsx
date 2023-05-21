@@ -1,8 +1,8 @@
-import { TimetableType } from "@/types/types"
+/* import { TimetableType } from "@/types/types" */
+import { LessonType } from "@/types/types"
 import Lesson from "./Lesson"
 
-const Timetable = ({ timetable }: { timetable: TimetableType }) => {
-  const { eight, ten, twelve, two, four, six } = timetable
+const Timetable = ({ timetable }: { timetable: (LessonType | null)[][] }) => {
   return (
     <>
       <div className="border border-[2px] rounded-lg overflow-hidden border-[#f0eff8] overflow-visible">
@@ -18,43 +18,43 @@ const Timetable = ({ timetable }: { timetable: TimetableType }) => {
           </thead>
           <tbody className="divide-y divide-[#f0eff8]">
             <tr>
-              {eight.map((lesson, i) => {
-                if (eight[i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
+              {timetable[0].map((lesson, i) => {
+                if (timetable[0][i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
                 else return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td className="border-solid border-r-[1px]" key={i}></td>
               })}
             </tr>
 
             <tr>
-              {ten.map((lesson, i) => {
-                if (ten[i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
+              {timetable[1].map((lesson, i) => {
+                if (timetable[1][i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
                 else return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td className="border-solid border-r-[1px]" key={i}></td>
               })}
             </tr>
 
             <tr>
-              {twelve.map((lesson, i) => {
-                if (twelve[i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
+              {timetable[2].map((lesson, i) => {
+                if (timetable[2][i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
                 else return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td className="border-solid border-r-[1px]" key={i}></td>
               })}
             </tr>
 
             <tr>
-              {two.map((lesson, i) => {
-                if (two[i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
+              {timetable[3].map((lesson, i) => {
+                if (timetable[3][i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
                 else return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td className="border-solid border-r-[1px]" key={i}></td>
               })}
             </tr>
 
             <tr>
-              {four.map((lesson, i) => {
-                if (four[i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
+              {timetable[4].map((lesson, i) => {
+                if (timetable[4][i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
                 else return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td className="border-solid border-r-[1px]" key={i}></td>
               })}
             </tr>
 
             <tr>
-              {six.map((lesson, i) => {
-                if (six[i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
+              {timetable[5].map((lesson, i) => {
+                if (timetable[5][i + 1] != null) return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td key={i}></td>
                 else return lesson != null ? <Lesson key={i} lesson={lesson} /> : <td className="border-solid border-r-[1px]" key={i}></td>
               })}
             </tr>

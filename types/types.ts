@@ -1,11 +1,11 @@
-export interface TimetableType {
+/* export interface TimetableType {
   eight: (LessonType | null)[]
   ten: (LessonType | null)[]
   twelve: (LessonType | null)[]
   two: (LessonType | null)[]
   four: (LessonType | null)[]
   six: (LessonType | null)[]
-}
+} */
 
 export interface LessonType {
   name: string

@@ -1,53 +1,11 @@
-import { TimetableType } from "@/types/types"
+/* import { TimetableType } from "@/types/types" */
 import { Console, table } from "console"
 import { use, useRef, useState } from "react"
 import { FaTimes } from "react-icons/fa"
+import { generateTimetables } from "./generate"
+import { LessonType } from "@/types/types"
 
 const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: any }) => {
-  const lessontest = {
-    name: "Sissejuhatus Erialasse",
-    startTime: "8:15",
-    endTime: "8:15",
-    place: "Narva mnt 27 - 1025",
-    lecture: false,
-    lecturer: "Kati Ain",
-  }
-  const lessontest2 = {
-    name: "Programmeerimine II",
-    startTime: "10:15",
-    endTime: "14:15",
-    place: "Narva mnt 27 - 1025",
-    lecture: true,
-    lecturer: "Mergot Robbie",
-  }
-
-  const tabledata: TimetableType[] = [
-    {
-      eight: [lessontest2, null, lessontest, null, null],
-      ten: [null, null, null, null, null],
-      twelve: [null, lessontest, lessontest2, null, null],
-      two: [lessontest, null, null, null, null],
-      four: [null, lessontest2, null, lessontest, null],
-      six: [lessontest, null, null, null, null],
-    },
-    {
-      eight: [null, null, lessontest, null, null],
-      ten: [null, null, null, null, lessontest2],
-      twelve: [null, lessontest2, null, null, null],
-      two: [lessontest, null, null, null, null],
-      four: [null, null, null, lessontest2, null],
-      six: [lessontest2, null, null, null, null],
-    },
-    {
-      eight: [lessontest2, null, lessontest, lessontest, null],
-      ten: [null, lessontest2, null, null, lessontest2],
-      twelve: [null, null, null, null, lessontest],
-      two: [null, lessontest, lessontest, null, null],
-      four: [null, null, null, null, null],
-      six: [null, lessontest, null, lessontest2, null],
-    },
-  ]
-
   const course: string[] = []
   const [selectedCourses, setSelectedCourses] = useState<string[]>(course)
   const [freeDays, setFreeDays] = useState<boolean[]>([false, false, false, false, false])
@@ -63,22 +21,28 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
     else {
       setLoading(true)
       try {
-        const body = {
+        const timetableData: (LessonType | null)[][][] = await generateTimetables(selectedCourses, freeDays, freeLessons)
+        setFormOpen(false)
+        setTimetables(timetableData)
+        setTimetableGenerated(true)
+        setLoading(false)
+
+        /* const body = {
           selectedCourses: selectedCourses,
           freeDays: freeDays,
           freeLessons: freeLessons,
-        }
+        } */
         /*  const response = await fetch("../api/generate", {
           method: "GET",
           headers: { "Content-Type": "application/json" },
           
         }) */
-        const response = await fetch("../api/generate", {
+        /* const response = await fetch("../api/generate", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(body),
         })
-        console.log(response)
+        console.log(response) */
         /* const tekst = await response.text() */
         /* const responseJson = await response.json()
         console.log("get req tehtud")
@@ -107,7 +71,7 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
           setTimetableGenerated(true)
 
 
-          const data = await response.json()
+        const data = await response.json()
           if (data.success) {
             setEmail(email.trim())
             setAuth(true)
@@ -115,13 +79,8 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
           }
         } else setError("Midagi läks valesti, proovi hiljem uuesti!") */
       } catch (error) {
-        console.log(error)
         setError("Midagi läks valesti, proovi hiljem uuesti!")
       }
-      /* setFormOpen(false)
-      setTimetables(tabledata)
-      setTimetableGenerated(true)
-      setLoading(false) */
     }
   }
 

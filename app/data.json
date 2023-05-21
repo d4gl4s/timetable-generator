@@ -1,0 +1,81 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Sissejuhatus erialasse",
+      "code": "LTAT.00.579",
+      "lecture": {
+        "weekday": 0,
+        "startTime": "10:15",
+        "endTime": "12:00",
+        "place": "Narva mnt 27 - 1037",
+        "lecturer": "Margot Robbie"
+      },
+
+      "groups": [
+        [
+          {
+            "name": "inf 2",
+            "weekday": 0,
+            "startTime": "14:15",
+            "endTime": "15:45",
+            "place": "Narva mnt 27 - 2006",
+            "lecturer": "Margot Robbie"
+          },
+          {
+            "name": "inf 2",
+            "weekday": 0,
+            "startTime": "14:15",
+            "endTime": "15:45",
+            "place": "Narva mnt 27 - 2006",
+            "lecturer": "Margot Robbie"
+          }
+        ],
+        [
+          {
+            "name": "inf 2",
+            "weekday": 3,
+            "startTime": "14:15",
+            "endTime": "15:45",
+            "place": "Narva mnt 27 2006",
+            "lecturer": "Margot Robbie"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Sissejuhatus erialasse",
+      "code": "LTAT.00.579",
+      "lecture": {
+        "weekday": 4,
+        "startTime": "14:15",
+        "endTime": "15:00",
+        "place": "Narva mnt 27 - 1037",
+        "lecturer": "Kati Ain"
+      },
+      "groups": [
+        [
+          {
+            "name": "inf 2",
+            "weekday": 0,
+            "startTime": "14:15",
+            "endTime": "15:45",
+            "place": "Narva mnt 27 2006",
+            "lecturer": "Margot Robbie"
+          }
+        ],
+        [
+          {
+            "name": "inf 3",
+            "weekday": 2,
+            "startTime": "14:15",
+            "endTime": "15:45",
+            "place": "Narva mnt 27 2006",
+            "lecturer": "Margot Robbie"
+          }
+        ]
+      ]
+    }
+  ]
+}
