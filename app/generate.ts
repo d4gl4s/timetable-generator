@@ -52,11 +52,14 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
           type: null,
         }
         var timeframe = 0
-        if (startTime == "10:15") timeframe = 1
-        else if (startTime == "12:15") timeframe = 2
-        else if (startTime == "14:15") timeframe = 3
-        else if (startTime == "16:15") timeframe = 4
-        else if (startTime == "18:15") timeframe = 5
+        const vahemikuIndeks = parseInt(startTimePieces[0]) / endTimePieces[0]
+
+        if (vahemikuIndeks >= 18) timeframe = 5
+        else if (vahemikuIndeks >= 16) timeframe = 4
+        else if (vahemikuIndeks >= 14) timeframe = 3
+        else if (vahemikuIndeks >= 12) timeframe = 2
+        else if (vahemikuIndeks >= 10) timeframe = 1
+        else timeframe = 0
 
         if (timetableConcrete[timeframe][weekday] == null) timetableConcrete[timeframe][weekday] = lecture
         else throw "error"
