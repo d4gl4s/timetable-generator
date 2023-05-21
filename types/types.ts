@@ -19,8 +19,8 @@ export interface LessonType {
 
 export interface CourseType {
   name: string
-  lecture: LessonType
-  groups: GroupType[]
+  code: string
+  eap: number
 }
 export interface GroupType {
   name: string

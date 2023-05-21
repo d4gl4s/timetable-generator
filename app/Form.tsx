@@ -3,11 +3,11 @@ import { Console, table } from "console"
 import { use, useRef, useState } from "react"
 import { FaTimes } from "react-icons/fa"
 import { generateTimetables } from "./generate"
-import { LessonType } from "@/types/types"
+import { CourseType, LessonType } from "@/types/types"
+import { getCourseData } from "./courseData"
 
 const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: any }) => {
-  const course: string[] = []
-  const [selectedCourses, setSelectedCourses] = useState<string[]>(course)
+  const [selectedCourses, setSelectedCourses] = useState<CourseType[]>([])
   const [freeDays, setFreeDays] = useState<boolean[]>([false, false, false, false, false])
   const [freeLessons, setFreeLessons] = useState<boolean[]>([false, false, false, false, false, false])
   const [courseInput, setCourseInput] = useState<string>("")
@@ -92,23 +92,34 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
     setCourseInput(e.target.value)
   }
 
-  const handleCoursesAdd = () => {
+  const handleCoursesAdd = async () => {
     //Kursuse nimi?
     if (courseInput.trim().length < 8 || courseInput.trim().length > 15) setError("Course not found!")
     else {
-      setSelectedCourses((oldArray: any) => [...oldArray, courseInput])
-      setError("")
-      setCourseInput("")
+      const courseData = await getCourseData(courseInput.trim())
+      if (courseData == null) setError("No course found!")
+      else {
+        for (let i = 0; i < selectedCourses.length; i++) {
+          if (courseData.code == selectedCourses[i].code) {
+            setError("Course already selected!")
+            return
+          }
+        }
+
+        setSelectedCourses((oldArray: any) => [...oldArray, courseData])
+        setError("")
+        setCourseInput("")
+      }
       //Siia cursor tagasi input fieldile
       addCourseInputRef.current!.focus()
     }
   }
   const addCourseInputRef = useRef<HTMLInputElement>(null)
 
-  const handleCourseDelete = (id: string) => {
-    setSelectedCourses((current: string[]) =>
-      current.filter((course: any) => {
-        return course !== id
+  const handleCourseDelete = (code: string) => {
+    setSelectedCourses((current: CourseType[]) =>
+      current.filter((course: CourseType) => {
+        return course.code !== code
       })
     )
   }
@@ -126,6 +137,13 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
     })
     setFreeLessons(newFreeLesson)
   }
+  const getEAP = () => {
+    var sum = 0
+    for (let i = 0; i < selectedCourses.length; i++) {
+      sum += selectedCourses[i].eap
+    }
+    return sum
+  }
 
   return (
     <div>
@@ -136,7 +154,8 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
             <label className="w-full flex justify-between">
               Enter the code of the course{" "}
               <div className="mb-2 font-normal">
-                Selected: <span className="font-bold">{selectedCourses.length}</span>
+                Selected: <span className="font-bold mr-8">{selectedCourses.length}</span>
+                EAP: <span className="font-bold">{getEAP()}</span>
               </div>
             </label>
             <div className="h-8 w-full  flex">
@@ -157,8 +176,11 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
             {error != "" ? <div className="mt-2 text-[0.85em] font-medium text-red-500">{error}</div> : null}
             <ul className="text-[0.95em] font-medium mt-5">
               {selectedCourses?.map((course, i) => (
-                <li key={i} className="flex w-full  items-start">
-                  <span className="w-full">{i + 1 + ".  " + course}</span> <FaTimes onClick={() => handleCourseDelete(course)} size={14} className="text-gray-300 cursor-pointer w-5 mt-[2px]" />
+                <li key={i} className="flex w-full  items-start justify-between">
+                  <div className="flex items-center">
+                    <span className="w-full text-[1.1em]">{i + 1 + ".  " + course.name}</span> <span className="font-semibold ml-4 text-gray-300">{course.code}</span>
+                  </div>
+                  <FaTimes onClick={() => handleCourseDelete(course.code)} size={14} className="text-gray-300 cursor-pointer w-5 mt-[2px]" />
                 </li>
               ))}
             </ul>

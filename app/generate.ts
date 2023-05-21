@@ -1,11 +1,10 @@
 "use server"
 
-import { LessonType } from "@/types/types"
-/* import { TimetableType } from "@/types/types" */
+import { CourseType, LessonType } from "@/types/types"
 import { group } from "console"
 const { readFileSync } = require("fs")
 
-export async function generateTimetables(selected: string[], freeDays: boolean[], freeLessons: boolean[]) {
+export async function generateTimetables(selected: CourseType[], freeDays: boolean[], freeLessons: boolean[]) {
   try {
     const path = "./app/data.json"
     const jsonString = await readFileSync(path)
@@ -14,9 +13,11 @@ export async function generateTimetables(selected: string[], freeDays: boolean[]
     const selectedCourses: any[] = []
 
     for (let i = 0; i < courses.length; i++) {
-      if (selected.includes(courses[i].code)) {
-        selectedCourses.push(courses[i])
-        if (selectedCourses.length == selected.length) break
+      for (let s = 0; i < selected.length; s++) {
+        if (selected[s].code == courses[i].code) {
+          selectedCourses.push(courses[i])
+          if (selectedCourses.length == selected.length) break
+        }
       }
     }
     if (selectedCourses.length != selected.length) throw "Incorrect course codes!"
@@ -34,21 +35,27 @@ export async function generateTimetables(selected: string[], freeDays: boolean[]
       const lectures = selectedCourses[i].lecture
       for (let i = 0; i < lectures.length; i++) {
         const weekday = lectures[i].weekday
+
+        const startTimePieces = lectures[i].startTime.split(":")
+        const startTime = startTimePieces[0] + ":" + startTimePieces[1]
+        const endTimePieces = lectures[i].endTime.split(":")
+        const endTime = endTimePieces[0] + ":" + endTimePieces[1]
+
         const lecture: LessonType = {
           name: selectedCourses[i].name,
-          startTime: lectures[i].startTime,
-          endTime: lectures[i].endTime,
+          startTime: startTime,
+          endTime: endTime,
           place: lectures[i].place,
           lecture: true,
           lecturer: null,
           group: null,
         }
         var timeframe = 0
-        if (lectures[i].startTime == "10:15") timeframe = 1
-        else if (lectures[i].startTime == "12:15") timeframe = 2
-        else if (lectures[i].startTime == "14:15") timeframe = 3
-        else if (lectures[i].startTime == "16:15") timeframe = 4
-        else if (lectures[i].startTime == "18:15") timeframe = 5
+        if (startTime == "10:15") timeframe = 1
+        else if (startTime == "12:15") timeframe = 2
+        else if (startTime == "14:15") timeframe = 3
+        else if (startTime == "16:15") timeframe = 4
+        else if (startTime == "18:15") timeframe = 5
 
         if (timetableConcrete[timeframe][weekday] == null) timetableConcrete[timeframe][weekday] = lecture
         else throw "error"
@@ -60,26 +67,29 @@ export async function generateTimetables(selected: string[], freeDays: boolean[]
         const group = groups[0].group
         const lecturer = groups[0].lecturer
         for (let j = 0; j < practicalSessions.length; j++) {
-          console.log("algus" + j)
           const weekday = practicalSessions[j].weekday
+
+          const startTimePieces = practicalSessions[j].startTime.split(":")
+          const startTime = startTimePieces[0] + ":" + startTimePieces[1]
+          const endTimePieces = practicalSessions[j].endTime.split(":")
+          const endTime = endTimePieces[0] + ":" + endTimePieces[1]
 
           const practicalSession: LessonType = {
             name: selectedCourses[i].name,
-            startTime: practicalSessions[j].startTime,
-            endTime: practicalSessions[j].endTime,
+            startTime: startTime,
+            endTime: endTime,
             place: practicalSessions[j].place,
             lecture: false,
             lecturer: lecturer,
             group: group,
           }
-          console.log(practicalSession)
           var timeframe = 0
-          if (practicalSessions[j].startTime == "10:15") timeframe = 1
-          else if (practicalSessions[j].startTime == "12:15") timeframe = 2
-          else if (practicalSessions[j].startTime == "14:15") timeframe = 3
-          else if (practicalSessions[j].startTime == "16:15") timeframe = 4
-          else if (practicalSessions[j].startTime == "18:15") timeframe = 5
-          console.log(timeframe)
+
+          if (startTime == "10:15") timeframe = 1
+          else if (startTime == "12:15") timeframe = 2
+          else if (startTime == "14:15") timeframe = 3
+          else if (startTime == "16:15") timeframe = 4
+          else if (startTime == "18:15") timeframe = 5
           if (timetableConcrete[timeframe][weekday] == null) {
             console.log("siin")
             timetableConcrete[timeframe][weekday] = practicalSession
