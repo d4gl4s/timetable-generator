@@ -9,9 +9,9 @@ export async function getCourseData(courseCode: string) {
   try {
     const pathDir = "./data.json"
 
-    const configDirectory = path.resolve(process.cwd(), "api")
-    console.log(process.cwd())
-    console.log(configDirectory)
+    const configDirectory = path.resolve(process.cwd())
+    /* console.log(process.cwd())
+    console.log(configDirectory) */
 
     const file = await readFileSync(path.join(configDirectory, "data.json"), "utf8")
 
@@ -19,8 +19,6 @@ export async function getCourseData(courseCode: string) {
 
     const jsonString = await readFileSync(file)
     const { courses } = JSON.parse(jsonString)
-
-    const selectedCourses: any[] = []
 
     for (let i = 0; i < courses.length; i++) {
       if (courses[i].code == courseCode) {
