@@ -28,7 +28,6 @@ def lisaPikkTund(aeg1, aeg2, tabel, ajavahemikud, tund):
     kõikLisatud = True
     for kordus in range(int(kordusi)):
         keskmine = (algusaeg+algusaeg+2)/2
-        print(keskmine)
         algusaeg += 2
         lisatud = lisaTund(tabel, keskmine, ajavahemikud, tund)
         if not lisatud:
@@ -43,10 +42,9 @@ firstPart = "https://ois2.ut.ee/api/timetable/courses/"
 with open(os.path.join(sys.path[0], "links.txt"), "r") as f:
     read = f.read().splitlines()
 
-ained = {}
+ained = {"courses":[]}
 for rida in read:
     url = firstPart+rida
-    #print(url)
     response = urlopen(url)
     data_json = json.loads(response.read())
     if not 'info' in data_json:
@@ -54,22 +52,39 @@ for rida in read:
     if not 'events' in data_json:
         continue
 
+    aine = {}
+    ainekood = data_json['info']['course_code']
+    nimi = data_json['info']['title']['en']
+    eap = data_json['info']['credits']
+    aine["name"] = nimi
+    aine["code"] = code = ainekood
+    aine["eap"] = eap
+    aine["lecture"] = []
+    aine["groups"] = []
+
     groups = {}
     if 'groups' in data_json:
         for group in data_json['groups']:
             groups[group] = data_json['groups'][group]
-    ainekood = data_json['info']['course_code']
-    aine = [ainekood, data_json['info']['title']['et'], data_json['info']['credits']]
     for event in data_json['events']:
-        tund = []
         note = ""
         if ("-" in event['time']['academic_weeks'] or event['time']['academic_weeks'].count(",")>3) and event['event_type']['code'] == "lecture" and (event['study_work_type']["code"]=="practice" or event['study_work_type']["code"]=="lecture" or event['study_work_type']["code"]=="seminar"):
-            tund.extend((event['study_work_type']["code"], event['time']['weekday']["code"], event['time']['begin_time'], event['time']['end_time']))
+            asukoht = None
+            tyyp = event['study_work_type']["code"]
+            nadalapaev = event['time']['weekday']["code"]
+            algusaeg = event['time']['begin_time']
+            loppaeg = event['time']['end_time']
+            if 'address' in event['location']:
+                asukoht = event['location']['address']
+            
+            ytund = {}
+
+
             for n in event['notes']:
                 note = event['notes'][n]
             if 'group_uuids' in event:
                 for n in event['group_uuids']:
-                    tund.append(groups[n])
+                    juhendaja = groups[n]
         if len(tund) > 0 and len(note) < 30:
             aine.append(tund)
 
@@ -78,10 +93,12 @@ for rida in read:
 
 
 with open(os.path.join(sys.path[0], "data.json"), "w", encoding='utf-8') as outfile:
-    json.dump(ained, outfile)
+    json.dump(ained, outfile) 
 
 
-""" tabel = []
+'''
+
+tabel = []
 for i in range(6):
     tabel.append([0,0,0,0,0])
 
@@ -112,16 +129,17 @@ for s in sor:
                 del(s[indx])
                 indx -=1
         indx+=1
-
-print(sor)
+print(tabel)
 
 def rek(ained, indeks, tabel, ajavahemikud):
+    print(ained[indeks])
     if indeks == len(ained):
         for t in tabel:
             print(t)
         print("\n")
-    elif len(ained[indeks]>3):
-        for tund in ained[indeks]:
+    elif len(ained[indeks])>3:
+        for tIndeks in range(3, len(ained[indeks])):
+            tund = ained[indeks][tIndeks]
             print(tund)
             aeg1 = int(tund[3].split(":")[0])
             aeg2 = int(tund[4].split(":")[0])
@@ -134,56 +152,71 @@ def rek(ained, indeks, tabel, ajavahemikud):
                 lisatud = lisaTund(tabel, keskmine, uusTabel, tund)
             if lisatud:
                 rek(ained, indeks+1, uusTabel, ajavahemikud)
+    else:
+        rek(ained, indeks+1, tabel, ajavahemikud)
+
+
+
+#rek(sor, 0,tabel,ajavahemikud)
+ 
 
 
 
 
-rek(sor, 0,tabel,ajavahemikud)
 
 
 
 
-
-
-
- """
-"""
 chromiumdriver = ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
 driver = webdriver.Chrome(service=Service(chromiumdriver))
 driver.get('https://ois2.ut.ee/#/courses')
 
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div[id='mat-select-value-1']"))).click()
+sleep(1)
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "mat-option[title='2023/2024']"))).click()
+sleep(1)
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button[class='mat-focus-indicator full-width mb-2 mat-stroked-button mat-button-base mat-primary ng-star-inserted']"))).click()
-button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "#mat-select-value-3"))).click()
-button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "mat-option[title='arvutiteaduse instituut (LTAT)']"))).click()
+sleep(1)
+
+#button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "#mat-select-value-3"))).click()
+#button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "mat-option[title='arvutiteaduse instituut (LTAT)']"))).click()
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "mat-select#mat-select-10"))).click()
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "mat-option[title='sügis']"))).click()
+
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "mat-select#mat-select-14"))).click()
+sleep(1)
 astmed = WebDriverWait(driver, 3).until(lambda d: d.find_elements(By.CSS_SELECTOR,".mat-option-text"))
 for i in astmed:
     if i.text == " bakalaureuseõpe ":
         i.click()
-sleep(2)
+sleep(1)
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div[class='cdk-overlay-container ois2-overlay-container']"))).click()
-sleep(2)
+sleep(1)
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button[class='mat-focus-indicator mat-raised-button mat-button-base mat-primary'"))).click()
 ained = WebDriverWait(driver, 3).until(lambda d: d.find_elements(By.CSS_SELECTOR,"div[class='col-12 col-xl-6 mt-3 ng-star-inserted']"))
-eelmine = 0
-for i in range(10):
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    sleep(0.2)
+eelmine = 0 
+sleep(1)
+lingid = set()
+for i in range(100):
+    try:
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        ained = driver.find_elements(By.CSS_SELECTOR, "div[class='col-12 col-xl-6 mt-3 ng-star-inserted']")
+        for aine in ained:
+            try:
+                a = aine.find_element(By.CSS_SELECTOR, "a")
+                lingid.add(a.get_attribute('href'))
+            except:
+                pass
+    except:
+        with open(os.path.join(sys.path[0], "links1.txt"), "w") as w:
+            for link in lingid:
+                try:
+                    lahku = link.split("/")
+                    w.write(lahku[-1]+"\n")
+                except:
+                    pass
+        break
 
-ained = driver.find_elements(By.CSS_SELECTOR, "div[class='col-12 col-xl-6 mt-3 ng-star-inserted']")
-lingid = []
-for aine in ained:
-    a = aine.find_element(By.CSS_SELECTOR, "a")
-    lingid.append(a.get_attribute('href'))
-
-for link in lingid:
-    lahku = link.split("/")
-    print(lahku[-1])
-------------------------------------------------------------------------------
 registerbtns = driver.find_elements(By.CSS_SELECTOR, ".mat-slide-toggle-bar")
 registerbtns[0].click()
 moodulid = driver.find_elements(By.CSS_SELECTOR, "mat-expansion-panel")
@@ -234,4 +267,4 @@ for r in registerbtns:
         break
 print(datetime.now())
 print(a2)
-sleep(100) """
+sleep(100) '''
