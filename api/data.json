@@ -145,12 +145,7 @@
             "groups": [
                 {
                     "group": "1.r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "d2b7f4fc-d153-256e-0899-07cb67dffee8",
-                        "person_name": "Kristi Vaher",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -400,12 +395,7 @@
             "groups": [
                 {
                     "group": "T1",
-                    "lecturer": {
-                        "person_uuid": "dce387f3-b10e-e26e-84a2-462b8cb848ca",
-                        "person_name": "Artur Eksi",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -417,12 +407,7 @@
                 },
                 {
                     "group": "T3",
-                    "lecturer": {
-                        "person_uuid": "dce387f3-b10e-e26e-84a2-462b8cb848ca",
-                        "person_name": "Artur Eksi",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -434,12 +419,7 @@
                 },
                 {
                     "group": "K3",
-                    "lecturer": {
-                        "person_uuid": "dce387f3-b10e-e26e-84a2-462b8cb848ca",
-                        "person_name": "Artur Eksi",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -451,12 +431,7 @@
                 },
                 {
                     "group": "N1",
-                    "lecturer": {
-                        "person_uuid": "dce387f3-b10e-e26e-84a2-462b8cb848ca",
-                        "person_name": "Artur Eksi",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -468,12 +443,7 @@
                 },
                 {
                     "group": "N3",
-                    "lecturer": {
-                        "person_uuid": "dce387f3-b10e-e26e-84a2-462b8cb848ca",
-                        "person_name": "Artur Eksi",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -485,12 +455,7 @@
                 },
                 {
                     "group": "R1",
-                    "lecturer": {
-                        "person_uuid": "dce387f3-b10e-e26e-84a2-462b8cb848ca",
-                        "person_name": "Artur Eksi",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -502,12 +467,7 @@
                 },
                 {
                     "group": "R3",
-                    "lecturer": {
-                        "person_uuid": "dce387f3-b10e-e26e-84a2-462b8cb848ca",
-                        "person_name": "Artur Eksi",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -677,7 +637,7 @@
                 },
                 {
                     "group": null,
-                    "lecturer": "Anton Mastitski",
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -951,7 +911,7 @@
                 },
                 {
                     "group": "stat (SAS)",
-                    "lecturer": "Anne Selart",
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -1282,12 +1242,7 @@
             "groups": [
                 {
                     "group": "1. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "1a4e5c28-123d-a65a-07ee-efd971e182aa",
-                        "person_name": "Mark Fi\u0161el",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -1299,12 +1254,7 @@
                 },
                 {
                     "group": "2. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "1a4e5c28-123d-a65a-07ee-efd971e182aa",
-                        "person_name": "Mark Fi\u0161el",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -1316,12 +1266,7 @@
                 },
                 {
                     "group": "3. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "1a4e5c28-123d-a65a-07ee-efd971e182aa",
-                        "person_name": "Mark Fi\u0161el",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -1333,12 +1278,7 @@
                 },
                 {
                     "group": "4. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "1a4e5c28-123d-a65a-07ee-efd971e182aa",
-                        "person_name": "Mark Fi\u0161el",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -1350,12 +1290,7 @@
                 },
                 {
                     "group": "6. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "1a4e5c28-123d-a65a-07ee-efd971e182aa",
-                        "person_name": "Mark Fi\u0161el",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -1367,12 +1302,7 @@
                 },
                 {
                     "group": "5. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "1a4e5c28-123d-a65a-07ee-efd971e182aa",
-                        "person_name": "Mark Fi\u0161el",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -1392,12 +1322,7 @@
             "groups": [
                 {
                     "group": "Inf_01",
-                    "lecturer": {
-                        "person_uuid": "de2dfcd7-0478-2113-6ecb-94344e43fde3",
-                        "person_name": "Liyanage Don Mohan Devapriya Liyanage",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -1409,12 +1334,7 @@
                 },
                 {
                     "group": "AT_01",
-                    "lecturer": {
-                        "person_uuid": "de2dfcd7-0478-2113-6ecb-94344e43fde3",
-                        "person_name": "Liyanage Don Mohan Devapriya Liyanage",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -1426,12 +1346,7 @@
                 },
                 {
                     "group": "AT_02",
-                    "lecturer": {
-                        "person_uuid": "de2dfcd7-0478-2113-6ecb-94344e43fde3",
-                        "person_name": "Liyanage Don Mohan Devapriya Liyanage",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -1443,12 +1358,7 @@
                 },
                 {
                     "group": "Inf_02",
-                    "lecturer": {
-                        "person_uuid": "de2dfcd7-0478-2113-6ecb-94344e43fde3",
-                        "person_name": "Liyanage Don Mohan Devapriya Liyanage",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -1460,12 +1370,7 @@
                 },
                 {
                     "group": "Inf_03",
-                    "lecturer": {
-                        "person_uuid": "de2dfcd7-0478-2113-6ecb-94344e43fde3",
-                        "person_name": "Liyanage Don Mohan Devapriya Liyanage",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -1477,12 +1382,7 @@
                 },
                 {
                     "group": "Inf_04",
-                    "lecturer": {
-                        "person_uuid": "de2dfcd7-0478-2113-6ecb-94344e43fde3",
-                        "person_name": "Liyanage Don Mohan Devapriya Liyanage",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -1529,12 +1429,7 @@
             "groups": [
                 {
                     "group": "1. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "4fd6d160-4eb8-a3a0-ba93-86e52197edbf",
-                        "person_name": "Raul Toomla",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -1546,12 +1441,7 @@
                 },
                 {
                     "group": "3. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "4fd6d160-4eb8-a3a0-ba93-86e52197edbf",
-                        "person_name": "Raul Toomla",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -1563,12 +1453,7 @@
                 },
                 {
                     "group": "2. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "4fd6d160-4eb8-a3a0-ba93-86e52197edbf",
-                        "person_name": "Raul Toomla",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -1580,12 +1465,7 @@
                 },
                 {
                     "group": "4. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "4fd6d160-4eb8-a3a0-ba93-86e52197edbf",
-                        "person_name": "Raul Toomla",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -1932,12 +1812,7 @@
             "groups": [
                 {
                     "group": "ST1",
-                    "lecturer": {
-                        "person_uuid": "18078f79-7e5a-9430-cd3c-08454d85a5cb",
-                        "person_name": "Renno Raudm\u00e4e",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -1949,12 +1824,7 @@
                 },
                 {
                     "group": "ST2",
-                    "lecturer": {
-                        "person_uuid": "18078f79-7e5a-9430-cd3c-08454d85a5cb",
-                        "person_name": "Renno Raudm\u00e4e",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -3767,12 +3637,7 @@
             "groups": [
                 {
                     "group": "2. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "95d2451d-8d72-1a96-3fce-894b3bee59f2",
-                        "person_name": "Karl Kevin Ruul",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -3784,12 +3649,7 @@
                 },
                 {
                     "group": "1. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "95d2451d-8d72-1a96-3fce-894b3bee59f2",
-                        "person_name": "Karl Kevin Ruul",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -3801,12 +3661,7 @@
                 },
                 {
                     "group": "3. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "95d2451d-8d72-1a96-3fce-894b3bee59f2",
-                        "person_name": "Karl Kevin Ruul",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -3818,12 +3673,7 @@
                 },
                 {
                     "group": "5. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "95d2451d-8d72-1a96-3fce-894b3bee59f2",
-                        "person_name": "Karl Kevin Ruul",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -3835,12 +3685,7 @@
                 },
                 {
                     "group": "6. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "95d2451d-8d72-1a96-3fce-894b3bee59f2",
-                        "person_name": "Karl Kevin Ruul",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -3852,12 +3697,7 @@
                 },
                 {
                     "group": "4. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "95d2451d-8d72-1a96-3fce-894b3bee59f2",
-                        "person_name": "Karl Kevin Ruul",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -3869,12 +3709,7 @@
                 },
                 {
                     "group": "9. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "95d2451d-8d72-1a96-3fce-894b3bee59f2",
-                        "person_name": "Karl Kevin Ruul",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -3886,12 +3721,7 @@
                 },
                 {
                     "group": "8. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "95d2451d-8d72-1a96-3fce-894b3bee59f2",
-                        "person_name": "Karl Kevin Ruul",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -3903,12 +3733,7 @@
                 },
                 {
                     "group": "7. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "95d2451d-8d72-1a96-3fce-894b3bee59f2",
-                        "person_name": "Karl Kevin Ruul",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -3920,12 +3745,7 @@
                 },
                 {
                     "group": "10. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "95d2451d-8d72-1a96-3fce-894b3bee59f2",
-                        "person_name": "Karl Kevin Ruul",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -3937,12 +3757,7 @@
                 },
                 {
                     "group": "11. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "95d2451d-8d72-1a96-3fce-894b3bee59f2",
-                        "person_name": "Karl Kevin Ruul",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -4320,12 +4135,7 @@
             "groups": [
                 {
                     "group": null,
-                    "lecturer": {
-                        "person_uuid": "96e311b6-7711-238e-8aeb-066721bec132",
-                        "person_name": "Iryna Barba",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -4725,12 +4535,7 @@
             "groups": [
                 {
                     "group": "1. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "9f5e762a-476e-e44b-1ec9-f55140eabe59",
-                        "person_name": "Mall Eltermaa",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -4742,12 +4547,7 @@
                 },
                 {
                     "group": "2. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "9f5e762a-476e-e44b-1ec9-f55140eabe59",
-                        "person_name": "Mall Eltermaa",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -5354,12 +5154,7 @@
             "groups": [
                 {
                     "group": "Group 1 - ITM_01 + BBA",
-                    "lecturer": {
-                        "person_uuid": "efcc9098-02b0-a133-9141-173672b6ee60",
-                        "person_name": "Kristiina Keps",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -5371,12 +5166,7 @@
                 },
                 {
                     "group": "Group 2 - ITM_02 + BBA",
-                    "lecturer": {
-                        "person_uuid": "efcc9098-02b0-a133-9141-173672b6ee60",
-                        "person_name": "Kristiina Keps",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -5388,12 +5178,7 @@
                 },
                 {
                     "group": "Group 3 - ITM_03 + BBA",
-                    "lecturer": {
-                        "person_uuid": "efcc9098-02b0-a133-9141-173672b6ee60",
-                        "person_name": "Kristiina Keps",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -5405,12 +5190,7 @@
                 },
                 {
                     "group": "Group 6 - Science and Technology_01",
-                    "lecturer": {
-                        "person_uuid": "efcc9098-02b0-a133-9141-173672b6ee60",
-                        "person_name": "Kristiina Keps",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -5422,12 +5202,7 @@
                 },
                 {
                     "group": "Group 7 - Science and Technology_02",
-                    "lecturer": {
-                        "person_uuid": "efcc9098-02b0-a133-9141-173672b6ee60",
-                        "person_name": "Kristiina Keps",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -5439,12 +5214,7 @@
                 },
                 {
                     "group": "Group 8 - Science and Technology_03 + Others",
-                    "lecturer": {
-                        "person_uuid": "efcc9098-02b0-a133-9141-173672b6ee60",
-                        "person_name": "Kristiina Keps",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -5456,12 +5226,7 @@
                 },
                 {
                     "group": "Group 4 - Quantitative Economics",
-                    "lecturer": {
-                        "person_uuid": "efcc9098-02b0-a133-9141-173672b6ee60",
-                        "person_name": "Kristiina Keps",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -5473,12 +5238,7 @@
                 },
                 {
                     "group": "Group 5 - Geoinformatics + Others",
-                    "lecturer": {
-                        "person_uuid": "efcc9098-02b0-a133-9141-173672b6ee60",
-                        "person_name": "Kristiina Keps",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -5490,12 +5250,7 @@
                 },
                 {
                     "group": "Group 11 - others",
-                    "lecturer": {
-                        "person_uuid": "efcc9098-02b0-a133-9141-173672b6ee60",
-                        "person_name": "Kristiina Keps",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -5507,12 +5262,7 @@
                 },
                 {
                     "group": "Group 10 - ITLaw_02 + Others",
-                    "lecturer": {
-                        "person_uuid": "efcc9098-02b0-a133-9141-173672b6ee60",
-                        "person_name": "Kristiina Keps",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -5524,12 +5274,7 @@
                 },
                 {
                     "group": "Group 9 - ITLaw_01",
-                    "lecturer": {
-                        "person_uuid": "efcc9098-02b0-a133-9141-173672b6ee60",
-                        "person_name": "Kristiina Keps",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -6032,12 +5777,7 @@
             "groups": [
                 {
                     "group": null,
-                    "lecturer": {
-                        "person_uuid": "44cd8ad9-2454-b8e3-b6fb-12b177e34f3d",
-                        "person_name": "Martin Maidla",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -6162,7 +5902,7 @@
                 },
                 {
                     "group": "2. r\u00fchm",
-                    "lecturer": "Vambola Leping",
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -6702,12 +6442,7 @@
             "groups": [
                 {
                     "group": null,
-                    "lecturer": {
-                        "person_uuid": "0aace473-995f-d872-dad9-03f5ea8a8009",
-                        "person_name": "Jarek M\u00e4estu",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -6845,12 +6580,7 @@
             "groups": [
                 {
                     "group": "Group 1",
-                    "lecturer": {
-                        "person_uuid": "e6330eb2-ab29-ef9b-712c-c3b2d2408bf5",
-                        "person_name": "Priit Paluoja",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -6862,12 +6592,7 @@
                 },
                 {
                     "group": "Group 2",
-                    "lecturer": {
-                        "person_uuid": "e6330eb2-ab29-ef9b-712c-c3b2d2408bf5",
-                        "person_name": "Priit Paluoja",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -6879,12 +6604,7 @@
                 },
                 {
                     "group": "Group 3",
-                    "lecturer": {
-                        "person_uuid": "e6330eb2-ab29-ef9b-712c-c3b2d2408bf5",
-                        "person_name": "Priit Paluoja",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -6896,12 +6616,7 @@
                 },
                 {
                     "group": "Group 4",
-                    "lecturer": {
-                        "person_uuid": "e6330eb2-ab29-ef9b-712c-c3b2d2408bf5",
-                        "person_name": "Priit Paluoja",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -7503,12 +7218,7 @@
             "groups": [
                 {
                     "group": "1. r\u00fchm e\u00f5pe+konsultatsioon",
-                    "lecturer": {
-                        "person_uuid": "84d33ff5-6687-487a-960f-8a080c385afb",
-                        "person_name": "Kristjan Laugesaar",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -7520,12 +7230,7 @@
                 },
                 {
                     "group": "2. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "84d33ff5-6687-487a-960f-8a080c385afb",
-                        "person_name": "Kristjan Laugesaar",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -7537,12 +7242,7 @@
                 },
                 {
                     "group": "3. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "84d33ff5-6687-487a-960f-8a080c385afb",
-                        "person_name": "Kristjan Laugesaar",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -8400,12 +8100,7 @@
             "groups": [
                 {
                     "group": "E3",
-                    "lecturer": {
-                        "person_uuid": "2b180a62-c7a8-4f4d-b433-1c4af323ae9c",
-                        "person_name": "Janno J\u00f5geva",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -8417,12 +8112,7 @@
                 },
                 {
                     "group": "T1",
-                    "lecturer": {
-                        "person_uuid": "2b180a62-c7a8-4f4d-b433-1c4af323ae9c",
-                        "person_name": "Janno J\u00f5geva",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -8434,12 +8124,7 @@
                 },
                 {
                     "group": "T2\u0394",
-                    "lecturer": {
-                        "person_uuid": "2b180a62-c7a8-4f4d-b433-1c4af323ae9c",
-                        "person_name": "Janno J\u00f5geva",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -8451,12 +8136,7 @@
                 },
                 {
                     "group": "T3",
-                    "lecturer": {
-                        "person_uuid": "2b180a62-c7a8-4f4d-b433-1c4af323ae9c",
-                        "person_name": "Janno J\u00f5geva",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -8468,12 +8148,7 @@
                 },
                 {
                     "group": "T3\u0394",
-                    "lecturer": {
-                        "person_uuid": "2b180a62-c7a8-4f4d-b433-1c4af323ae9c",
-                        "person_name": "Janno J\u00f5geva",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -8485,12 +8160,7 @@
                 },
                 {
                     "group": "K3",
-                    "lecturer": {
-                        "person_uuid": "2b180a62-c7a8-4f4d-b433-1c4af323ae9c",
-                        "person_name": "Janno J\u00f5geva",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -8502,12 +8172,7 @@
                 },
                 {
                     "group": "K3\u0394",
-                    "lecturer": {
-                        "person_uuid": "2b180a62-c7a8-4f4d-b433-1c4af323ae9c",
-                        "person_name": "Janno J\u00f5geva",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -8519,12 +8184,7 @@
                 },
                 {
                     "group": "N1\u0394",
-                    "lecturer": {
-                        "person_uuid": "2b180a62-c7a8-4f4d-b433-1c4af323ae9c",
-                        "person_name": "Janno J\u00f5geva",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -8536,12 +8196,7 @@
                 },
                 {
                     "group": "N1",
-                    "lecturer": {
-                        "person_uuid": "2b180a62-c7a8-4f4d-b433-1c4af323ae9c",
-                        "person_name": "Janno J\u00f5geva",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -8553,12 +8208,7 @@
                 },
                 {
                     "group": "N2",
-                    "lecturer": {
-                        "person_uuid": "2b180a62-c7a8-4f4d-b433-1c4af323ae9c",
-                        "person_name": "Janno J\u00f5geva",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -8570,12 +8220,7 @@
                 },
                 {
                     "group": "N3",
-                    "lecturer": {
-                        "person_uuid": "2b180a62-c7a8-4f4d-b433-1c4af323ae9c",
-                        "person_name": "Janno J\u00f5geva",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -8587,12 +8232,7 @@
                 },
                 {
                     "group": "R1",
-                    "lecturer": {
-                        "person_uuid": "2b180a62-c7a8-4f4d-b433-1c4af323ae9c",
-                        "person_name": "Janno J\u00f5geva",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -8604,12 +8244,7 @@
                 },
                 {
                     "group": null,
-                    "lecturer": {
-                        "person_uuid": "2b180a62-c7a8-4f4d-b433-1c4af323ae9c",
-                        "person_name": "Janno J\u00f5geva",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -9065,12 +8700,7 @@
             "groups": [
                 {
                     "group": "2",
-                    "lecturer": {
-                        "person_uuid": "3cc3e472-0c28-52da-f963-c4f3f6e5b614",
-                        "person_name": "Anneli Truup\u00f5ld",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -9082,12 +8712,7 @@
                 },
                 {
                     "group": "1",
-                    "lecturer": {
-                        "person_uuid": "3cc3e472-0c28-52da-f963-c4f3f6e5b614",
-                        "person_name": "Anneli Truup\u00f5ld",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -9728,12 +9353,7 @@
             "groups": [
                 {
                     "group": "Group 1",
-                    "lecturer": {
-                        "person_uuid": "7d2c3e81-2299-7ac9-7be9-db24f412ed64",
-                        "person_name": "Mohamad Gharib",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -9745,12 +9365,7 @@
                 },
                 {
                     "group": "Group 2",
-                    "lecturer": {
-                        "person_uuid": "7d2c3e81-2299-7ac9-7be9-db24f412ed64",
-                        "person_name": "Mohamad Gharib",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -9762,12 +9377,7 @@
                 },
                 {
                     "group": "Group 3",
-                    "lecturer": {
-                        "person_uuid": "7d2c3e81-2299-7ac9-7be9-db24f412ed64",
-                        "person_name": "Mohamad Gharib",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -9779,12 +9389,7 @@
                 },
                 {
                     "group": "Group 5",
-                    "lecturer": {
-                        "person_uuid": "7d2c3e81-2299-7ac9-7be9-db24f412ed64",
-                        "person_name": "Mohamad Gharib",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -9796,12 +9401,7 @@
                 },
                 {
                     "group": "Group 4",
-                    "lecturer": {
-                        "person_uuid": "7d2c3e81-2299-7ac9-7be9-db24f412ed64",
-                        "person_name": "Mohamad Gharib",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -9813,12 +9413,7 @@
                 },
                 {
                     "group": "Group 7",
-                    "lecturer": {
-                        "person_uuid": "7d2c3e81-2299-7ac9-7be9-db24f412ed64",
-                        "person_name": "Mohamad Gharib",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -9830,12 +9425,7 @@
                 },
                 {
                     "group": "Group 6",
-                    "lecturer": {
-                        "person_uuid": "7d2c3e81-2299-7ac9-7be9-db24f412ed64",
-                        "person_name": "Mohamad Gharib",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -10205,12 +9795,7 @@
             "groups": [
                 {
                     "group": "2. r\u00fchm (HT koolieel., jt.)",
-                    "lecturer": {
-                        "person_uuid": "6500a4d7-419f-77a8-df29-9c92a448b7c4",
-                        "person_name": "Kaisa Hunt",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -10222,12 +9807,7 @@
                 },
                 {
                     "group": "3. r\u00fchm (HT klassi\u00f5p., jt.)",
-                    "lecturer": {
-                        "person_uuid": "6500a4d7-419f-77a8-df29-9c92a448b7c4",
-                        "person_name": "Kaisa Hunt",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -10239,12 +9819,7 @@
                 },
                 {
                     "group": "1. r\u00fchm (Eripedagoogid)",
-                    "lecturer": {
-                        "person_uuid": "6500a4d7-419f-77a8-df29-9c92a448b7c4",
-                        "person_name": "Kaisa Hunt",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -10377,12 +9952,7 @@
             "groups": [
                 {
                     "group": "1. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "1c68e743-3cb1-df4e-b06c-ffd578d0aa63",
-                        "person_name": "Karl Marti Toots",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -10394,12 +9964,7 @@
                 },
                 {
                     "group": "2. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "1c68e743-3cb1-df4e-b06c-ffd578d0aa63",
-                        "person_name": "Karl Marti Toots",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -10433,12 +9998,7 @@
             "groups": [
                 {
                     "group": null,
-                    "lecturer": {
-                        "person_uuid": "174b68ea-5859-bc6e-c6fd-4080f45c0e80",
-                        "person_name": "Kr\u00f5\u00f5t Kaljusto-Munck",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -10492,12 +10052,7 @@
             "groups": [
                 {
                     "group": "Teisip\u00e4ev",
-                    "lecturer": {
-                        "person_uuid": "0dc8623a-08f5-e6e4-ff68-e4722e48969e",
-                        "person_name": "Marta-Lisette Pikma",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -10509,12 +10064,7 @@
                 },
                 {
                     "group": "Kolmap\u00e4ev",
-                    "lecturer": {
-                        "person_uuid": "0dc8623a-08f5-e6e4-ff68-e4722e48969e",
-                        "person_name": "Marta-Lisette Pikma",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -10526,12 +10076,7 @@
                 },
                 {
                     "group": "Reede",
-                    "lecturer": {
-                        "person_uuid": "0dc8623a-08f5-e6e4-ff68-e4722e48969e",
-                        "person_name": "Marta-Lisette Pikma",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -10732,12 +10277,7 @@
             "groups": [
                 {
                     "group": "Inf_01",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -10755,12 +10295,7 @@
                 },
                 {
                     "group": "Inf_03",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -10772,12 +10307,7 @@
                 },
                 {
                     "group": "Inf_02",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -10789,12 +10319,7 @@
                 },
                 {
                     "group": "Inf_11",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -10806,12 +10331,7 @@
                 },
                 {
                     "group": "Inf_04",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -10829,12 +10349,7 @@
                 },
                 {
                     "group": "Inf_05",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -10846,12 +10361,7 @@
                 },
                 {
                     "group": "Mat-stat",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -10863,12 +10373,7 @@
                 },
                 {
                     "group": "Inf_13",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -10886,12 +10391,7 @@
                 },
                 {
                     "group": "Inf_06",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -10903,12 +10403,7 @@
                 },
                 {
                     "group": "Inf_07",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -10920,12 +10415,7 @@
                 },
                 {
                     "group": "Inf_08",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -10943,12 +10433,7 @@
                 },
                 {
                     "group": "Inf_09",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -10966,12 +10451,7 @@
                 },
                 {
                     "group": "Inf_10",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -10983,12 +10463,7 @@
                 },
                 {
                     "group": "Inf_12",
-                    "lecturer": {
-                        "person_uuid": "0c29c007-ab98-edc4-2ba3-cd9005a96dc2",
-                        "person_name": "Mart-Mihkel Aun",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -11360,12 +10835,7 @@
             "groups": [
                 {
                     "group": "AT1",
-                    "lecturer": {
-                        "person_uuid": "ebaf98a4-7599-9029-1e05-178d317fbc99",
-                        "person_name": "Kaarel Rhede",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -11377,12 +10847,7 @@
                 },
                 {
                     "group": "AT2",
-                    "lecturer": {
-                        "person_uuid": "ebaf98a4-7599-9029-1e05-178d317fbc99",
-                        "person_name": "Kaarel Rhede",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -11394,12 +10859,7 @@
                 },
                 {
                     "group": "AT3",
-                    "lecturer": {
-                        "person_uuid": "ebaf98a4-7599-9029-1e05-178d317fbc99",
-                        "person_name": "Kaarel Rhede",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -11411,12 +10871,7 @@
                 },
                 {
                     "group": "AT4",
-                    "lecturer": {
-                        "person_uuid": "ebaf98a4-7599-9029-1e05-178d317fbc99",
-                        "person_name": "Kaarel Rhede",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -12478,12 +11933,7 @@
             "groups": [
                 {
                     "group": "1. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "ee5cd8f7-7d17-814e-9a6a-8276ea195826",
-                        "person_name": "Ants Tull",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -12501,12 +11951,7 @@
                 },
                 {
                     "group": "2. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "ee5cd8f7-7d17-814e-9a6a-8276ea195826",
-                        "person_name": "Ants Tull",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -13208,12 +12653,7 @@
             "groups": [
                 {
                     "group": "AT1",
-                    "lecturer": {
-                        "person_uuid": "f57ffe3b-1431-96c9-8615-a890bb52745f",
-                        "person_name": "Sten Salumets",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -13225,12 +12665,7 @@
                 },
                 {
                     "group": "AT2",
-                    "lecturer": {
-                        "person_uuid": "f57ffe3b-1431-96c9-8615-a890bb52745f",
-                        "person_name": "Sten Salumets",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -13242,12 +12677,7 @@
                 },
                 {
                     "group": "AT3",
-                    "lecturer": {
-                        "person_uuid": "f57ffe3b-1431-96c9-8615-a890bb52745f",
-                        "person_name": "Sten Salumets",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -13259,12 +12689,7 @@
                 },
                 {
                     "group": "AT4",
-                    "lecturer": {
-                        "person_uuid": "f57ffe3b-1431-96c9-8615-a890bb52745f",
-                        "person_name": "Sten Salumets",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -13276,12 +12701,7 @@
                 },
                 {
                     "group": "AT5",
-                    "lecturer": {
-                        "person_uuid": "f57ffe3b-1431-96c9-8615-a890bb52745f",
-                        "person_name": "Sten Salumets",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -13356,12 +12776,7 @@
             "groups": [
                 {
                     "group": "Group 1",
-                    "lecturer": {
-                        "person_uuid": "75a0f32c-2615-fa45-49af-4dc4aa7e7608",
-                        "person_name": "Maria Khan",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -13373,12 +12788,7 @@
                 },
                 {
                     "group": "Group 2",
-                    "lecturer": {
-                        "person_uuid": "75a0f32c-2615-fa45-49af-4dc4aa7e7608",
-                        "person_name": "Maria Khan",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -13390,12 +12800,7 @@
                 },
                 {
                     "group": "Group 3",
-                    "lecturer": {
-                        "person_uuid": "75a0f32c-2615-fa45-49af-4dc4aa7e7608",
-                        "person_name": "Maria Khan",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -13407,12 +12812,7 @@
                 },
                 {
                     "group": "Group 4",
-                    "lecturer": {
-                        "person_uuid": "75a0f32c-2615-fa45-49af-4dc4aa7e7608",
-                        "person_name": "Maria Khan",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -13424,12 +12824,7 @@
                 },
                 {
                     "group": "Group 6",
-                    "lecturer": {
-                        "person_uuid": "75a0f32c-2615-fa45-49af-4dc4aa7e7608",
-                        "person_name": "Maria Khan",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -13441,12 +12836,7 @@
                 },
                 {
                     "group": "Group 5",
-                    "lecturer": {
-                        "person_uuid": "75a0f32c-2615-fa45-49af-4dc4aa7e7608",
-                        "person_name": "Maria Khan",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -13458,12 +12848,7 @@
                 },
                 {
                     "group": "Group 7",
-                    "lecturer": {
-                        "person_uuid": "75a0f32c-2615-fa45-49af-4dc4aa7e7608",
-                        "person_name": "Maria Khan",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -13475,12 +12860,7 @@
                 },
                 {
                     "group": "Group 8",
-                    "lecturer": {
-                        "person_uuid": "75a0f32c-2615-fa45-49af-4dc4aa7e7608",
-                        "person_name": "Maria Khan",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -13492,12 +12872,7 @@
                 },
                 {
                     "group": "Group 10",
-                    "lecturer": {
-                        "person_uuid": "75a0f32c-2615-fa45-49af-4dc4aa7e7608",
-                        "person_name": "Maria Khan",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -13509,12 +12884,7 @@
                 },
                 {
                     "group": "Group 9",
-                    "lecturer": {
-                        "person_uuid": "75a0f32c-2615-fa45-49af-4dc4aa7e7608",
-                        "person_name": "Maria Khan",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -13526,12 +12896,7 @@
                 },
                 {
                     "group": "Group 11",
-                    "lecturer": {
-                        "person_uuid": "75a0f32c-2615-fa45-49af-4dc4aa7e7608",
-                        "person_name": "Maria Khan",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -13543,12 +12908,7 @@
                 },
                 {
                     "group": "Group 12",
-                    "lecturer": {
-                        "person_uuid": "75a0f32c-2615-fa45-49af-4dc4aa7e7608",
-                        "person_name": "Maria Khan",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -15816,12 +15176,7 @@
             "groups": [
                 {
                     "group": "1. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "0dda498a-2213-de78-48d5-cb1750197cfc",
-                        "person_name": "Gristin Rohula-Okunev",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -15839,12 +15194,7 @@
                 },
                 {
                     "group": "2. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "0dda498a-2213-de78-48d5-cb1750197cfc",
-                        "person_name": "Gristin Rohula-Okunev",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -15862,12 +15212,7 @@
                 },
                 {
                     "group": "3. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "0dda498a-2213-de78-48d5-cb1750197cfc",
-                        "person_name": "Gristin Rohula-Okunev",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -15928,12 +15273,7 @@
             "groups": [
                 {
                     "group": null,
-                    "lecturer": {
-                        "person_uuid": "7163c3ac-0e23-49fc-b754-02986588b67b",
-                        "person_name": "Liina Juuse",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -16104,7 +15444,7 @@
                 },
                 {
                     "group": "3. r\u00fchm",
-                    "lecturer": "Vambola Leping",
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -17697,12 +17037,7 @@
             "groups": [
                 {
                     "group": null,
-                    "lecturer": {
-                        "person_uuid": "547ed001-4da6-c24c-d117-88a5e4b2ad56",
-                        "person_name": "Shan Wu",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -19069,12 +18404,7 @@
             "groups": [
                 {
                     "group": "ST_1",
-                    "lecturer": {
-                        "person_uuid": "561d45df-425c-3882-6cc7-beb8c515fe00",
-                        "person_name": "Nasir Sohail",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -19787,12 +19117,7 @@
             "groups": [
                 {
                     "group": "LTMS.TK.027 (1.-5. n\u00e4d)",
-                    "lecturer": {
-                        "person_uuid": "a72bc258-f710-ebe4-c646-cd1da862fb0b",
-                        "person_name": "Mare V\u00e4hi",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -19810,12 +19135,7 @@
                 },
                 {
                     "group": "1. r\u00fchm (1.-5. n\u00e4d)",
-                    "lecturer": {
-                        "person_uuid": "a72bc258-f710-ebe4-c646-cd1da862fb0b",
-                        "person_name": "Mare V\u00e4hi",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -19833,12 +19153,7 @@
                 },
                 {
                     "group": "2. r\u00fchm (9.-13. n\u00e4d)",
-                    "lecturer": {
-                        "person_uuid": "a72bc258-f710-ebe4-c646-cd1da862fb0b",
-                        "person_name": "Mare V\u00e4hi",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -20150,7 +19465,7 @@
                 },
                 {
                     "group": null,
-                    "lecturer": "Andra Annuka-Loik",
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -20281,12 +19596,7 @@
             "groups": [
                 {
                     "group": "Inf_02 (2. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -20298,12 +19608,7 @@
                 },
                 {
                     "group": "Inf_01 (1. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -20315,12 +19620,7 @@
                 },
                 {
                     "group": "Inf_03 (1. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -20332,12 +19632,7 @@
                 },
                 {
                     "group": "Inf_04  (2. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -20349,12 +19644,7 @@
                 },
                 {
                     "group": "Inf_05 (1. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -20366,12 +19656,7 @@
                 },
                 {
                     "group": "Inf_06 (2. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "1",
@@ -20383,12 +19668,7 @@
                 },
                 {
                     "group": "Inf_07 (2. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -20400,12 +19680,7 @@
                 },
                 {
                     "group": "Inf_08 (2. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -20417,12 +19692,7 @@
                 },
                 {
                     "group": "AT_01",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -20434,12 +19704,7 @@
                 },
                 {
                     "group": "Inf_09 (1. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -20451,12 +19716,7 @@
                 },
                 {
                     "group": "Inf_10 (1. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -20468,12 +19728,7 @@
                 },
                 {
                     "group": "AT_02",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -20485,12 +19740,7 @@
                 },
                 {
                     "group": "Inf_11 (1. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -20502,12 +19752,7 @@
                 },
                 {
                     "group": "Inf_12 (1. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -20519,12 +19764,7 @@
                 },
                 {
                     "group": "Inf_13  (2. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -20536,12 +19776,7 @@
                 },
                 {
                     "group": "Inf_14  (2. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -20553,12 +19788,7 @@
                 },
                 {
                     "group": "Inf_15 (2. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "4",
@@ -20570,12 +19800,7 @@
                 },
                 {
                     "group": "Inf_17 (1. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -20587,12 +19812,7 @@
                 },
                 {
                     "group": "Inf_16 (1. aasta)",
-                    "lecturer": {
-                        "person_uuid": "99705725-2d3a-e08b-c060-5fa239df64ea",
-                        "person_name": "Artjom Lind",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "5",
@@ -20626,12 +19846,7 @@
             "groups": [
                 {
                     "group": "1. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "02d9b177-9f31-645a-a211-92a86ebdf62f",
-                        "person_name": "Patrick Teppor",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -20643,12 +19858,7 @@
                 },
                 {
                     "group": "2. r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "02d9b177-9f31-645a-a211-92a86ebdf62f",
-                        "person_name": "Patrick Teppor",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -21753,12 +20963,7 @@
             "groups": [
                 {
                     "group": "FT - r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "3aac2c8d-32a0-82d9-674e-fb66b5d8595d",
-                        "person_name": "Raivo Puhke",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",
@@ -21770,12 +20975,7 @@
                 },
                 {
                     "group": "FT(liikumisn\u00f5ustaja) r\u00fchm",
-                    "lecturer": {
-                        "person_uuid": "3aac2c8d-32a0-82d9-674e-fb66b5d8595d",
-                        "person_name": "Raivo Puhke",
-                        "is_responsible": false,
-                        "is_teaching": false
-                    },
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "3",
@@ -21998,7 +21198,7 @@
                 },
                 {
                     "group": "1. r\u00fchm geenitehnoloogia",
-                    "lecturer": "Terje Raudsepp",
+                    "lecturer": null,
                     "practicalSessions": [
                         {
                             "weekday": "2",

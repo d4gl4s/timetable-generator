@@ -59,6 +59,7 @@ for rida in read:
                 for n in event['notes']:
                     note = event['notes'][n]
                 grupp = None
+                lecturer = None
                 if 'group_uuids' in event:
                     for n in event['group_uuids']:
                         grupp = groups[n]
