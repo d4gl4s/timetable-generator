@@ -14,7 +14,7 @@ import os
 import sys
 import copy
 
-def lisaTund(tabel, keskmine, ajavahemikud, tund):
+""" def lisaTund(tabel, keskmine, ajavahemikud, tund):
     for vahemik in ajavahemikud:
         if keskmine > vahemik[0] and keskmine < vahemik[1] and tabel[ajavahemikud[vahemik]][int(tund[2])-1]==0:
             tabel[ajavahemikud[vahemik]][int(tund[2])-1] = tund
@@ -91,6 +91,6 @@ def rek(ained, indeks, tabel, ajavahemikud):
     else:
         rek(ained, indeks+1, tabel, ajavahemikud)
 
-
+ """
 
 #rek(sor, 0,tabel,ajavahemikud)
