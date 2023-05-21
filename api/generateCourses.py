@@ -46,35 +46,75 @@ for rida in read:
         if ("-" in event['time']['academic_weeks'] or event['time']['academic_weeks'].count(",")>3) and event['event_type']['code'] == "lecture" and (event['study_work_type']["code"]=="practice" or event['study_work_type']["code"]=="lecture" or event['study_work_type']["code"]=="seminar"):
             asukoht = None
             tyyp = event['study_work_type']["code"]
-            nadalapaev = event['time']['weekday']["code"]
+            nadalapaev = int(event['time']['weekday']["code"])-1
             algusaeg = event['time']['begin_time']
             loppaeg = event['time']['end_time']
-            if 'address' in event['location']:
-                asukoht = event['location']['address']
-            
-            tund = {"weekday":nadalapaev, "startTime":algusaeg,"endTime":loppaeg,"place":asukoht}
-            if tyyp=="lecture":
-                aine["lecture"].append(tund)
-            else:
-                
-                for n in event['notes']:
-                    note = event['notes'][n]
-                grupp = None
-                lecturer = None
-                if 'group_uuids' in event:
-                    for n in event['group_uuids']:
-                        grupp = groups[n]
-                if 'lecturers' in event:
-                    lecturer = lecturers[event['lecturers'][0]['person_uuid']]
 
-                leidub = False
-                tund["type"] = tyyp
-                for group in aine['groups']:
-                    if group['group'] == grupp:
-                        group["practicalSessions"].append(tund)
-                        leidub = True
-                if(not leidub):
-                    aine['groups'].append({"group":grupp, "lecturer":lecturer, "practicalSessions":[tund]})
+
+            algusLahku = algusaeg.split(":")
+            loppLahku = loppaeg.split(":")
+            algus = int(algusLahku[0])
+            lopp = int(loppLahku[0])
+            kordaja = 1
+            if(lopp-algus>2):
+                kordaja = int((lopp-algus)/2)
+                for i in range(kordaja):
+                    if(i!=0):
+                        algusaeg = str(algus)+":00:00"
+                    loppaeg = str(algus+2)+":00:00"
+                    algus += 2
+                    if 'address' in event['location']:
+                        asukoht = event['location']['address']
+                    tund = {"weekday":nadalapaev, "startTime":algusaeg,"endTime":loppaeg,"place":asukoht}
+                    if tyyp=="lecture":
+                        aine["lecture"].append(tund)
+                    else:
+                        
+                        for n in event['notes']:
+                            note = event['notes'][n]
+                        grupp = None
+                        lecturer = None
+                        if 'group_uuids' in event:
+                            for n in event['group_uuids']:
+                                grupp = groups[n]
+                        if 'lecturers' in event:
+                            lecturer = lecturers[event['lecturers'][0]['person_uuid']]
+
+                        leidub = False
+                        tund["type"] = tyyp
+                        for group in aine['groups']:
+                            if group['group'] == grupp:
+                                group["practicalSessions"].append(tund)
+                                leidub = True
+                        if(not leidub):
+                            aine['groups'].append({"group":grupp, "lecturer":lecturer, "practicalSessions":[tund]})
+            else:
+                if 'address' in event['location']:
+                    asukoht = event['location']['address']
+                
+                tund = {"weekday":nadalapaev, "startTime":algusaeg,"endTime":loppaeg,"place":asukoht}
+                if tyyp=="lecture":
+                    aine["lecture"].append(tund)
+                else:
+                    
+                    for n in event['notes']:
+                        note = event['notes'][n]
+                    grupp = None
+                    lecturer = None
+                    if 'group_uuids' in event:
+                        for n in event['group_uuids']:
+                            grupp = groups[n]
+                    if 'lecturers' in event:
+                        lecturer = lecturers[event['lecturers'][0]['person_uuid']]
+
+                    leidub = False
+                    tund["type"] = tyyp
+                    for group in aine['groups']:
+                        if group['group'] == grupp:
+                            group["practicalSessions"].append(tund)
+                            leidub = True
+                    if(not leidub):
+                        aine['groups'].append({"group":grupp, "lecturer":lecturer, "practicalSessions":[tund]})
     ained['courses'].append(aine)
 
 with open(os.path.join(sys.path[0], "data.json"), "w", encoding='utf-8') as outfile:
