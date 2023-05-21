@@ -56,6 +56,7 @@ for rida in read:
             if tyyp=="lecture":
                 aine["lecture"].append(tund)
             else:
+                
                 for n in event['notes']:
                     note = event['notes'][n]
                 grupp = None
@@ -67,6 +68,7 @@ for rida in read:
                     lecturer = lecturers[event['lecturers'][0]['person_uuid']]
 
                 leidub = False
+                tund["type"] = tyyp
                 for group in aine['groups']:
                     if group['group'] == grupp:
                         group["practicalSessions"].append(tund)
