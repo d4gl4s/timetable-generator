@@ -23,9 +23,12 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
       try {
         const timetableData: (LessonType | null)[][][] | null = await generateTimetables(selectedCourses, freeDays, freeLessons)
         if (timetableData == null) setError("Could not create timetable. Incorrect course codes")
-        setFormOpen(false)
-        setTimetables(timetableData)
-        setTimetableGenerated(true)
+        else {
+          setFormOpen(false)
+          setTimetables(timetableData)
+          setTimetableGenerated(true)
+        }
+        setError("")
         setLoading(false)
 
         /* const body = {

@@ -2,11 +2,11 @@
 import { useState } from "react"
 import Timetable from "./Timetable"
 import { HiOutlineArrowCircleRight, HiOutlineArrowCircleLeft } from "react-icons/hi"
-import { TimetableType } from "@/types/types"
 import Form from "./Form"
+import { LessonType } from "@/types/types"
 
 export default function Home() {
-  const [timetables, setTimetables] = useState<TimetableType[] | null>(null)
+  const [timetables, setTimetables] = useState<(LessonType | null)[][][] | null>(null)
   const [loading, setLoading] = useState<boolean>(false)
   const [current, setCurrent] = useState<number>(0)
 

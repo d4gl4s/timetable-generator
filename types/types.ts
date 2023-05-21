@@ -11,9 +11,10 @@ export interface LessonType {
   name: string
   startTime: string
   endTime: string
-  place: string
+  place: string | null
   lecture: boolean
-  lecturer: string
+  lecturer: string | null
+  group: string | null
 }
 
 export interface CourseType {
