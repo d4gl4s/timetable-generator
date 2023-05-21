@@ -78,7 +78,7 @@ function recursive(courses: any, index: number, timetables: (LessonType | null)[
 
 export async function generateTimetables(selected: CourseType[], freeDays: boolean[], freeLessons: boolean[]) {
   try {
-    const path = "../api/data.json"
+    const path = "./data.json"
     const jsonString = await readFileSync(path)
     const { courses } = JSON.parse(jsonString)
 
