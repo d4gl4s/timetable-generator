@@ -29,62 +29,10 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
           setTimetableGenerated(true)
         }
         setError("")
-        setLoading(false)
-
-        /* const body = {
-          selectedCourses: selectedCourses,
-          freeDays: freeDays,
-          freeLessons: freeLessons,
-        } */
-        /*  const response = await fetch("../api/generate", {
-          method: "GET",
-          headers: { "Content-Type": "application/json" },
-          
-        }) */
-        /* const response = await fetch("../api/generate", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(body),
-        })
-        console.log(response) */
-        /* const tekst = await response.text() */
-        /* const responseJson = await response.json()
-        console.log("get req tehtud")
-        console.log(responseJson)
-        const obj: any = JSON.parse(responseJson)
-        console.log(obj) */
-
-        /* fetch("/ws/invoice/checkDoublon", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            invoiceNumber: invoiceNumber.val(),
-            vatNumber: vatNumber.val(),
-            id: $("#pdfId").val(),
-          }),
-        }).then(function (response) {
-          console.log(response)
-    })
- */
-        /* if (response.ok) {
-
-          setFormOpen(false)
-          setTimetables(tabledata)
-          setTimetableGenerated(true)
-
-
-        const data = await response.json()
-          if (data.success) {
-            setEmail(email.trim())
-            setAuth(true)
-            clearCart()
-          }
-        } else setError("Midagi läks valesti, proovi hiljem uuesti!") */
       } catch (error) {
         setError("Midagi läks valesti, proovi hiljem uuesti!")
       }
+      setLoading(false)
     }
   }
 

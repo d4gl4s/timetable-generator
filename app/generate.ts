@@ -6,15 +6,16 @@ const { readFileSync } = require("fs")
 
 export async function generateTimetables(selected: CourseType[], freeDays: boolean[], freeLessons: boolean[]) {
   try {
-    const path = "./app/data.json"
+    const path = "./api/data.json"
     const jsonString = await readFileSync(path)
     const { courses } = JSON.parse(jsonString)
 
     const selectedCourses: any[] = []
 
     for (let i = 0; i < courses.length; i++) {
-      for (let s = 0; i < selected.length; s++) {
+      for (let s = 0; s < selected.length; s++) {
         if (selected[s].code == courses[i].code) {
+          console.log(courses[i])
           selectedCourses.push(courses[i])
           if (selectedCourses.length == selected.length) break
         }
@@ -74,6 +75,7 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
           const endTimePieces = practicalSessions[j].endTime.split(":")
           const endTime = endTimePieces[0] + ":" + endTimePieces[1]
 
+          console.log(selectedCourses[i].name)
           const practicalSession: LessonType = {
             name: selectedCourses[i].name,
             startTime: startTime,
