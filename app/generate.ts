@@ -2,6 +2,7 @@
 
 import { CourseType, LessonType } from "@/types/types"
 import path from "path"
+import { courses } from "../api/data.json"
 const { readFileSync } = require("fs")
 
 function addGroupPracticals(group: any, name: string, timetable: (LessonType | null)[][], freeDays: boolean[], freeLessons: boolean[]) {
@@ -79,14 +80,6 @@ function recursive(courses: any, index: number, timetables: (LessonType | null)[
 
 export async function generateTimetables(selected: CourseType[], freeDays: boolean[], freeLessons: boolean[]) {
   try {
-    const pathDir = "./app/data.json"
-    const configDirectory = path.resolve(process.cwd(), "app")
-
-    const file = await readFileSync(path.join(configDirectory, "data.json"), "utf8")
-
-    /* const jsonString = await readFileSync(pathDir) */
-    const { courses } = JSON.parse(file)
-
     const selectedCourses: any[] = []
 
     for (let i = 0; i < courses.length; i++) {
