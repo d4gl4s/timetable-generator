@@ -1,7 +1,6 @@
 "use server"
 
 import { CourseType, LessonType } from "@/types/types"
-import { group } from "console"
 const { readFileSync } = require("fs")
 
 export async function generateTimetables(selected: CourseType[], freeDays: boolean[], freeLessons: boolean[]) {
@@ -50,6 +49,7 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
           lecture: true,
           lecturer: null,
           group: null,
+          type: null,
         }
         var timeframe = 0
         if (startTime == "10:15") timeframe = 1
@@ -75,7 +75,6 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
           const endTimePieces = practicalSessions[j].endTime.split(":")
           const endTime = endTimePieces[0] + ":" + endTimePieces[1]
 
-          console.log(selectedCourses[i].name)
           const practicalSession: LessonType = {
             name: selectedCourses[i].name,
             startTime: startTime,
@@ -84,6 +83,7 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
             lecture: false,
             lecturer: lecturer,
             group: group,
+            type: practicalSessions[j].type,
           }
           var timeframe = 0
 
@@ -93,7 +93,6 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
           else if (startTime == "16:15") timeframe = 4
           else if (startTime == "18:15") timeframe = 5
           if (timetableConcrete[timeframe][weekday] == null) {
-            console.log("siin")
             timetableConcrete[timeframe][weekday] = practicalSession
           } else throw "error"
         }

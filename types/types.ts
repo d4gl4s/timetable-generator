@@ -15,6 +15,7 @@ export interface LessonType {
   lecture: boolean
   lecturer: string | null
   group: string | null
+  type: string | null
 }
 
 export interface CourseType {

@@ -4,7 +4,7 @@ import OutsideClickHandler from "react-outside-click-handler"
 
 const Lesson = ({ lesson }: { lesson: LessonType }) => {
   const [open, setOpen] = useState<boolean>(false)
-  const { name, startTime, endTime, lecture, place, lecturer } = lesson
+  const { name, startTime, endTime, lecture, place, lecturer, group, type } = lesson
 
   return (
     <>
@@ -12,7 +12,7 @@ const Lesson = ({ lesson }: { lesson: LessonType }) => {
         onClick={() => setOpen(open ? false : true)}
         className={
           "relative inner-border-[1px] leading-[16px] cursor-pointer rounded-[4px] z-2  break-all break-words  " +
-          (lecture ? "bg-purple-200 inner-border-purple-400" : "bg-green-100 inner-border-green-300")
+          (lecture ? "bg-purple-200 inner-border-purple-400" : type == "practice" ? "bg-green-100 inner-border-green-300" : "bg-orange-100 inner-border-orange-300")
         }
       >
         <OutsideClickHandler
@@ -31,9 +31,10 @@ const Lesson = ({ lesson }: { lesson: LessonType }) => {
                   {startTime}-{endTime}
                 </div>
                 <div>{name}</div>
-                <div className="mt-2">{lecture ? "Lecture" : "Practise"}</div>
+                <div className="mt-2 capitalize">{lecture ? "Lecture" : type}</div>
                 <div>{place}</div>
                 <div className="mt-4">{lecturer}</div>
+                {group != null ? <div> {group} </div> : null}
               </div>
             ) : null}
           </div>
