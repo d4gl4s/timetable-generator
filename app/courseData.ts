@@ -7,18 +7,21 @@ const { readFileSync } = require("fs")
 
 export async function getCourseData(courseCode: string) {
   try {
-    const pathDir = "./data.json"
+    /* const pathDir = "./data.json" */
 
-    const configDirectory = path.resolve(process.cwd())
+    const file = path.join(process.cwd(), "api", "data.json")
+    const data = await readFileSync(file, "utf8")
+
+    /* const configDirectory = path.resolve(process.cwd()) */
     /* console.log(process.cwd())
     console.log(configDirectory) */
 
-    const file = await readFileSync(path.join(configDirectory, "data.json"), "utf8")
-
+    /* const file = await readFileSync(path.join(configDirectory, "data.json"), "utf8")
+     */
     /* const jsonString = await readFileSync(pathDir) */
 
-    const jsonString = await readFileSync(file)
-    const { courses } = JSON.parse(jsonString)
+    /* const jsonString = await readFileSync(file) */
+    const { courses } = JSON.parse(data)
 
     for (let i = 0; i < courses.length; i++) {
       if (courses[i].code == courseCode) {
