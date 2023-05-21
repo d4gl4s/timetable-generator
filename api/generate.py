@@ -2,6 +2,17 @@ from http.server import BaseHTTPRequestHandler
 import json
  
 class handler(BaseHTTPRequestHandler):
+
+    def do_POST(self):
+        content_length = int(self.headers.get('Content-Length'))
+        """ content_length = int(self.headers['Content-Length']) """ # <--- Gets the size of data
+        post_data = self.rfile.read(content_length) # <--- Gets the data itself
+
+        self.send_header('Content-Type', 'application/json')
+        self.end_headers()
+        json_string = json.dumps({'hello': 'world', 'received': post_data, 'tunniplaan': 4})
+        self.wfile.write(bytes(json.dumps(json_string, ensure_ascii=False), 'utf-8'))
+        return
  
     def do_GET(self):
         self.send_response(200)
