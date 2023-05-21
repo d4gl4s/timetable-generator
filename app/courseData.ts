@@ -6,7 +6,7 @@ const { readFileSync } = require("fs")
 
 export async function getCourseData(courseCode: string) {
   try {
-    const path = "./api/data.json"
+    const path = "../api/data.json"
     const jsonString = await readFileSync(path)
     const { courses } = JSON.parse(jsonString)
 

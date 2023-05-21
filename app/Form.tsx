@@ -6,7 +6,7 @@ import { generateTimetables } from "./generate"
 import { CourseType, LessonType } from "@/types/types"
 import { getCourseData } from "./courseData"
 
-const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: any }) => {
+const Form = ({ setTimetables, setLoading, setCurrent }: any) => {
   const [selectedCourses, setSelectedCourses] = useState<CourseType[]>([])
   const [freeDays, setFreeDays] = useState<boolean[]>([false, false, false, false, false])
   const [freeLessons, setFreeLessons] = useState<boolean[]>([false, false, false, false, false, false])
@@ -20,10 +20,11 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
     if (selectedCourses.length == 0) setError("Please enter at least one course code!")
     else {
       setLoading(true)
+      setCurrent(0)
       try {
         const timetableData: (LessonType | null)[][][] | null = await generateTimetables(selectedCourses, freeDays, freeLessons)
         if (timetableData == null) {
-          setError("Could not create timetable. Incorrect course codes")
+          setError("Could not create such timetable.")
           setTimetables(null)
         } else {
           setFormOpen(false)
@@ -136,14 +137,16 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
             </ul>
           </div>
           <div className="w-full mt-8">
-            <label>At what times do you want your practises to take place at?</label>
+            <label>Select the lecture times that you want and do not want</label>
             <div className="flex flex-wrap font-medium text-[0.8em] mt-4">
               {freeLessons.map((lessonValue, i) => {
                 const lessons = ["08:15-09:45", "10:15-11:45", "12:15-13:45", "14:15-15:45", "16:15-17:45", "18:15-19:45"]
                 return (
                   <div
                     key={i}
-                    className={"p-[9px] px-6 unselectable rounded-[50px] mr-2 cursor-pointer flex items-center mb-2 " + (lessonValue ? "bg-orange-200 text-orange-600" : "bg-gray-100 text-gray-400")}
+                    className={
+                      "p-[9px] px-6 unselectable rounded-[50px] mr-2 cursor-pointer flex items-center mb-2 " + (lessonValue ? "bg-red-200 text-red-600 line-through" : "bg-gray-100 text-gray-400")
+                    }
                     onClick={() => handleFreeLesson(i)}
                   >
                     {lessons[i]}
@@ -160,7 +163,9 @@ const Form = ({ setTimetables, setLoading }: { setTimetables: any; setLoading: a
                 return (
                   <div
                     key={i}
-                    className={"p-[9px] px-6 rounded-[50px] mr-2 cursor-pointer flex items-center unselectable mb-2 " + (dayValue ? "bg-orange-200 text-orange-600" : "bg-gray-100 text-gray-400")}
+                    className={
+                      "p-[9px] px-6 rounded-[50px] mr-2 cursor-pointer flex items-center unselectable mb-2 " + (dayValue ? "bg-red-200 text-red-600 line-through" : "bg-gray-100 text-gray-400")
+                    }
                     onClick={() => handleFreeDay(i)}
                   >
                     {days[i]}

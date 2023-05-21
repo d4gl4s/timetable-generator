@@ -12,9 +12,9 @@ export default function Home() {
 
   return (
     <main className="w-[96%] sm:w-[90%] md:w-[80%] md:max-w-[700px]  2xl:max-w-[1000px] m-auto mb-48 overflow-visible">
-      <Form setTimetables={setTimetables} setLoading={setLoading} />
+      <Form setTimetables={setTimetables} setLoading={setLoading} setCurrent={setCurrent} />
       {loading ? "loading..." : null}
-      {timetables ? (
+      {timetables != null ? (
         <div className="overflow-visible">
           <div className="w-[90%] m-auto md:w-full flex justify-between mt-16 mb-6">
             <div className="flex text-[0.9em] font-medium unselectable">

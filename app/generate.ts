@@ -3,9 +3,82 @@
 import { CourseType, LessonType } from "@/types/types"
 const { readFileSync } = require("fs")
 
+function addGroupPracticals(group: any, name: string, timetable: (LessonType | null)[][], freeDays: boolean[], freeLessons: boolean[]) {
+  const practicalSessions = group.practicalSessions
+  const groupName = group.group
+  const lecturer = group.lecturer
+  for (let j = 0; j < practicalSessions.length; j++) {
+    const weekday = practicalSessions[j].weekday
+    if (freeDays[weekday]) return false
+    const startTimePieces = practicalSessions[j].startTime.split(":")
+    const startTime = startTimePieces[0] + ":" + startTimePieces[1]
+    const endTimePieces = practicalSessions[j].endTime.split(":")
+    const endTime = endTimePieces[0] + ":" + endTimePieces[1]
+
+    var timeframe = timeFrame(startTime, endTime)
+    if (freeLessons[timeframe]) return false
+
+    const practicalSession: LessonType = {
+      name: name,
+      startTime: startTime,
+      endTime: endTime,
+      place: practicalSessions[j].place,
+      lecture: false,
+      lecturer: lecturer,
+      group: groupName,
+      type: practicalSessions[j].type,
+    }
+    if (timetable[timeframe][weekday] == null) {
+      timetable[timeframe][weekday] = practicalSession
+      return true
+    } else return false
+  }
+}
+
+function timeFrame(start: string, end: string) {
+  var timeframe
+  const startTimePieces = start.split(":")
+  const endTimePieces = end.split(":")
+  const vahemikuIndeks = (parseInt(startTimePieces[0]) + parseInt(endTimePieces[0])) / 2
+
+  if (vahemikuIndeks >= 18) timeframe = 5
+  else if (vahemikuIndeks >= 16) timeframe = 4
+  else if (vahemikuIndeks >= 14) timeframe = 3
+  else if (vahemikuIndeks >= 12) timeframe = 2
+  else if (vahemikuIndeks >= 10) timeframe = 1
+  else timeframe = 0
+
+  return timeframe
+}
+
+function compare(a: any, b: any) {
+  if (a.groups.lenght < b.groups.lenght) {
+    return -1
+  }
+  if (a.groups.lenght > b.groups.lenght) {
+    return 1
+  }
+  return 0
+}
+
+function recursive(courses: any, index: number, timetables: (LessonType | null)[][][], timetable: (LessonType | null)[][], freeDays: boolean[], freeLessons: boolean[]) {
+  if (index == courses.length) timetables.push(timetable)
+  else if (courses[index].groups.length > 0) {
+    const name = courses[index].name
+    for (let i = 0; i < courses[index].groups.length; i++) {
+      const timetableCopy = JSON.parse(JSON.stringify(timetable))
+      const group = courses[index].groups[i]
+
+      if (addGroupPracticals(group, name, timetableCopy, freeDays, freeLessons)) {
+        recursive(courses, index + 1, timetables, timetableCopy, freeDays, freeLessons)
+      }
+    }
+  } else recursive(courses, index + 1, timetables, timetable, freeDays, freeLessons)
+}
+
 export async function generateTimetables(selected: CourseType[], freeDays: boolean[], freeLessons: boolean[]) {
   try {
-    const path = "./api/data.json"
+    const path = "../api/data.json"
     const jsonString = await readFileSync(path)
     const { courses } = JSON.parse(jsonString)
 
@@ -14,7 +87,6 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
     for (let i = 0; i < courses.length; i++) {
       for (let s = 0; s < selected.length; s++) {
         if (selected[s].code == courses[i].code) {
-          console.log(courses[i])
           selectedCourses.push(courses[i])
           if (selectedCourses.length == selected.length) break
         }
@@ -30,79 +102,46 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
       [null, null, null, null, null],
       [null, null, null, null, null],
     ]
+    var coursesWithOnePractical = 0
 
     for (let i = 0; i < selectedCourses.length; i++) {
       const lectures = selectedCourses[i].lecture
-      for (let i = 0; i < lectures.length; i++) {
-        const weekday = lectures[i].weekday
+      for (let j = 0; j < lectures.length; j++) {
+        const weekday = lectures[j].weekday
 
-        const startTimePieces = lectures[i].startTime.split(":")
+        const startTimePieces = lectures[j].startTime.split(":")
         const startTime = startTimePieces[0] + ":" + startTimePieces[1]
-        const endTimePieces = lectures[i].endTime.split(":")
+        const endTimePieces = lectures[j].endTime.split(":")
         const endTime = endTimePieces[0] + ":" + endTimePieces[1]
 
         const lecture: LessonType = {
           name: selectedCourses[i].name,
           startTime: startTime,
           endTime: endTime,
-          place: lectures[i].place,
+          place: lectures[j].place,
           lecture: true,
           lecturer: null,
           group: null,
           type: null,
         }
-        var timeframe = 0
-        const vahemikuIndeks = parseInt(startTimePieces[0]) / endTimePieces[0]
-
-        if (vahemikuIndeks >= 18) timeframe = 5
-        else if (vahemikuIndeks >= 16) timeframe = 4
-        else if (vahemikuIndeks >= 14) timeframe = 3
-        else if (vahemikuIndeks >= 12) timeframe = 2
-        else if (vahemikuIndeks >= 10) timeframe = 1
-        else timeframe = 0
+        var timeframe = timeFrame(startTime, endTime)
 
         if (timetableConcrete[timeframe][weekday] == null) timetableConcrete[timeframe][weekday] = lecture
-        else throw "error"
       }
 
       const groups = selectedCourses[i].groups
-      if (groups.length == 1) {
-        const practicalSessions = groups[0].practicalSessions
-        const group = groups[0].group
-        const lecturer = groups[0].lecturer
-        for (let j = 0; j < practicalSessions.length; j++) {
-          const weekday = practicalSessions[j].weekday
-
-          const startTimePieces = practicalSessions[j].startTime.split(":")
-          const startTime = startTimePieces[0] + ":" + startTimePieces[1]
-          const endTimePieces = practicalSessions[j].endTime.split(":")
-          const endTime = endTimePieces[0] + ":" + endTimePieces[1]
-
-          const practicalSession: LessonType = {
-            name: selectedCourses[i].name,
-            startTime: startTime,
-            endTime: endTime,
-            place: practicalSessions[j].place,
-            lecture: false,
-            lecturer: lecturer,
-            group: group,
-            type: practicalSessions[j].type,
-          }
-          var timeframe = 0
-
-          if (startTime == "10:15") timeframe = 1
-          else if (startTime == "12:15") timeframe = 2
-          else if (startTime == "14:15") timeframe = 3
-          else if (startTime == "16:15") timeframe = 4
-          else if (startTime == "18:15") timeframe = 5
-          if (timetableConcrete[timeframe][weekday] == null) {
-            timetableConcrete[timeframe][weekday] = practicalSession
-          } else throw "error"
-        }
-      }
+      if (groups.length == 1) coursesWithOnePractical++
+      if (groups.length == 1 && !addGroupPracticals(groups[0], selectedCourses[i].name, timetableConcrete, [false, false, false, false, false], [false, false, false, false, false, false]))
+        throw "error"
     }
 
-    return [timetableConcrete]
+    if (coursesWithOnePractical == selectedCourses.length) return [timetableConcrete]
+    selectedCourses.sort(compare)
+
+    const timetableArray: (LessonType | null)[][][] = []
+    recursive(selectedCourses, 0, timetableArray, timetableConcrete, freeDays, freeLessons)
+
+    return timetableArray.length == 0 ? null : timetableArray
   } catch (error) {
     return null
   }
