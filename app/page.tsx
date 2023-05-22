@@ -7,13 +7,13 @@ import { LessonType } from "@/types/types"
 
 export default function Home() {
   const [timetables, setTimetables] = useState<(LessonType | null)[][][] | null>(null)
-  const [loading, setLoading] = useState<boolean>(false)
+  /*   const [loading, setLoading] = useState<boolean>(false) */
   const [current, setCurrent] = useState<number>(0)
 
   return (
     <main className="w-[96%] sm:w-[90%] md:w-[80%] md:max-w-[700px]  2xl:max-w-[1000px] m-auto mb-48 overflow-visible">
-      <Form setTimetables={setTimetables} setLoading={setLoading} setCurrent={setCurrent} />
-      {loading ? "Laadimine..." : null}
+      <Form setTimetables={setTimetables} /* setLoading={setLoading}  */ setCurrent={setCurrent} />
+      {/* {loading ? "Laadimine..." : null} */}
       {timetables != null ? (
         <div className="overflow-visible">
           <div className="w-[90%] m-auto md:w-full flex justify-between mt-16 mb-6">

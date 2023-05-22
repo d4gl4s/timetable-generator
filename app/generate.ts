@@ -1,7 +1,6 @@
 "use server"
 
 import { CourseType, LessonType } from "@/types/types"
-import path from "path"
 import { courses } from "../api/data.json"
 const { readFileSync } = require("fs")
 

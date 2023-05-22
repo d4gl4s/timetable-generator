@@ -4,10 +4,12 @@ import { use, useRef, useState } from "react"
 import { FaTimes } from "react-icons/fa"
 import { generateTimetables } from "./generate"
 import { CourseType, LessonType } from "@/types/types"
+import ScaleLoader from "react-spinners/ScaleLoader"
 import { getCourseData } from "./courseData"
 
-const Form = ({ setTimetables, setLoading, setCurrent }: any) => {
+const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
   const [selectedCourses, setSelectedCourses] = useState<CourseType[]>([])
+  const [loading, setLoading] = useState<boolean>(false)
   const [freeDays, setFreeDays] = useState<boolean[]>([false, false, false, false, false])
   const [freeLessons, setFreeLessons] = useState<boolean[]>([false, false, false, false, false, false])
   const [courseInput, setCourseInput] = useState<string>("")
@@ -188,8 +190,9 @@ const Form = ({ setTimetables, setLoading, setCurrent }: any) => {
               </div>
             ) : null}
 
-            <button onClick={submitForm} className="bg-blue-400 font-medium p-3 px-8 text-white rounded-[50px] unselectable">
-              Genereeri
+            <button onClick={submitForm} className="bg-blue-400 w-32 h-10 font-medium  text-white rounded-[50px] unselectable flex items-center justify-center">
+              {loading ? null : "Genereeri"}
+              <ScaleLoader color="white" loading={loading} height={14} radius={1} aria-label="Loading Spinner" data-testid="loader" />
             </button>
           </div>
         </div>
