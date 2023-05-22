@@ -3,6 +3,42 @@ import json
 import os
 import sys
 
+def lisaTund(event, groups, algusaeg, loppaeg, aine):
+    nadalapaev = int(event['time']['weekday']["code"])-1
+    asukoht = None
+    if 'address' in event['location']:
+        asukoht = event['location']['address']
+    tund = {"weekday":nadalapaev, "startTime":algusaeg,"endTime":loppaeg,"place":asukoht}
+    if tyyp=="lecture":
+        aine["lecture"].append(tund)
+    else:
+        grupp = None
+        lecturer = None
+        gruppLeidub = False
+        grupid = []
+        if 'group_uuids' in event:
+            for n in event['group_uuids']:
+                grupid.append(groups[n])
+                gruppLeidub = True
+        if not gruppLeidub:
+            grupid.append(grupp)
+
+        if 'lecturers' in event:
+            lecturer = lecturers[event['lecturers'][0]['person_uuid']]
+
+        tund["type"] = tyyp
+
+        for g in grupid:
+            leidub = False
+            for group in aine['groups']:
+                if group['group'] == g:
+                    group["practicalSessions"].append(tund)
+                    leidub = True
+            if(not leidub):
+                aine['groups'].append({"group":g, "lecturer":lecturer, "practicalSessions":[tund]})
+    
+
+
 firstPart = "https://ois2.ut.ee/api/timetable/courses/"
 with open(os.path.join(sys.path[0], "links1.txt"), "r") as f:
     read = f.read().splitlines()
@@ -44,9 +80,7 @@ for rida in read:
     for event in data_json['events']:
         note = ""
         if ("-" in event['time']['academic_weeks'] or event['time']['academic_weeks'].count(",")>3) and event['event_type']['code'] == "lecture" and (event['study_work_type']["code"]=="practice" or event['study_work_type']["code"]=="lecture" or event['study_work_type']["code"]=="seminar"):
-            asukoht = None
             tyyp = event['study_work_type']["code"]
-            nadalapaev = int(event['time']['weekday']["code"])-1
             algusaeg = event['time']['begin_time']
             loppaeg = event['time']['end_time']
 
@@ -63,59 +97,10 @@ for rida in read:
                         algusaeg = str(algus)+":00:00"
                     loppaeg = str(algus+2)+":00:00"
                     algus += 2
-                    if 'address' in event['location']:
-                        asukoht = event['location']['address']
-                    tund = {"weekday":nadalapaev, "startTime":algusaeg,"endTime":loppaeg,"place":asukoht}
-                    if tyyp=="lecture":
-                        aine["lecture"].append(tund)
-                    else:
-                        
-                        for n in event['notes']:
-                            note = event['notes'][n]
-                        grupp = None
-                        lecturer = None
-                        if 'group_uuids' in event:
-                            for n in event['group_uuids']:
-                                grupp = groups[n]
-                        if 'lecturers' in event:
-                            lecturer = lecturers[event['lecturers'][0]['person_uuid']]
-
-                        leidub = False
-                        tund["type"] = tyyp
-                        for group in aine['groups']:
-                            if group['group'] == grupp:
-                                group["practicalSessions"].append(tund)
-                                leidub = True
-                        if(not leidub):
-                            aine['groups'].append({"group":grupp, "lecturer":lecturer, "practicalSessions":[tund]})
+                    lisaTund(event, groups, algusaeg, loppaeg, aine)
             else:
-                if 'address' in event['location']:
-                    asukoht = event['location']['address']
-                
-                tund = {"weekday":nadalapaev, "startTime":algusaeg,"endTime":loppaeg,"place":asukoht}
-                if tyyp=="lecture":
-                    aine["lecture"].append(tund)
-                else:
-                    
-                    for n in event['notes']:
-                        note = event['notes'][n]
-                    grupp = None
-                    lecturer = None
-                    if 'group_uuids' in event:
-                        for n in event['group_uuids']:
-                            grupp = groups[n]
-                    if 'lecturers' in event:
-                        lecturer = lecturers[event['lecturers'][0]['person_uuid']]
-
-                    leidub = False
-                    tund["type"] = tyyp
-                    for group in aine['groups']:
-                        if group['group'] == grupp:
-                            group["practicalSessions"].append(tund)
-                            leidub = True
-                    if(not leidub):
-                        aine['groups'].append({"group":grupp, "lecturer":lecturer, "practicalSessions":[tund]})
+                lisaTund(event, groups, algusaeg, loppaeg, aine)
     ained['courses'].append(aine)
 
 with open(os.path.join(sys.path[0], "data.json"), "w", encoding='utf-8') as outfile:
-    json.dump(ained, outfile) 
+    json.dump(ained, outfile)  

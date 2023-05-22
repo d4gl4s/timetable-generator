@@ -146,6 +146,32 @@
             "lecture": [],
             "groups": [
                 {
+                    "group": "2.r\u00fchm",
+                    "lecturer": null,
+                    "practicalSessions": [
+                        {
+                            "weekday": 4,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": null,
+                            "type": "practice"
+                        }
+                    ]
+                },
+                {
+                    "group": "3.Erasmus'e r\u00fchm",
+                    "lecturer": null,
+                    "practicalSessions": [
+                        {
+                            "weekday": 4,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": null,
+                            "type": "practice"
+                        }
+                    ]
+                },
+                {
                     "group": "1.r\u00fchm",
                     "lecturer": null,
                     "practicalSessions": [
@@ -3897,7 +3923,7 @@
                     "weekday": 0,
                     "startTime": "12:15:00",
                     "endTime": "14:00:00",
-                    "place": "Narva mnt 18 - 1004"
+                    "place": "Narva mnt 18 - 2039"
                 }
             ],
             "groups": [
@@ -8531,6 +8557,19 @@
             ],
             "groups": [
                 {
+                    "group": "2. r\u00fchm (materjaliteadus)",
+                    "lecturer": "Indrek J\u00f5gi",
+                    "practicalSessions": [
+                        {
+                            "weekday": 2,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": "W. Ostwaldi tn 1 - B103",
+                            "type": "seminar"
+                        }
+                    ]
+                },
+                {
                     "group": "1. r\u00fchm (f\u00fc\u00fcsika)",
                     "lecturer": "Indrek J\u00f5gi",
                     "practicalSessions": [
@@ -9673,7 +9712,7 @@
                             "weekday": 4,
                             "startTime": "12:15:00",
                             "endTime": "14:00:00",
-                            "place": null,
+                            "place": "Jakobi 2 - 113",
                             "type": "practice"
                         }
                     ]
@@ -11171,6 +11210,13 @@
                             "endTime": "12:00:00",
                             "place": "Narva mnt 18 - 2047",
                             "type": "practice"
+                        },
+                        {
+                            "weekday": 2,
+                            "startTime": "14:15:00",
+                            "endTime": "16:00:00",
+                            "place": "Narva mnt 18 - 1037",
+                            "type": "practice"
                         }
                     ]
                 },
@@ -11184,6 +11230,13 @@
                             "endTime": "12:00:00",
                             "place": "Narva mnt 18 - 2045",
                             "type": "practice"
+                        },
+                        {
+                            "weekday": 2,
+                            "startTime": "14:15:00",
+                            "endTime": "16:00:00",
+                            "place": "Narva mnt 18 - 1037",
+                            "type": "practice"
                         }
                     ]
                 },
@@ -11196,6 +11249,13 @@
                             "startTime": "10:15:00",
                             "endTime": "12:00:00",
                             "place": "Narva mnt 18 - 1008",
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 2,
+                            "startTime": "16:15:00",
+                            "endTime": "18:00:00",
+                            "place": "Narva mnt 18 - 1019",
                             "type": "practice"
                         }
                     ]
@@ -11230,6 +11290,13 @@
                             "endTime": "14:00:00",
                             "place": "Narva mnt 18 - 2047",
                             "type": "practice"
+                        },
+                        {
+                            "weekday": 2,
+                            "startTime": "14:15:00",
+                            "endTime": "16:00:00",
+                            "place": "Narva mnt 18 - 1008",
+                            "type": "practice"
                         }
                     ]
                 },
@@ -11242,6 +11309,13 @@
                             "startTime": "14:15:00",
                             "endTime": "16:00:00",
                             "place": "Narva mnt 18 - 1007",
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 2,
+                            "startTime": "14:15:00",
+                            "endTime": "16:00:00",
+                            "place": "Narva mnt 18 - 1019",
                             "type": "practice"
                         }
                     ]
@@ -11276,6 +11350,13 @@
                             "endTime": "14:00:00",
                             "place": "Narva mnt 18 - 2045",
                             "type": "practice"
+                        },
+                        {
+                            "weekday": 2,
+                            "startTime": "14:15:00",
+                            "endTime": "16:00:00",
+                            "place": "Narva mnt 18 - 1008",
+                            "type": "practice"
                         }
                     ]
                 },
@@ -11288,6 +11369,13 @@
                             "startTime": "12:15:00",
                             "endTime": "14:00:00",
                             "place": "Narva mnt 18 - 2047",
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 2,
+                            "startTime": "14:15:00",
+                            "endTime": "16:00:00",
+                            "place": "Narva mnt 18 - 1019",
                             "type": "practice"
                         }
                     ]
@@ -11342,6 +11430,13 @@
                             "endTime": "16:00:00",
                             "place": "Narva mnt 18 - 2047",
                             "type": "practice"
+                        },
+                        {
+                            "weekday": 2,
+                            "startTime": "16:15:00",
+                            "endTime": "18:00:00",
+                            "place": "Narva mnt 18 - 1019",
+                            "type": "practice"
                         }
                     ]
                 },
@@ -11354,6 +11449,13 @@
                             "startTime": "14:15:00",
                             "endTime": "16:00:00",
                             "place": "Narva mnt 18 - 1008",
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 2,
+                            "startTime": "16:15:00",
+                            "endTime": "18:00:00",
+                            "place": "Narva mnt 18 - 1037",
                             "type": "practice"
                         }
                     ]
@@ -12553,6 +12655,26 @@
             ],
             "groups": [
                 {
+                    "group": "2. r\u00fchm (Naised)",
+                    "lecturer": "Taavi Truija",
+                    "practicalSessions": [
+                        {
+                            "weekday": 4,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": "Ujula 4-1072 (v\u00f5imlemis-ja maadlussaal)",
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 1,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": "Ujula 4-1072 (v\u00f5imlemis-ja maadlussaal)",
+                            "type": "practice"
+                        }
+                    ]
+                },
+                {
                     "group": "1. r\u00fchm (Mehed)",
                     "lecturer": "Taavi Truija",
                     "practicalSessions": [
@@ -13299,6 +13421,46 @@
             "eap": 3,
             "lecture": [],
             "groups": [
+                {
+                    "group": "2.r\u00fchm NEIUD (mitte sportm\u00e4ngijad)",
+                    "lecturer": "Kristjan Kais",
+                    "practicalSessions": [
+                        {
+                            "weekday": 0,
+                            "startTime": "12:15:00",
+                            "endTime": "14:00:00",
+                            "place": null,
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 3,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": null,
+                            "type": "practice"
+                        }
+                    ]
+                },
+                {
+                    "group": "1.r\u00fchm SPORTM\u00c4NGIJAD",
+                    "lecturer": "Kristjan Kais",
+                    "practicalSessions": [
+                        {
+                            "weekday": 0,
+                            "startTime": "12:15:00",
+                            "endTime": "14:00:00",
+                            "place": null,
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 3,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": null,
+                            "type": "practice"
+                        }
+                    ]
+                },
                 {
                     "group": "3.r\u00fchm NOORMEHED (mitte sportm\u00e4ngijjad",
                     "lecturer": "Kristjan Kais",
@@ -14655,6 +14817,66 @@
                 }
             ],
             "groups": [
+                {
+                    "group": "2.r\u00fchm Kergej\u00f5ustik",
+                    "lecturer": "Taavi Truija",
+                    "practicalSessions": [
+                        {
+                            "weekday": 0,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": null,
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 1,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": null,
+                            "type": "seminar"
+                        }
+                    ]
+                },
+                {
+                    "group": "4.r\u00fchm V\u00f5imlemine",
+                    "lecturer": "Taavi Truija",
+                    "practicalSessions": [
+                        {
+                            "weekday": 0,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": null,
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 1,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": null,
+                            "type": "seminar"
+                        }
+                    ]
+                },
+                {
+                    "group": "5.r\u00fchm Talisport",
+                    "lecturer": "Taavi Truija",
+                    "practicalSessions": [
+                        {
+                            "weekday": 0,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": null,
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 1,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": null,
+                            "type": "seminar"
+                        }
+                    ]
+                },
                 {
                     "group": "6.r\u00fchm Vastupidavusalad",
                     "lecturer": "Taavi Truija",
@@ -16333,7 +16555,7 @@
             "groups": []
         },
         {
-            "name": "Estonian Intermediate Level  I (partially web-based), Level B1",
+            "name": "Estonian Intermediate Level I (Partially Web-based), Level B1",
             "code": "HVLC.09.050",
             "eap": 6,
             "lecture": [],
@@ -17177,6 +17399,66 @@
             ],
             "groups": [
                 {
+                    "group": "KK (naised)",
+                    "lecturer": "Taavi Truija",
+                    "practicalSessions": [
+                        {
+                            "weekday": 4,
+                            "startTime": "14:15:00",
+                            "endTime": "16:00:00",
+                            "place": "Ujula 4-1072 (v\u00f5imlemis-ja maadlussaal)",
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 1,
+                            "startTime": "12:15:00",
+                            "endTime": "14:00:00",
+                            "place": "Ujula 4-1072 (v\u00f5imlemis-ja maadlussaal)",
+                            "type": "practice"
+                        }
+                    ]
+                },
+                {
+                    "group": "KK (mehed)",
+                    "lecturer": "Taavi Truija",
+                    "practicalSessions": [
+                        {
+                            "weekday": 4,
+                            "startTime": "14:15:00",
+                            "endTime": "16:00:00",
+                            "place": "Ujula 4-1072 (v\u00f5imlemis-ja maadlussaal)",
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 1,
+                            "startTime": "12:15:00",
+                            "endTime": "14:00:00",
+                            "place": "Ujula 4-1072 (v\u00f5imlemis-ja maadlussaal)",
+                            "type": "practice"
+                        }
+                    ]
+                },
+                {
+                    "group": "3.a.(mehed/naised)",
+                    "lecturer": "Taavi Truija",
+                    "practicalSessions": [
+                        {
+                            "weekday": 4,
+                            "startTime": "14:15:00",
+                            "endTime": "16:00:00",
+                            "place": "Ujula 4-1072 (v\u00f5imlemis-ja maadlussaal)",
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 1,
+                            "startTime": "12:15:00",
+                            "endTime": "14:00:00",
+                            "place": "Ujula 4-1072 (v\u00f5imlemis-ja maadlussaal)",
+                            "type": "practice"
+                        }
+                    ]
+                },
+                {
                     "group": "FT(Liikumisn\u00f5ustaja)",
                     "lecturer": "Taavi Truija",
                     "practicalSessions": [
@@ -17610,6 +17892,19 @@
                             "startTime": "14:15:00",
                             "endTime": "16:00:00",
                             "place": "Ujula 4 - 3017",
+                            "type": "seminar"
+                        }
+                    ]
+                },
+                {
+                    "group": "4. r\u00fchm Kiirus ja j\u00f5uv\u00f5imete treening",
+                    "lecturer": "Ando Pehme",
+                    "practicalSessions": [
+                        {
+                            "weekday": 0,
+                            "startTime": "14:15:00",
+                            "endTime": "16:00:00",
+                            "place": "Ujula 4 - 3027 (F.Kudu auditoorium)",
                             "type": "seminar"
                         }
                     ]
@@ -18173,6 +18468,46 @@
             ],
             "groups": [
                 {
+                    "group": "FKM1",
+                    "lecturer": "Ella Puman",
+                    "practicalSessions": [
+                        {
+                            "weekday": 1,
+                            "startTime": "08:15:00",
+                            "endTime": "10:00:00",
+                            "place": "W. Ostwaldi tn 1 - A106",
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 4,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": "W. Ostwaldi tn 1 - A101",
+                            "type": "practice"
+                        }
+                    ]
+                },
+                {
+                    "group": "FKM2",
+                    "lecturer": "Ella Puman",
+                    "practicalSessions": [
+                        {
+                            "weekday": 1,
+                            "startTime": "08:15:00",
+                            "endTime": "10:00:00",
+                            "place": "W. Ostwaldi tn 1 - A106",
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 4,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": "Ravila 14A - 1020",
+                            "type": "practice"
+                        }
+                    ]
+                },
+                {
                     "group": "FKM3",
                     "lecturer": "Ella Puman",
                     "practicalSessions": [
@@ -18255,32 +18590,6 @@
                             "startTime": "12:15:00",
                             "endTime": "14:00:00",
                             "place": "Ravila 14A - 1022",
-                            "type": "practice"
-                        }
-                    ]
-                },
-                {
-                    "group": "FKM1",
-                    "lecturer": "Annely M\u00fcrk",
-                    "practicalSessions": [
-                        {
-                            "weekday": 4,
-                            "startTime": "10:15:00",
-                            "endTime": "12:00:00",
-                            "place": "W. Ostwaldi tn 1 - A101",
-                            "type": "practice"
-                        }
-                    ]
-                },
-                {
-                    "group": "FKM2",
-                    "lecturer": "Kati Ain",
-                    "practicalSessions": [
-                        {
-                            "weekday": 4,
-                            "startTime": "10:15:00",
-                            "endTime": "12:00:00",
-                            "place": "Ravila 14A - 1020",
                             "type": "practice"
                         }
                     ]
@@ -20468,6 +20777,46 @@
             "lecture": [],
             "groups": [
                 {
+                    "group": "2.r\u00fchm (noormehed)",
+                    "lecturer": "Peep P\u00e4ll",
+                    "practicalSessions": [
+                        {
+                            "weekday": 1,
+                            "startTime": "08:15:00",
+                            "endTime": "10:00:00",
+                            "place": "Ujula 4 - 150 J\u00f5usaal (1.korrus)",
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 4,
+                            "startTime": "08:15:00",
+                            "endTime": "10:00:00",
+                            "place": "Ujula 4 - 150 J\u00f5usaal (1.korrus)",
+                            "type": "practice"
+                        }
+                    ]
+                },
+                {
+                    "group": "1.r\u00fchm (t\u00fctarlapsed)",
+                    "lecturer": "Peep P\u00e4ll",
+                    "practicalSessions": [
+                        {
+                            "weekday": 1,
+                            "startTime": "08:15:00",
+                            "endTime": "10:00:00",
+                            "place": "Ujula 4 - 150 J\u00f5usaal (1.korrus)",
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 4,
+                            "startTime": "08:15:00",
+                            "endTime": "10:00:00",
+                            "place": "Ujula 4 - 150 J\u00f5usaal (1.korrus)",
+                            "type": "practice"
+                        }
+                    ]
+                },
+                {
                     "group": "3. r\u00fchm (liikumisn\u00f5ustaja)",
                     "lecturer": "Peep P\u00e4ll",
                     "practicalSessions": [
@@ -20692,6 +21041,19 @@
             "eap": 6,
             "lecture": [],
             "groups": [
+                {
+                    "group": "1. r\u00fchm",
+                    "lecturer": "Inga Neissaar",
+                    "practicalSessions": [
+                        {
+                            "weekday": 2,
+                            "startTime": "14:15:00",
+                            "endTime": "16:00:00",
+                            "place": null,
+                            "type": "practice"
+                        }
+                    ]
+                },
                 {
                     "group": "2. r\u00fchm",
                     "lecturer": "Inga Neissaar",
@@ -22577,7 +22939,7 @@
                     "weekday": 0,
                     "startTime": "12:15:00",
                     "endTime": "14:00:00",
-                    "place": "Narva mnt 18 - 2039"
+                    "place": "Narva mnt 18 - 1004"
                 }
             ],
             "groups": [
@@ -22677,6 +23039,19 @@
                     "practicalSessions": [
                         {
                             "weekday": 1,
+                            "startTime": "12:15:00",
+                            "endTime": "14:00:00",
+                            "place": "Ujula 4 - 3026 (A.Viru auditoorium) ",
+                            "type": "seminar"
+                        }
+                    ]
+                },
+                {
+                    "group": "KK - r\u00fchm",
+                    "lecturer": null,
+                    "practicalSessions": [
+                        {
+                            "weekday": 2,
                             "startTime": "12:15:00",
                             "endTime": "14:00:00",
                             "place": "Ujula 4 - 3026 (A.Viru auditoorium) ",
@@ -23428,6 +23803,26 @@
             ],
             "groups": [
                 {
+                    "group": "mat+stat1",
+                    "lecturer": "Johann Langemets",
+                    "practicalSessions": [
+                        {
+                            "weekday": 1,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": "Narva mnt 18 - 1020",
+                            "type": "practice"
+                        },
+                        {
+                            "weekday": 2,
+                            "startTime": "10:15:00",
+                            "endTime": "12:00:00",
+                            "place": "Narva mnt 18 - 1020",
+                            "type": "practice"
+                        }
+                    ]
+                },
+                {
                     "group": "mat+stat2",
                     "lecturer": "Johann Langemets",
                     "practicalSessions": [
@@ -23443,19 +23838,6 @@
                             "startTime": "10:15:00",
                             "endTime": "12:00:00",
                             "place": "Narva mnt 18 - 1007",
-                            "type": "practice"
-                        }
-                    ]
-                },
-                {
-                    "group": "mat+stat1",
-                    "lecturer": "Urve Kangro",
-                    "practicalSessions": [
-                        {
-                            "weekday": 2,
-                            "startTime": "10:15:00",
-                            "endTime": "12:00:00",
-                            "place": "Narva mnt 18 - 1020",
                             "type": "practice"
                         }
                     ]
