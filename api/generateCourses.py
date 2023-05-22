@@ -9,7 +9,7 @@ def lisaTund(event, groups, algusaeg, loppaeg, aine):
     if 'address' in event['location']:
         asukoht = event['location']['address']
     tund = {"weekday":nadalapaev, "startTime":algusaeg,"endTime":loppaeg,"place":asukoht}
-    if tyyp=="lecture":
+    if tyyp=="loeng":
         aine["lecture"].append(tund)
     else:
         grupp = None
@@ -58,10 +58,7 @@ for rida in read:
     if not 'events' in data_json:
         continue
     ainekood = data_json['info']['course_code']
-    if 'en' in data_json['info']['title']:
-        nimi = data_json['info']['title']['en']
-    else:
-        nimi = data_json['info']['title']['et']
+    nimi = data_json['info']['title']['et']
     eap = 0
     if 'credits' in data_json['info']:
         eap = data_json['info']['credits']
@@ -79,7 +76,7 @@ for rida in read:
     for event in data_json['events']:
         note = ""
         if ("-" in event['time']['academic_weeks'] or event['time']['academic_weeks'].count(",")>3) and event['event_type']['code'] == "lecture" and (event['study_work_type']["code"]=="practice" or event['study_work_type']["code"]=="lecture" or event['study_work_type']["code"]=="seminar"):
-            tyyp = event['study_work_type']["code"]
+            tyyp = event['study_work_type']["et"]
             algusaeg = event['time']['begin_time']
             loppaeg = event['time']['end_time']
 
