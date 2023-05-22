@@ -11,10 +11,10 @@ export interface LessonType {
   name: string
   startTime: string
   endTime: string
-  place: string | null
+  place: string[] | null
   lecture: boolean
-  lecturer: string | null
-  group: string | null
+  lecturer: string[] | null
+  group: string[] | null
   type: string | null
 }
 

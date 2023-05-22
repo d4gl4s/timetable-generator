@@ -106,11 +106,11 @@ const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
   return (
     <div>
       {formOpen ? (
-        <div className="flex w-[93%] m-auto sm:w-full flex-col items-start mt-16 text-[0.9em]">
-          <h1 className="font-bold text-[1.1em] mb-16">Genereeri kõik võimalik tunniplaanid</h1>
+        <div className="flex w-[93%] m-auto sm:w-full flex-col items-start mt-16 text-[0.9em] 2xl:text-[1em]  sm:p-10">
+          <h1 className="font-bold text-[1.1em] mb-16 mt-8">Genereeri kõik võimalikud tunniplaanid</h1>
           <div className="flex flex-col w-full mb-8">
             <label className="w-full flex justify-between">
-              Sisesta kursuse kood{" "}
+              Sisesta ainete koodid{" "}
               <div className="mb-2 font-normal">
                 Valitud: <span className="font-bold mr-8">{selectedCourses.length}</span>
                 EAP: <span className="font-bold">{getEAP()}</span>
@@ -128,7 +128,7 @@ const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
                 value={courseInput}
                 onChange={handleCourseInputChange}
               />
-              <button className="bg-orange-400 text-white w-[6em] h-full font-semibold text-[0.85em] rounded-[50px] unselectable" onClick={handleCoursesAdd}>
+              <button className="bg-blue-400 text-white w-[6em] h-full font-semibold text-[0.85em] rounded-[50px] unselectable" onClick={handleCoursesAdd}>
                 LISA
               </button>
             </div>
@@ -136,10 +136,14 @@ const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
             <ul className="text-[0.95em] font-medium mt-5">
               {selectedCourses?.map((course, i) => (
                 <li key={i} className="flex w-full  items-start justify-between">
-                  <div className="flex items-center">
-                    <span className="w-full text-[1.1em]">{i + 1 + ".  " + course.name}</span> <span className="font-semibold ml-4 text-gray-300">{course.code}</span>
+                  <div className="flex items-start">
+                    <span className="w-4 text-[1.1em]">{i + 1 + ". "} </span>
+                    <span className=" text-[1.1em]">
+                      {course.name}
+                      <span className="font-semibold ml-4 text-[0.9em] text-gray-300">{course.code}</span>
+                    </span>
                   </div>
-                  <FaTimes onClick={() => handleCourseDelete(course.code)} size={14} className="text-gray-300 cursor-pointer w-5 mt-[2px]" />
+                  <FaTimes onClick={() => handleCourseDelete(course.code)} size={14} className="text-red-400 cursor-pointer w-5 mt-[2px]" />
                 </li>
               ))}
             </ul>
@@ -183,7 +187,7 @@ const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
             </div>
           </div>
 
-          <div className="w-full flex justify-end mt-10 mb-10 items-center text-[0.9em]">
+          <div className="w-full flex justify-end mt-14 mb-4 items-center text-[0.9em]">
             {timetableGenerated ? (
               <div className="font-bold mr-4 text-[0.85em] cursor-pointer" onClick={() => setFormOpen(false)}>
                 TAGASI
@@ -198,7 +202,7 @@ const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
         </div>
       ) : (
         <div className="w-full flex justify-end mt-10 mb-10">
-          <button onClick={() => setFormOpen(true)} className="bg-gray-200 font-medium p-[10px] px-6  text-[0.8em] rounded-[50px] unselectable">
+          <button onClick={() => setFormOpen(true)} className="bg-gray-100 font-medium p-[10px] px-6  text-[0.8em] rounded-[50px] unselectable">
             Genereeri Uus
           </button>
         </div>
