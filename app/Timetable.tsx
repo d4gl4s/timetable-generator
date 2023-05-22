@@ -10,11 +10,11 @@ const Timetable = ({ timetable }: { timetable: (LessonType | null)[][] }) => {
           <table className="min-w-[100%] divide-y divide-[#f0eff8] ">
             <thead>
               <tr>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
+                <th>Esmaspäev</th>
+                <th>Teisipäev</th>
+                <th>Kolmapäev</th>
+                <th>Neljapäev</th>
+                <th>Reede</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#f0eff8]">
@@ -66,10 +66,13 @@ const Timetable = ({ timetable }: { timetable: (LessonType | null)[][] }) => {
       <div className="flex justify-end mt-8">
         <div className="font-medium text-[0.8em]">
           <div className="flex items-center">
-            <div className="w-2 h-2 rounded-[50px] bg-purple-400 mr-2"></div> Lecture
+            <div className="w-2 h-2 rounded-[50px] bg-purple-400 mr-2"></div> Loeng
           </div>
           <div className="flex items-center">
-            <div className="w-2 h-2 rounded-[50px] bg-green-400 mr-2"></div> Lab Practise
+            <div className="w-2 h-2 rounded-[50px] bg-green-400 mr-2"></div> Praktikum
+          </div>
+          <div className="flex items-center">
+            <div className="w-2 h-2 rounded-[50px] bg-orange-400 mr-2"></div> Seminar
           </div>
         </div>
       </div>

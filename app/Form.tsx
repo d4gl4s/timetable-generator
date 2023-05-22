@@ -17,14 +17,14 @@ const Form = ({ setTimetables, setLoading, setCurrent }: any) => {
 
   const submitForm = async (e: any) => {
     e.preventDefault()
-    if (selectedCourses.length == 0) setError("Please enter at least one course code!")
+    if (selectedCourses.length == 0) setError("Sisesta vähemalt ühe aine kood!")
     else {
       setLoading(true)
       setCurrent(0)
       try {
         const timetableData: (LessonType | null)[][][] | null = await generateTimetables(selectedCourses, freeDays, freeLessons)
         if (timetableData == null) {
-          setError("Could not create such timetable.")
+          setError("Ei olnud võimalik tunniplaani genereerida.")
           setTimetables(null)
         } else {
           setFormOpen(false)
@@ -40,19 +40,24 @@ const Form = ({ setTimetables, setLoading, setCurrent }: any) => {
   }
 
   const handleCourseInputChange = (e: any) => {
-    setCourseInput(e.target.value)
+    setCourseInput(e.target.value.toUpperCase())
+  }
+  const handleInputKeyPress = (event: any) => {
+    if (event.key === "Enter") {
+      handleCoursesAdd()
+    }
   }
 
   const handleCoursesAdd = async () => {
     //Kursuse nimi?
-    if (courseInput.trim().length < 8 || courseInput.trim().length > 15) setError("Course not found!")
+    if (courseInput.trim().length < 8 || courseInput.trim().length > 15) setError("Ainet ei leitud!")
     else {
       const courseData = await getCourseData(courseInput.trim())
-      if (courseData == null) setError("No course found!")
+      if (courseData == null) setError("Ainet ei leitud!")
       else {
         for (let i = 0; i < selectedCourses.length; i++) {
           if (courseData.code == selectedCourses[i].code) {
-            setError("Course already selected!")
+            setError("Aine juba lisatud!")
             return
           }
         }
@@ -100,12 +105,12 @@ const Form = ({ setTimetables, setLoading, setCurrent }: any) => {
     <div>
       {formOpen ? (
         <div className="flex w-[93%] m-auto sm:w-full flex-col items-start mt-16 text-[0.9em]">
-          <h1 className="font-bold text-[1.1em] mb-16">Generate All Possible Timetables</h1>
+          <h1 className="font-bold text-[1.1em] mb-16">Genereeri kõik võimalik tunniplaanid</h1>
           <div className="flex flex-col w-full mb-8">
             <label className="w-full flex justify-between">
-              Enter the code of the course{" "}
+              Sisesta kursuse kood{" "}
               <div className="mb-2 font-normal">
-                Selected: <span className="font-bold mr-8">{selectedCourses.length}</span>
+                Valitud: <span className="font-bold mr-8">{selectedCourses.length}</span>
                 EAP: <span className="font-bold">{getEAP()}</span>
               </div>
             </label>
@@ -117,12 +122,13 @@ const Form = ({ setTimetables, setLoading, setCurrent }: any) => {
                 type="text"
                 maxLength={11}
                 name="name"
+                onKeyPress={(e) => handleInputKeyPress(e)}
                 value={courseInput}
                 onChange={handleCourseInputChange}
-              />{" "}
+              />
               <button className="bg-orange-400 text-white w-[6em] h-full font-semibold text-[0.85em] rounded-[50px] unselectable" onClick={handleCoursesAdd}>
-                ADD
-              </button>{" "}
+                LISA
+              </button>
             </div>
             {error != "" ? <div className="mt-2 text-[0.85em] font-medium text-red-500">{error}</div> : null}
             <ul className="text-[0.95em] font-medium mt-5">
@@ -137,7 +143,7 @@ const Form = ({ setTimetables, setLoading, setCurrent }: any) => {
             </ul>
           </div>
           <div className="w-full mt-8">
-            <label>Select the lecture times that you want and do not want</label>
+            <label>Vali kellaajad, millal ei soovi praktikume</label>
             <div className="flex flex-wrap font-medium text-[0.8em] mt-4">
               {freeLessons.map((lessonValue, i) => {
                 const lessons = ["08:15-09:45", "10:15-11:45", "12:15-13:45", "14:15-15:45", "16:15-17:45", "18:15-19:45"]
@@ -156,10 +162,10 @@ const Form = ({ setTimetables, setLoading, setCurrent }: any) => {
             </div>
           </div>
           <div className="w-full mt-10">
-            <label>If you want to have days without practicals, select them here</label>
+            <label>Vali päevad, millal ei soovi praktikume</label>
             <div className="flex flex-wrap font-medium text-[0.8em] mt-4">
               {freeDays.map((dayValue, i) => {
-                const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+                const days = ["Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede"]
                 return (
                   <div
                     key={i}
@@ -178,19 +184,19 @@ const Form = ({ setTimetables, setLoading, setCurrent }: any) => {
           <div className="w-full flex justify-end mt-10 mb-10 items-center text-[0.9em]">
             {timetableGenerated ? (
               <div className="font-bold mr-4 text-[0.85em] cursor-pointer" onClick={() => setFormOpen(false)}>
-                CANCEL
+                TAGASI
               </div>
             ) : null}
 
             <button onClick={submitForm} className="bg-blue-400 font-medium p-3 px-8 text-white rounded-[50px] unselectable">
-              Generate
+              Genereeri
             </button>
           </div>
         </div>
       ) : (
         <div className="w-full flex justify-end mt-10 mb-10">
           <button onClick={() => setFormOpen(true)} className="bg-gray-200 font-medium p-[10px] px-6  text-[0.8em] rounded-[50px] unselectable">
-            Generate New
+            Genereeri Uus
           </button>
         </div>
       )}
