@@ -14,6 +14,11 @@ import os
 import sys
 import copy
 
+set1 = {1,3,7}
+set2 = {7,1,3}
+if set2 == set1:
+    print('yes')
+
 """ def lisaTund(tabel, keskmine, ajavahemikud, tund):
     for vahemik in ajavahemikud:
         if keskmine > vahemik[0] and keskmine < vahemik[1] and tabel[ajavahemikud[vahemik]][int(tund[2])-1]==0:

@@ -48,7 +48,6 @@ for rida in read:
     if len(rida) < 35:
         continue
     url = firstPart+rida
-    print(url)
     try:
         response = urlopen(url)
     except:
@@ -100,7 +99,37 @@ for rida in read:
                     lisaTund(event, groups, algusaeg, loppaeg, aine)
             else:
                 lisaTund(event, groups, algusaeg, loppaeg, aine)
-    ained['courses'].append(aine)
+
+    uusaine = {'name':aine['name'], 'code':aine['code'], 'eap':aine['eap'], 'lecture':aine['lecture'], 'groups':[]}
+
+    kokku = [] 
+    for a in aine['groups']:
+        kokkuset = set()
+        for b in a['practicalSessions']:            
+            kokkuset.add(b['weekday'])
+            kokkuset.add(b['startTime'])
+            kokkuset.add(b['endTime'])
+        jubaOlnud = False
+        for k in range(len(kokku)):
+            if kokku[k] == kokkuset:
+                jubaOlnud = True
+                #lisab alösdkj
+                uusaine['groups'][k]['group'].append(a['group'])
+                uusaine['groups'][k]['lecturer'].append(a['lecturer'])
+                sessions = uusaine['groups'][k]['practicalSessions']
+                for ax in range(len(sessions)):
+                    for b in range(len(a['practicalSessions'])):
+                        if sessions[ax]['weekday'] == a['practicalSessions'][b]['weekday'] and sessions[ax]['startTime'] == a['practicalSessions'][b]['startTime'] and sessions[ax]['endTime'] == a['practicalSessions'][b]['endTime']:
+                            sessions[ax]['place'].append(a['practicalSessions'][b]['place'])
+                break
+        if not jubaOlnud:
+            kokku.append(kokkuset)
+            komplekt = {'group':[a['group']], 'lecturer':[a['lecturer']], 'practicalSessions':[]}  
+            for b in a['practicalSessions']:
+                komplekt['practicalSessions'].append({'weekday':b['weekday'], 'startTime':b['startTime'], 'endTime':b['endTime'], 'place':[b['place']], 'type':b['type']})
+            uusaine['groups'].append(komplekt)
+
+    ained['courses'].append(uusaine)
 
 with open(os.path.join(sys.path[0], "data.json"), "w", encoding='utf-8') as outfile:
-    json.dump(ained, outfile)  
+    json.dump(ained, outfile)
