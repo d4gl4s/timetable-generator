@@ -32,9 +32,9 @@ function addGroupPracticals(group: any, name: string, timetable: (LessonType | n
     }
     if (timetable[timeframe][weekday] == null) {
       timetable[timeframe][weekday] = practicalSession
-      return true
-    } else return false
+    } else return false;
   }
+  return true;
 }
 
 function timeFrame(start: string, end: string) {

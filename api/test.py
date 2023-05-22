@@ -19,7 +19,6 @@ import copy
         if keskmine > vahemik[0] and keskmine < vahemik[1] and tabel[ajavahemikud[vahemik]][int(tund[2])-1]==0:
             tabel[ajavahemikud[vahemik]][int(tund[2])-1] = tund
             return True
-    
     return False
 
 def lisaPikkTund(aeg1, aeg2, tabel, ajavahemikud, tund):
