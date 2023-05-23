@@ -1,11 +1,12 @@
 import { useRef, useState } from "react"
 import { motion } from "framer-motion"
-import { FaTimes } from "react-icons/fa"
-import { generateTimetables } from "./generate"
+import Link from "next/link"
+import { generateTimetables } from "../generate"
 import { CourseType, LessonType } from "@/types/types"
 import ScaleLoader from "react-spinners/ScaleLoader"
-import { getCourseData } from "./courseData"
+import { getCourseData } from "../courseData"
 import SelectedCourse from "./SelectedCourse"
+import { BiRightArrow } from "react-icons/bi"
 
 const Form = ({ setTimetables, setCurrent }: any) => {
   const [selectedCourses, setSelectedCourses] = useState<CourseType[]>([])
@@ -109,7 +110,12 @@ const Form = ({ setTimetables, setCurrent }: any) => {
     <div>
       {formOpen ? (
         <div className="flex w-[93%] m-auto sm:w-full flex-col items-start mt-16 text-[0.9em] 2xl:text-[1em]  sm:p-10">
-          <h1 className="font-bold text-[1.1em] mb-16 mt-16">Genereeri kõik võimalikud tunniplaanid</h1>
+          <h1 className="font-bold text-[1.1em] mb-20 mt-16 w-full flex items-end justify-between">
+            Genereeri kõik võimalikud tunniplaanid{" "}
+            <Link href="/projektist" className="text-[0.8em] h-fit underline flex items-center">
+              Sissejuhatus <BiRightArrow size={12} className="ml-2" />
+            </Link>
+          </h1>
           <div className="flex flex-col w-full mb-8">
             <label className="w-full flex justify-between">
               Sisesta ainete koodid{" "}
@@ -122,7 +128,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
               <input
                 ref={addCourseInputRef}
                 placeholder="LTAT.00.000"
-                className="h-full w-full rounded   placeholder-gray-300 font-medium bg-gray-100 mr-2"
+                className="h-full w-full rounded   placeholder-slate-300 font-medium bg-slate-100 mr-2"
                 type="text"
                 maxLength={11}
                 name="name"
@@ -157,7 +163,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
                     animate={{ backgroundColor: lessonValue ? "#fecaca" : "#f3f4f6" }}
                     transition={{ duration: 0.1 }}
                     whileHover={{ backgroundColor: lessonValue ? "#fca5a5" : "#e2e8f0" }}
-                    className={"p-[9px] px-6 unselectable bg-zinc-100 rounded-[50px] mr-2 cursor-pointer flex items-center mb-2 " + (lessonValue ? " text-red-600 line-through" : "text-zinc-400")}
+                    className={"p-[9px] px-6 unselectable bg-slate-100 rounded-[50px] mr-2 cursor-pointer flex items-center mb-2 " + (lessonValue ? " text-red-600 line-through" : "text-slate-400")}
                     onClick={() => handleFreeLesson(i)}
                   >
                     {lessons[i]}
@@ -176,7 +182,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
                     key={i}
                     animate={{ backgroundColor: dayValue ? "#fecaca" : "#f3f4f6" }}
                     whileHover={{ backgroundColor: dayValue ? "#fca5a5" : "#e2e8f0" }}
-                    className={"p-[9px] px-6 rounded-[50px] bg-zinc-100 mr-2 cursor-pointer flex items-center unselectable mb-2 " + (dayValue ? " text-red-600 line-through" : " text-zinc-400")}
+                    className={"p-[9px] px-6 rounded-[50px] bg-slate-100 mr-2 cursor-pointer flex items-center unselectable mb-2 " + (dayValue ? " text-red-600 line-through" : " text-slate-400")}
                     onClick={() => handleFreeDay(i)}
                   >
                     {days[i]}
@@ -205,7 +211,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
         </div>
       ) : (
         <div className="w-full flex justify-end mt-10 mb-10">
-          <motion.button whileHover={{ backgroundColor: "#e8eaed" }} onClick={() => setFormOpen(true)} className="bg-gray-100 font-medium p-[10px] px-6  text-[0.8em] rounded-[50px] unselectable">
+          <motion.button whileHover={{ backgroundColor: "#e8eaed" }} onClick={() => setFormOpen(true)} className="bg-slate-100 font-medium p-[10px] px-6  text-[0.8em] rounded-[50px] unselectable">
             Genereeri Uus
           </motion.button>
         </div>

@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react"
-import Timetable from "./Timetable"
+import Timetable from "./components/Timetable"
 import { HiOutlineArrowCircleRight, HiOutlineArrowCircleLeft } from "react-icons/hi"
-import Form from "./Form"
+import Form from "./components/Form"
 import { LessonType } from "@/types/types"
 
 export default function Home() {
@@ -40,7 +40,6 @@ export default function Home() {
           <Timetable timetable={timetables[current]} />
         </div>
       )}
-      <div className="w-full flex justify-center mb-12 text-[0.8em] font-semibold text-gray-300 mt-48">&#169; {new Date().getFullYear()}</div>
     </main>
   )
 }

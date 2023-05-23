@@ -15,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning={true} className={inter.className}>
         {children}
         <Analytics />
+        <footer className="w-full flex justify-center mb-12 text-[0.8em] font-semibold text-gray-300 mt-48">&#169; {new Date().getFullYear()}</footer>
       </body>
     </html>
   )

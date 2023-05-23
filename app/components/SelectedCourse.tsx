@@ -20,8 +20,24 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
     }
   }
 
+  const containsGroup = (groups: string[]): boolean => {
+    for (let i = 0; i < groups.length; i++) {
+      if (groups[i] !== null) return true
+    }
+    return false
+  }
+
   const notWantedContainsGroup = (group: string): boolean => {
     return notWanted.includes(group)
+  }
+
+  const selectAll = () => {
+    course.groupsNotWanted = course.groups
+    setNotWanted(course.groups)
+  }
+  const deselectAll = () => {
+    course.groupsNotWanted = []
+    setNotWanted([])
   }
 
   return (
@@ -35,14 +51,16 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
           </span>
         </div>
         <div className="flex h-full items-start">
-          <div onClick={() => setOpen(!open)} className=" mr-8 cursor-pointer w-5 mt-[6px]">
-            {open ? <IoIosArrowUp /> : <IoIosArrowDown />}
-          </div>
+          {containsGroup(course.groups) && (
+            <div onClick={() => setOpen(!open)} className=" mr-8 cursor-pointer w-5 mt-[6px]">
+              {open ? <IoIosArrowUp /> : <IoIosArrowDown />}
+            </div>
+          )}
           <FaTimes onClick={() => handleCourseDelete(course.code)} size={15} className="text-red-400 cursor-pointer w-5 mt-[6px]" />
         </div>
       </motion.li>
       {/* siin kontrolli, kas vahemalt uks grupp esineb ruhmal */}
-      {open && (
+      {open && containsGroup(course.groups) && (
         <div className="flex flex-wrap font-medium text-[0.8em] mt-4 mb-4">
           {course.groups.map((group, i) => {
             if (group !== null)
@@ -52,8 +70,8 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
                   animate={{ backgroundColor: notWantedContainsGroup(group) ? "#fecaca" : "#f3f4f6" }}
                   whileHover={{ backgroundColor: notWantedContainsGroup(group) ? "#fca5a5" : "#e2e8f0" }}
                   className={
-                    "p-[9px] px-6 rounded-[50px] bg-zinc-100 mr-2 cursor-pointer flex items-center unselectable mb-2 " +
-                    (notWantedContainsGroup(group) ? " text-red-600 line-through" : " text-zinc-400")
+                    "p-[9px] px-6 rounded-[50px] bg-slate-100 mr-2 cursor-pointer flex items-center unselectable mb-2 " +
+                    (notWantedContainsGroup(group) ? " text-red-600 line-through" : " text-slate-400")
                   }
                   onClick={() => handleGroupNotWantedClick(group)}
                 >
@@ -61,6 +79,12 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
                 </motion.div>
               )
           })}
+          <motion.div className={"ml-3 flex items-center  unselectable mb-2 text-slate-400 "} onClick={selectAll} whileHover={{ color: "#cbd5e1" }}>
+            <div className="h-fit cursor-pointer">Vali Kõik</div>
+          </motion.div>
+          <motion.div className={"ml-6 flex items-center  unselectable mb-2 text-slate-400 "} onClick={deselectAll} whileHover={{ color: "#cbd5e1" }}>
+            <div className="h-fit cursor-pointer">Tagasi</div>
+          </motion.div>
         </div>
       )}
     </div>
