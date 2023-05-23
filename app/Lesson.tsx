@@ -24,13 +24,13 @@ const Lesson = ({ lesson }: { lesson: LessonType }) => {
   return (
     <>
       <motion.td
-        animate={{ backgroundColor: lecture ? "#e9d5ff" : type == "praktikum" ? "#d1fae5" : "#ffedd5" }}
+        /* animate={{ backgroundColor: lecture ? "#e9d5ff" : type == "praktikum" ? "#d1fae5" : "#ffedd5" }}
         transition={{ duration: 0.1 }}
-        whileHover={{ backgroundColor: lecture ? "#c4b5fd" : type == "praktikum" ? "#a7f3d0" : "#fed7aa" }}
+        whileHover={{ backgroundColor: lecture ? "#c4b5fd" : type == "praktikum" ? "#a7f3d0" : "#fed7aa" }} */
         onClick={() => setOpen(open ? false : true)}
         className={
           "relative 2xl:text-[0.9em] inner-border-[1px] leading-[16px] cursor-pointer rounded-[4px] z-2  break-all break-words  " +
-          (lecture ? "inner-border-purple-400" : type == "praktikum" ? " inner-border-emerald-300" : "inner-border-orange-300")
+          (lecture ? "bg-purple-100 inner-border-purple-400" : type == "praktikum" ? " bg-emerald-100 inner-border-emerald-300" : "bg-orange-100 inner-border-orange-300")
         }
       >
         <OutsideClickHandler

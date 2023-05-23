@@ -5,6 +5,7 @@ import { generateTimetables } from "./generate"
 import { CourseType, LessonType } from "@/types/types"
 import ScaleLoader from "react-spinners/ScaleLoader"
 import { getCourseData } from "./courseData"
+import SelectedCourse from "./SelectedCourse"
 
 const Form = ({ setTimetables, setCurrent }: any) => {
   const [selectedCourses, setSelectedCourses] = useState<CourseType[]>([])
@@ -19,6 +20,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
 
   const submitForm = async (e: any) => {
     e.preventDefault()
+    console.log(selectedCourses)
     if (selectedCourses.length == 0) setError("Sisesta vähemalt ühe aine kood!")
     else {
       setLoading(true)
@@ -55,7 +57,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
     if (courseInput.trim().length < 8 || courseInput.trim().length > 15) setError("Ainet ei leitud!")
     else {
       const courseData = await getCourseData(courseInput.trim())
-      console.log(courseData)
+
       if (courseData == null) setError("Ainet ei leitud!")
       else {
         for (let i = 0; i < selectedCourses.length; i++) {
@@ -64,6 +66,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
             return
           }
         }
+        courseData.groupsNotWanted = []
 
         setSelectedCourses((oldArray: any) => [...oldArray, courseData])
         setError("")
@@ -140,16 +143,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
 
             <ul className="text-[0.95em] font-medium mt-5">
               {selectedCourses?.map((course, i) => (
-                <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }} key={i} className="flex w-full overflow  items-start justify-between">
-                  <div className="flex items-start">
-                    <span className="w-4 text-[1.1em]">{i + 1 + ". "} </span>
-                    <span className=" text-[1.1em]">
-                      {course.name}
-                      <span className="font-semibold ml-4 text-[0.9em] text-gray-300">{course.code}</span>
-                    </span>
-                  </div>
-                  <FaTimes onClick={() => handleCourseDelete(course.code)} size={15} className="text-red-400 cursor-pointer w-5 mt-[6px]" />
-                </motion.li>
+                <SelectedCourse handleCourseDelete={handleCourseDelete} course={course} key={i} i={i} />
               ))}
             </ul>
           </div>

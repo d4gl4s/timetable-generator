@@ -23,6 +23,7 @@ export interface CourseType {
   code: string
   eap: number
   groups: string[]
+  groupsNotWanted?: string[]
 }
 export interface GroupType {
   name: string
