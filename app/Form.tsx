@@ -1,6 +1,7 @@
 /* import { TimetableType } from "@/types/types" */
 import { Console, table } from "console"
 import { use, useRef, useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import { FaTimes } from "react-icons/fa"
 import { generateTimetables } from "./generate"
 import { CourseType, LessonType } from "@/types/types"
@@ -16,6 +17,7 @@ const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
   const [formOpen, setFormOpen] = useState<boolean>(true)
   const [timetableGenerated, setTimetableGenerated] = useState<boolean>(false)
   const [error, setError] = useState<string>("")
+  const addCourseInputRef = useRef<HTMLInputElement>(null)
 
   const submitForm = async (e: any) => {
     e.preventDefault()
@@ -72,7 +74,6 @@ const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
       addCourseInputRef.current!.focus()
     }
   }
-  const addCourseInputRef = useRef<HTMLInputElement>(null)
 
   const handleCourseDelete = (code: string) => {
     setSelectedCourses((current: CourseType[]) =>
@@ -107,7 +108,7 @@ const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
     <div>
       {formOpen ? (
         <div className="flex w-[93%] m-auto sm:w-full flex-col items-start mt-16 text-[0.9em] 2xl:text-[1em]  sm:p-10">
-          <h1 className="font-bold text-[1.1em] mb-16 mt-8">Genereeri kõik võimalikud tunniplaanid</h1>
+          <h1 className="font-bold text-[1.1em] mb-16 mt-16">Genereeri kõik võimalikud tunniplaanid</h1>
           <div className="flex flex-col w-full mb-8">
             <label className="w-full flex justify-between">
               Sisesta ainete koodid{" "}
@@ -128,14 +129,19 @@ const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
                 value={courseInput}
                 onChange={handleCourseInputChange}
               />
-              <button className="bg-blue-400 text-white w-[6em] h-full font-semibold text-[0.85em] rounded-[50px] unselectable" onClick={handleCoursesAdd}>
+              <motion.button
+                whileHover={{ backgroundColor: "#5b8bde" }}
+                className="bg-blue-400 text-white w-[6em] h-full font-semibold text-[0.85em] rounded-[50px] unselectable"
+                onClick={handleCoursesAdd}
+              >
                 LISA
-              </button>
+              </motion.button>
             </div>
             {error != "" ? <div className="mt-2 text-[0.85em] font-medium text-red-500">{error}</div> : null}
+
             <ul className="text-[0.95em] font-medium mt-5">
               {selectedCourses?.map((course, i) => (
-                <li key={i} className="flex w-full  items-start justify-between">
+                <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }} key={i} className="flex w-full overflow  items-start justify-between">
                   <div className="flex items-start">
                     <span className="w-4 text-[1.1em]">{i + 1 + ". "} </span>
                     <span className=" text-[1.1em]">
@@ -143,8 +149,8 @@ const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
                       <span className="font-semibold ml-4 text-[0.9em] text-gray-300">{course.code}</span>
                     </span>
                   </div>
-                  <FaTimes onClick={() => handleCourseDelete(course.code)} size={14} className="text-red-400 cursor-pointer w-5 mt-[2px]" />
-                </li>
+                  <FaTimes onClick={() => handleCourseDelete(course.code)} size={15} className="text-red-400 cursor-pointer w-5 mt-[6px]" />
+                </motion.li>
               ))}
             </ul>
           </div>
@@ -154,15 +160,16 @@ const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
               {freeLessons.map((lessonValue, i) => {
                 const lessons = ["08:15-09:45", "10:15-11:45", "12:15-13:45", "14:15-15:45", "16:15-17:45", "18:15-19:45"]
                 return (
-                  <div
+                  <motion.div
                     key={i}
-                    className={
-                      "p-[9px] px-6 unselectable rounded-[50px] mr-2 cursor-pointer flex items-center mb-2 " + (lessonValue ? "bg-red-200 text-red-600 line-through" : "bg-gray-100 text-gray-400")
-                    }
+                    animate={{ backgroundColor: lessonValue ? "#fecaca" : "#f3f4f6" }}
+                    transition={{ duration: 0.1 }}
+                    whileHover={{ backgroundColor: lessonValue ? "#fca5a5" : "#e2e8f0" }}
+                    className={"p-[9px] px-6 unselectable bg-zinc-100 rounded-[50px] mr-2 cursor-pointer flex items-center mb-2 " + (lessonValue ? " text-red-600 line-through" : "text-zinc-400")}
                     onClick={() => handleFreeLesson(i)}
                   >
                     {lessons[i]}
-                  </div>
+                  </motion.div>
                 )
               })}
             </div>
@@ -173,15 +180,15 @@ const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
               {freeDays.map((dayValue, i) => {
                 const days = ["Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede"]
                 return (
-                  <div
+                  <motion.div
                     key={i}
-                    className={
-                      "p-[9px] px-6 rounded-[50px] mr-2 cursor-pointer flex items-center unselectable mb-2 " + (dayValue ? "bg-red-200 text-red-600 line-through" : "bg-gray-100 text-gray-400")
-                    }
+                    animate={{ backgroundColor: dayValue ? "#fecaca" : "#f3f4f6" }}
+                    whileHover={{ backgroundColor: dayValue ? "#fca5a5" : "#e2e8f0" }}
+                    className={"p-[9px] px-6 rounded-[50px] bg-zinc-100 mr-2 cursor-pointer flex items-center unselectable mb-2 " + (dayValue ? " text-red-600 line-through" : " text-zinc-400")}
                     onClick={() => handleFreeDay(i)}
                   >
                     {days[i]}
-                  </div>
+                  </motion.div>
                 )
               })}
             </div>
@@ -194,17 +201,21 @@ const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
               </div>
             ) : null}
 
-            <button onClick={submitForm} className="bg-blue-400 w-32 h-10 font-medium  text-white rounded-[50px] unselectable flex items-center justify-center">
+            <motion.button
+              whileHover={{ backgroundColor: "#5b8bde" }}
+              onClick={submitForm}
+              className="bg-blue-400 w-32 h-10 font-medium  text-white rounded-[50px] unselectable flex items-center justify-center"
+            >
               {loading ? null : "Genereeri"}
               <ScaleLoader color="white" loading={loading} height={14} radius={1} aria-label="Loading Spinner" data-testid="loader" />
-            </button>
+            </motion.button>
           </div>
         </div>
       ) : (
         <div className="w-full flex justify-end mt-10 mb-10">
-          <button onClick={() => setFormOpen(true)} className="bg-gray-100 font-medium p-[10px] px-6  text-[0.8em] rounded-[50px] unselectable">
+          <motion.button whileHover={{ backgroundColor: "#e8eaed" }} onClick={() => setFormOpen(true)} className="bg-gray-100 font-medium p-[10px] px-6  text-[0.8em] rounded-[50px] unselectable">
             Genereeri Uus
-          </button>
+          </motion.button>
         </div>
       )}
     </div>

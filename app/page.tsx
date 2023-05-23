@@ -7,14 +7,13 @@ import { LessonType } from "@/types/types"
 
 export default function Home() {
   const [timetables, setTimetables] = useState<(LessonType | null)[][][] | null>(null)
-  /*   const [loading, setLoading] = useState<boolean>(false) */
   const [current, setCurrent] = useState<number>(0)
 
   return (
     <main className="w-[96%] sm:w-[90%] md:w-[80%] md:max-w-[700px]  2xl:max-w-[1000px] m-auto overflow-visible">
-      <Form setTimetables={setTimetables} /* setLoading={setLoading}  */ setCurrent={setCurrent} />
-      {/* {loading ? "Laadimine..." : null} */}
-      {timetables != null ? (
+      <Form setTimetables={setTimetables} setCurrent={setCurrent} />
+
+      {timetables != null && (
         <div className="overflow-visible mt-32">
           <div className="w-[90%] m-auto md:w-full flex justify-between mt-16 mb-6">
             <div className="flex text-[0.9em] 2xl:text-[1em] font-medium unselectable">
@@ -40,8 +39,8 @@ export default function Home() {
 
           <Timetable timetable={timetables[current]} />
         </div>
-      ) : null}
-      <div className="w-full flex justify-center mb-12 text-[0.8em] font-semibold text-gray-300">&#169; {new Date().getFullYear()}</div>
+      )}
+      <div className="w-full flex justify-center mb-12 text-[0.8em] font-semibold text-gray-300 mt-48">&#169; {new Date().getFullYear()}</div>
     </main>
   )
 }
