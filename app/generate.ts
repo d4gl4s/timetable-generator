@@ -4,6 +4,7 @@ import { CourseType, LessonType } from "@/types/types"
 import { courses } from "../api/data.json"
 
 function addGroupPracticals(group: any, name: string, timetable: (LessonType | null)[][], freeDays: boolean[], freeLessons: boolean[]) {
+  console.log(group)
   const practicalSessions = group.practicalSessions
   const groupName = group.group
   const lecturer = group.lecturer
@@ -126,17 +127,20 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
       }
 
       const groups = selectedCourses[i].groups
-      if (groups.length == 1) coursesWithOnePractical++
-      if (groups.length == 1 && !addGroupPracticals(groups[0], selectedCourses[i].name, timetableConcrete, [false, false, false, false, false], [false, false, false, false, false, false]))
-        throw "error"
+      if (groups.length == 1) {
+        coursesWithOnePractical++
+        const added = addGroupPracticals(groups[0], selectedCourses[i].name, timetableConcrete, [false, false, false, false, false], [false, false, false, false, false, false])
+        if (added) selectedCourses.splice(i, 1);
+        else throw "error";
+      }
     }
 
-    if (coursesWithOnePractical == selectedCourses.length) return [timetableConcrete]
+    if (selectedCourses.length == 0) return [timetableConcrete]
     selectedCourses.sort(compare)
+    console.log(selectedCourses)
 
     const timetableArray: (LessonType | null)[][][] = []
     recursive(selectedCourses, 0, timetableArray, timetableConcrete, freeDays, freeLessons)
-
     return timetableArray.length == 0 ? null : timetableArray
   } catch (error) {
     return null
