@@ -1,14 +1,12 @@
-/* import { TimetableType } from "@/types/types" */
-import { Console, table } from "console"
-import { use, useRef, useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useRef, useState } from "react"
+import { motion } from "framer-motion"
 import { FaTimes } from "react-icons/fa"
 import { generateTimetables } from "./generate"
 import { CourseType, LessonType } from "@/types/types"
 import ScaleLoader from "react-spinners/ScaleLoader"
 import { getCourseData } from "./courseData"
 
-const Form = ({ setTimetables, /* setLoading, */ setCurrent }: any) => {
+const Form = ({ setTimetables, setCurrent }: any) => {
   const [selectedCourses, setSelectedCourses] = useState<CourseType[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [freeDays, setFreeDays] = useState<boolean[]>([false, false, false, false, false])

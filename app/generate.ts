@@ -2,7 +2,6 @@
 
 import { CourseType, LessonType } from "@/types/types"
 import { courses } from "../api/data.json"
-const { readFileSync } = require("fs")
 
 function addGroupPracticals(group: any, name: string, timetable: (LessonType | null)[][], freeDays: boolean[], freeLessons: boolean[]) {
   const practicalSessions = group.practicalSessions
