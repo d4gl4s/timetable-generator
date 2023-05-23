@@ -55,6 +55,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
     if (courseInput.trim().length < 8 || courseInput.trim().length > 15) setError("Ainet ei leitud!")
     else {
       const courseData = await getCourseData(courseInput.trim())
+      console.log(courseData)
       if (courseData == null) setError("Ainet ei leitud!")
       else {
         for (let i = 0; i < selectedCourses.length; i++) {

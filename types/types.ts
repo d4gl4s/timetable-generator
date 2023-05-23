@@ -22,6 +22,7 @@ export interface CourseType {
   name: string
   code: string
   eap: number
+  groups: string[]
 }
 export interface GroupType {
   name: string
