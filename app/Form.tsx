@@ -20,7 +20,6 @@ const Form = ({ setTimetables, setCurrent }: any) => {
 
   const submitForm = async (e: any) => {
     e.preventDefault()
-    console.log(selectedCourses)
     if (selectedCourses.length == 0) setError("Sisesta vähemalt ühe aine kood!")
     else {
       setLoading(true)
