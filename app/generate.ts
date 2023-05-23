@@ -83,7 +83,9 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
     for (let i = 0; i < courses.length; i++) {
       for (let s = 0; s < selected.length; s++) {
         if (selected[s].code == courses[i].code) {
-          selectedCourses.push(courses[i])
+          const coursesCopy = JSON.parse(JSON.stringify(courses[i]))
+          Object.assign(coursesCopy, { 'groupsNotWanted': selected[s].groupsNotWanted });
+          selectedCourses.push(coursesCopy)
           if (selectedCourses.length == selected.length) break
         }
       }
@@ -126,6 +128,21 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
       }
 
       const groups = selectedCourses[i].groups
+      for (let j = 0; j < groups.length; j++) {
+        for (let k = 0; k < groups[j].group.length; k++) {
+          for (let l = 0; l < selectedCourses[i].groupsNotWanted.length; l++) {
+            if (groups[j].group[k] == selectedCourses[i].groupsNotWanted[l]) {
+              groups[j].group.splice(k, 1);
+              k--;
+            }
+          }
+        }
+        if (groups[j].group.length == 0) {
+          groups.splice(j, 1)
+          j--;
+        }
+
+      }
       if (groups.length == 1) {
         coursesWithOnePractical++
         const added = addGroupPracticals(groups[0], selectedCourses[i].name, timetableConcrete, [false, false, false, false, false], [false, false, false, false, false, false])
@@ -135,6 +152,8 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
     }
 
     if (selectedCourses.length == 0) return [timetableConcrete]
+
+
     selectedCourses.sort(compare)
 
     const timetableArray: (LessonType | null)[][][] = []
