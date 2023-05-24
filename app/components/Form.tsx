@@ -19,7 +19,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
   const [error, setError] = useState<string>("")
   const addCourseInputRef = useRef<HTMLInputElement>(null)
 
-  const submitForm = async (e: any) => {
+  const submitForm = async (e: React.SyntheticEvent) => {
     e.preventDefault()
     if (selectedCourses.length == 0) setError("Sisesta vähemalt ühe aine kood!")
     else {
@@ -43,17 +43,14 @@ const Form = ({ setTimetables, setCurrent }: any) => {
     }
   }
 
-  const handleCourseInputChange = (e: any) => {
-    setCourseInput(e.target.value.toUpperCase())
+  const handleCourseInputChange = (e: React.FormEvent<HTMLInputElement>) => {
+    setCourseInput(e.currentTarget.value.toUpperCase())
   }
-  const handleInputKeyPress = (event: any) => {
-    if (event.key === "Enter") {
-      handleCoursesAdd()
-    }
+  const handleInputKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") handleCoursesAdd()
   }
 
   const handleCoursesAdd = async () => {
-    //Kursuse nimi?
     if (courseInput.trim().length < 8 || courseInput.trim().length > 15) setError("Ainet ei leitud!")
     else {
       const courseData = await getCourseData(courseInput.trim())
@@ -67,12 +64,11 @@ const Form = ({ setTimetables, setCurrent }: any) => {
           }
         }
         courseData.groupsNotWanted = []
-
-        setSelectedCourses((oldArray: any) => [...oldArray, courseData])
+        setSelectedCourses((oldArray: CourseType[]) => [...oldArray, courseData])
         setError("")
         setCourseInput("")
       }
-      //Siia cursor tagasi input fieldile
+
       addCourseInputRef.current!.focus()
     }
   }
@@ -85,14 +81,14 @@ const Form = ({ setTimetables, setCurrent }: any) => {
     )
   }
   const handleFreeDay = (i: number) => {
-    const newFreeDays = freeDays!.map((day, indeks: any) => {
+    const newFreeDays = freeDays!.map((day, indeks: number) => {
       if (indeks === i) return !day
       return day
     })
     setFreeDays(newFreeDays)
   }
   const handleFreeLesson = (i: number) => {
-    const newFreeLesson = freeLessons!.map((lesson, indeks: any) => {
+    const newFreeLesson = freeLessons!.map((lesson, indeks: number) => {
       if (indeks === i) return !lesson
       return lesson
     })
@@ -112,9 +108,11 @@ const Form = ({ setTimetables, setCurrent }: any) => {
         <div className="flex w-[93%] m-auto sm:w-full flex-col items-start mt-16 text-[0.9em] 2xl:text-[1em]  sm:p-10">
           <h1 className="font-bold text-[1.1em] mb-20 mt-16 w-full flex items-end justify-between">
             Genereeri kõik võimalikud tunniplaanid{" "}
-            <Link href="/projektist" className="text-[0.8em] h-fit underline flex items-center">
-              Sissejuhatus <BiRightArrow size={12} className="ml-2" />
-            </Link>
+            <motion.div whileHover={{ color: "#e2e8f0" }} initial={{ color: "#94a3b8" }} animate={{ color: "#94a3b8" }}>
+              <Link href="/projektist" className="font-medium unselectable text-[0.8em] h-fit underline flex items-center">
+                Sissejuhatus <BiRightArrow size={12} className="ml-2" />
+              </Link>
+            </motion.div>
           </h1>
           <div className="flex flex-col w-full mb-8">
             <label className="w-full flex justify-between">
@@ -129,7 +127,9 @@ const Form = ({ setTimetables, setCurrent }: any) => {
                 ref={addCourseInputRef}
                 placeholder="LTAT.00.000"
                 className="h-full w-full rounded   placeholder-slate-300 font-medium bg-slate-100 mr-2"
+                autoComplete="off"
                 type="text"
+                autoFocus={true}
                 maxLength={11}
                 name="name"
                 onKeyPress={(e) => handleInputKeyPress(e)}
@@ -144,7 +144,11 @@ const Form = ({ setTimetables, setCurrent }: any) => {
                 LISA
               </motion.button>
             </div>
-            {error != "" ? <div className="mt-2 text-[0.85em] font-medium text-red-500">{error}</div> : null}
+            {error != "" ? (
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-2 text-[0.85em] font-medium text-red-500">
+                {error}
+              </motion.div>
+            ) : null}
 
             <ul className="text-[0.95em] font-medium mt-5">
               {selectedCourses?.map((course, i) => (
@@ -194,9 +198,9 @@ const Form = ({ setTimetables, setCurrent }: any) => {
 
           <div className="w-full flex justify-end mt-14 mb-4 items-center text-[0.9em]">
             {timetableGenerated ? (
-              <div className="font-bold mr-4 text-[0.85em] cursor-pointer" onClick={() => setFormOpen(false)}>
+              <motion.div whileHover={{ color: "#94a3b8" }} className="font-bold mr-4 text-[0.85em] cursor-pointer" onClick={() => setFormOpen(false)}>
                 TAGASI
-              </div>
+              </motion.div>
             ) : null}
 
             <motion.button
@@ -211,7 +215,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
         </div>
       ) : (
         <div className="w-full flex justify-end mt-10 mb-10">
-          <motion.button whileHover={{ backgroundColor: "#e8eaed" }} onClick={() => setFormOpen(true)} className="bg-slate-100 font-medium p-[10px] px-6  text-[0.8em] rounded-[50px] unselectable">
+          <motion.button whileHover={{ backgroundColor: "#e2e8f0" }} onClick={() => setFormOpen(true)} className="bg-slate-100 font-medium p-[10px] px-6  text-[0.8em] rounded-[50px] unselectable">
             Genereeri Uus
           </motion.button>
         </div>

@@ -16,7 +16,7 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
       setNotWanted(notWantedNew)
     } else {
       course.groupsNotWanted?.push(group)
-      setNotWanted((oldArray: any) => [...oldArray, group])
+      setNotWanted((oldArray: string[]) => [...oldArray, group])
     }
   }
 
@@ -52,11 +52,13 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
         </div>
         <div className="flex h-full items-start">
           {containsGroup(course.groups) && (
-            <div onClick={() => setOpen(!open)} className=" mr-8 cursor-pointer w-5 mt-[6px]">
+            <motion.div whileHover={{ color: "#94a3b8", scale: 1.2 }} onClick={() => setOpen(!open)} className=" mr-8 cursor-pointer w-5 mt-[6px]">
               {open ? <IoIosArrowUp /> : <IoIosArrowDown />}
-            </div>
+            </motion.div>
           )}
-          <FaTimes onClick={() => handleCourseDelete(course.code)} size={15} className="text-red-400 cursor-pointer w-5 mt-[6px]" />
+          <motion.div whileHover={{ color: "#ef4444" }} initial={{ color: "#f87171" }}>
+            <FaTimes onClick={() => handleCourseDelete(course.code)} size={15} className="cursor-pointer w-5 mt-[6px]" />
+          </motion.div>
         </div>
       </motion.li>
       {/* siin kontrolli, kas vahemalt uks grupp esineb ruhmal */}
@@ -79,12 +81,14 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
                 </motion.div>
               )
           })}
-          <motion.div className={"ml-3 flex items-center  unselectable mb-2 text-slate-400 "} onClick={selectAll} whileHover={{ color: "#cbd5e1" }}>
-            <div className="h-fit cursor-pointer">Vali Kõik</div>
-          </motion.div>
-          <motion.div className={"ml-6 flex items-center  unselectable mb-2 text-slate-400 "} onClick={deselectAll} whileHover={{ color: "#cbd5e1" }}>
-            <div className="h-fit cursor-pointer">Tagasi</div>
-          </motion.div>
+          <div className="flex h-10">
+            <motion.div className={"ml-3 flex items-center  unselectable mb-2 text-slate-400 "} onClick={selectAll} whileHover={{ color: "#cbd5e1" }}>
+              <div className="h-fit cursor-pointer">Vali Kõik</div>
+            </motion.div>
+            <motion.div className={"ml-6 flex items-center  unselectable mb-2 text-slate-400 "} onClick={deselectAll} whileHover={{ color: "#cbd5e1" }}>
+              <div className="h-fit cursor-pointer">Tagasi</div>
+            </motion.div>
+          </div>
         </div>
       )}
     </div>

@@ -11,24 +11,14 @@ body {
   color: var(--main);
   border-style: solid;
   border-color: var(--main);
-  /* font-weight: 500; */
 }
 
 .divShadow {
   box-shadow: rgba(137, 139, 142, 0.2) 0px 2px 8px 0px;
-  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
 }
 .tableShadow {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
 
 table {
   border-spacing: 0;
@@ -38,18 +28,6 @@ tr,
 tbody {
   overflow: visible;
 }
-
-/* tr {
-  :last-child {
-    td {
-      border-bottom: 0;
-    }
-  }
-} */
-
-/* td :last-child {
-  border-right: 0;
-} */
 
 label {
   font-weight: 600;
@@ -132,7 +110,7 @@ input::-ms-input-placeholder {
   user-select: none;
 }
 ::selection {
-  background: rgb(255, 230, 225);
+  background: rgba(203, 217, 238, 0.492);
 }
 
 /*Scrollbar*/

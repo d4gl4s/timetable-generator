@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section className="text-justify text-[0.95em] leading-[20px] font-normal w-[95%] m-auto max-w-[800px] mt-[16svh]">
       <div className="w-fit">
-        <Link href="./" className="flex items-center text-zinc-400 font-medium text-[0.85em]">
+        <Link href="./" className="flex items-center text-slate-400 font-medium text-[0.85em]">
           <BiLeftArrow className="mr-2" size={12} />
           Tagasi
         </Link>

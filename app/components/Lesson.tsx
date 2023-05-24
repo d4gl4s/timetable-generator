@@ -3,16 +3,18 @@ import { useState } from "react"
 
 import OutsideClickHandler from "react-outside-click-handler"
 
-const popUp = (places: any, groups: any, lecturers: any) => {
+const popUp = (places: string[] | null, groups: string[] | null, lecturers: string[] | null) => {
   return (
     <div>
-      {places.map((place: any, i: any) => (
-        <div key={i} className="mt-3">
-          <div className="font-bold">{groups[i]}</div>
-          <div>{places[i]}</div>
-          <div>{lecturers[i]}</div>
-        </div>
-      ))}
+      {/* we know that places.length == groups.length == lecturers.length */}
+      {places != null &&
+        places.map((place: string | null, i: number) => (
+          <div key={i} className="mt-3">
+            {groups != null && <div className="font-bold">{groups[i]}</div>}
+            <div>{places[i]}</div>
+            {lecturers != null && <div>{lecturers[i]}</div>}
+          </div>
+        ))}
     </div>
   )
 }
