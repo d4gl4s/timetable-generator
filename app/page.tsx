@@ -10,7 +10,7 @@ export default function Home() {
   const [current, setCurrent] = useState<number>(0)
 
   return (
-    <main className="w-[96%] sm:w-[90%] md:w-[80%] md:max-w-[700px]  2xl:max-w-[1000px] m-auto overflow-visible">
+    <main className="w-[96%] sm:w-[90%] md:w-[80%] md:max-w-[700px]  2xl:max-w-[900px] m-auto overflow-visible">
       <Form setTimetables={setTimetables} setCurrent={setCurrent} />
 
       {timetables != null && (
