@@ -38,6 +38,9 @@ const About = () => {
         <li className="flex w-full ">
           <p className="mr-3">4.</p>Genereeri kõikvõimalikud tunniplaanid
         </li>
+        <li className="flex w-full ">
+          <p className="mr-3">5.</p>Uuri tundide kohta lähemalt vajutades nende peale
+        </li>
       </ol>
       <br />
       <p className="mb-16">Kui mingitel tingimustel pole võimalik tunniplaani genereerida, siis annab veebileht vastava teate.</p>
