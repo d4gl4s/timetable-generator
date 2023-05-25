@@ -40,14 +40,12 @@ const About = () => {
         </li>
       </ol>
       <br />
-      <p className="mb-16">
-        Kui mingitel tingimustel pole võimalik tunniplaani genereerida, siis annab veebileht vastava teate. *Hetkel töötab programm kõigi Tartu Ülikooli bakalaureuse astme ainete peal.
-      </p>
+      <p className="mb-16">Kui mingitel tingimustel pole võimalik tunniplaani genereerida, siis annab veebileht vastava teate.</p>
 
       <p className="font-bold mb-6 text-[1.1em]">Kuidas programm töötab?</p>
       <ol className="mb-14">
         <li className="flex w-full mb-1">
-          <p className="mr-3">1.</p> Pythoni programm kogus ÕISist kõikide ainete info(~1200 bakalaureuse ainet) ning vormistab nende info JSON faili.
+          <p className="mr-3">1.</p> Pythoni programm kogus ÕISist kõikide ainete info(~2700 ainet) ning vormistab nende info JSON faili.
         </li>
         <li className="flex w-full mb-1">
           <p className="mr-3">2.</p> Veebileht saadab kasutaja sisestatud ainete ja praktikumide parameetrid serverile. Serveripoolne kood loob rekursiivse algoritmiga erinevad kombinatsioonid koos
