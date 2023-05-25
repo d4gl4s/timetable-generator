@@ -18,6 +18,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
   const [timetableGenerated, setTimetableGenerated] = useState<boolean>(false)
   const [error, setError] = useState<string>("")
   const [generateError, setGenerateError] = useState<string>("")
+  const [buttonDisabled, setButtonDisabled] = useState<boolean>(false)
 
   const addCourseInputRef = useRef<HTMLInputElement>(null)
 
@@ -56,6 +57,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
   }
 
   const handleCoursesAdd = async () => {
+    setButtonDisabled(true)
     if (courseInput.trim().length < 10 || courseInput.trim().length > 15) setError("Ainet ei leitud!")
     else {
       const courseData = await getCourseData(courseInput.trim())
@@ -76,7 +78,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
         setCourseInput("")
       }
     }
-    /*  addCourseInputRef.current!.focus() */
+    setButtonDisabled(false)
   }
 
   const handleCourseDelete = (code: string) => {
@@ -146,6 +148,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
                 whileHover={{ backgroundColor: "#5b8bde" }}
                 className="bg-blue-400 text-white w-[6em] h-full font-semibold text-[0.85em] rounded-[50px] unselectable"
                 onClick={handleCoursesAdd}
+                disabled={buttonDisabled}
               >
                 LISA
               </motion.button>
