@@ -5,42 +5,43 @@ import sys
 
 def lisaTund(event, groups, algusaeg, loppaeg, aine):
     nadalapaev = int(event['time']['weekday']["code"])-1
-    asukoht = None
-    if 'address' in event['location']:
-        asukoht = event['location']['address']
-    tund = {"weekday":nadalapaev, "startTime":algusaeg,"endTime":loppaeg,"place":asukoht}
-    if tyyp=="loeng":
-        aine["lecture"].append(tund)
-    else:
-        grupp = None
-        lecturer = None
-        gruppLeidub = False
-        grupid = []
-        if 'group_uuids' in event:
-            for n in event['group_uuids']:
-                grupid.append(groups[n])
-                gruppLeidub = True
-        if not gruppLeidub:
-            grupid.append(grupp)
+    if nadalapaev < 5:
+        asukoht = None
+        if 'address' in event['location']:
+            asukoht = event['location']['address']
+        tund = {"weekday":nadalapaev, "startTime":algusaeg,"endTime":loppaeg,"place":asukoht}
+        if tyyp=="loeng":
+            aine["lecture"].append(tund)
+        else:
+            grupp = None
+            lecturer = None
+            gruppLeidub = False
+            grupid = []
+            if 'group_uuids' in event:
+                for n in event['group_uuids']:
+                    grupid.append(groups[n])
+                    gruppLeidub = True
+            if not gruppLeidub:
+                grupid.append(grupp)
 
-        if 'lecturers' in event:
-            lecturer = lecturers[event['lecturers'][0]['person_uuid']]
+            if 'lecturers' in event:
+                lecturer = lecturers[event['lecturers'][0]['person_uuid']]
 
-        tund["type"] = tyyp
+            tund["type"] = tyyp
 
-        for g in grupid:
-            leidub = False
-            for group in aine['groups']:
-                if group['group'] == g:
-                    group["practicalSessions"].append(tund)
-                    leidub = True
-            if(not leidub):
-                aine['groups'].append({"group":g, "lecturer":lecturer, "practicalSessions":[tund]})
-    
+            for g in grupid:
+                leidub = False
+                for group in aine['groups']:
+                    if group['group'] == g:
+                        group["practicalSessions"].append(tund)
+                        leidub = True
+                if(not leidub):
+                    aine['groups'].append({"group":g, "lecturer":lecturer, "practicalSessions":[tund]})
+        
 
 
 firstPart = "https://ois2.ut.ee/api/timetable/courses/"
-with open(os.path.join(sys.path[0], "links1.txt"), "r") as f:
+with open(os.path.join(sys.path[0], "linksAll.txt"), "r") as f:
     read = f.read().splitlines()
 
 ained = {"courses":[]}

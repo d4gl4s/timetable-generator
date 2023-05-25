@@ -25,15 +25,6 @@ sleep(1)
 #button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "mat-option[title='arvutiteaduse instituut (LTAT)']"))).click()
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "mat-select#mat-select-10"))).click()
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "mat-option[title='sügis']"))).click()
-
-button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "mat-select#mat-select-14"))).click()
-sleep(1)
-astmed = WebDriverWait(driver, 3).until(lambda d: d.find_elements(By.CSS_SELECTOR,".mat-option-text"))
-for i in astmed:
-    if i.text == " bakalaureuseõpe ":
-        i.click()
-sleep(1)
-button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div[class='cdk-overlay-container ois2-overlay-container']"))).click()
 sleep(1)
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button[class='mat-focus-indicator mat-raised-button mat-button-base mat-primary'"))).click()
 ained = WebDriverWait(driver, 3).until(lambda d: d.find_elements(By.CSS_SELECTOR,"div[class='col-12 col-xl-6 mt-3 ng-star-inserted']"))
@@ -51,7 +42,7 @@ for i in range(100):
             except:
                 pass
     except:
-        with open(os.path.join(sys.path[0], "links1.txt"), "w") as w:
+        with open(os.path.join(sys.path[0], "linksAll.txt"), "w") as w:
             for link in lingid:
                 try:
                     lahku = link.split("/")
