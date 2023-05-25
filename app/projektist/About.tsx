@@ -4,7 +4,7 @@ import { BiLeftArrow } from "react-icons/bi"
 
 const About = () => {
   return (
-    <section className="text-justify text-[0.95em] leading-[20px] font-normal w-[95%] m-auto max-w-[800px] mt-[16svh]">
+    <section className="text-justify text-[0.9em] font-normal leading-[20px]  w-[95%] m-auto max-w-[700px] mt-[16svh]">
       <div className="w-fit">
         <Link href="./" className="flex items-center text-slate-400 font-medium text-[0.85em]">
           <BiLeftArrow className="mr-2" size={12} />
@@ -40,9 +40,9 @@ const About = () => {
         </li>
       </ol>
       <br />
-      <p className="text-slate-400 text-[0.9em] mb-1">Kui mingitel tingimustel pole võimalik tunniplaani genereerida, siis annab veebileht vastava teate.</p>
-
-      <h3 className="font-semibold mb-24">*Hetkel töötab programm kõigi Tartu Ülikooli bakalaureuse astme ainete peal.</h3>
+      <p className="mb-16">
+        Kui mingitel tingimustel pole võimalik tunniplaani genereerida, siis annab veebileht vastava teate. *Hetkel töötab programm kõigi Tartu Ülikooli bakalaureuse astme ainete peal.
+      </p>
 
       <p className="font-bold mb-6 text-[1.1em]">Kuidas programm töötab?</p>
       <ol className="mb-14">
@@ -57,13 +57,13 @@ const About = () => {
           <p className="mr-3">3.</p> Veebileht kuvab tunniplaanide info kasutajale.
         </li>
       </ol>
-      <h3 className="font-bold mb-32 text-[1em]">
+      <h3 className="font-bold mb-16 text-[1em]">
         Tehnoloogiad: <span className="ml-2 font-normal">Typescipt, Python, Next JS, React, Tailwind css </span>{" "}
       </h3>
 
       <h3 className="font-bold mb-4 text-[1.1em]">Autorid</h3>
-      <ul className="mb-16">
-        <li className="mb-1">Daglas Aitsen, Johan Kirikal</li>
+      <ul className="mb-8">
+        <li>Daglas Aitsen, Johan Kirikal</li>
         <li>1. aasta informaatika bakalaureus (ATI)</li>
       </ul>
       <Image src="/ati.png" width={330} height={88} alt="UT Institute of Computer Science logo" />

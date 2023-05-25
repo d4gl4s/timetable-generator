@@ -47,19 +47,23 @@ const Form = ({ setTimetables, setCurrent }: any) => {
     setCourseInput(e.currentTarget.value.toUpperCase())
   }
   const handleInputKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") handleCoursesAdd()
+    if (e.key === "Enter") {
+      handleCoursesAdd()
+    }
   }
 
   const handleCoursesAdd = async () => {
-    if (courseInput.trim().length < 8 || courseInput.trim().length > 15) setError("Ainet ei leitud!")
+    if (courseInput.trim().length < 10 || courseInput.trim().length > 15) setError("Ainet ei leitud!")
     else {
       const courseData = await getCourseData(courseInput.trim())
 
-      if (courseData == null) setError("Ainet ei leitud!")
-      else {
+      if (courseData == null) {
+        setError("Ainet ei leitud!")
+      } else {
         for (let i = 0; i < selectedCourses.length; i++) {
           if (courseData.code == selectedCourses[i].code) {
             setError("Aine juba lisatud!")
+
             return
           }
         }
@@ -68,9 +72,8 @@ const Form = ({ setTimetables, setCurrent }: any) => {
         setError("")
         setCourseInput("")
       }
-
-      addCourseInputRef.current!.focus()
     }
+    /*  addCourseInputRef.current!.focus() */
   }
 
   const handleCourseDelete = (code: string) => {
@@ -129,7 +132,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
                 className="h-full w-full rounded   placeholder-slate-300 font-medium bg-slate-100 mr-2"
                 autoComplete="off"
                 type="text"
-                autoFocus={true}
+                /* autoFocus={true} */
                 maxLength={11}
                 name="name"
                 onKeyPress={(e) => handleInputKeyPress(e)}
