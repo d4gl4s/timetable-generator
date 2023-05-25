@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { BiLeftArrow } from "react-icons/bi"
+import { FaGithub } from "react-icons/fa"
 
 const About = () => {
   return (
@@ -67,7 +68,12 @@ const About = () => {
         <li>Daglas Aitsen, Johan Kirikal</li>
         <li>1. aasta informaatika bakalaureus (ATI)</li>
       </ul>
-      <Image src="/ati.png" width={330} height={88} alt="UT Institute of Computer Science logo" />
+      <div className="flex items-center">
+        <Image src="/ati.png" width={330} height={88} alt="UT Institute of Computer Science logo" />
+        <a href="https://github.com/d4gl4s/timetable-generator" className="mb-4 ml-2" target="_blank">
+          <FaGithub size={40} />
+        </a>
+      </div>
     </section>
   )
 }
