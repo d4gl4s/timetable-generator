@@ -41,7 +41,7 @@ const Lesson = ({ lesson }: { lesson: LessonType }) => {
             {startTime}-{endTime}
           </div>
           <div className="mx-1">{name}</div>
-          {group != null && <div className="absolute bottom-0 m-1 text-[0.9em] text-emerald-500 max-h-[28px] overflow-hidden">{group.join(", ")}</div>}
+          {group != null && <div className="absolute bottom-0 m-1 text-[0.9em] text-emerald-500 max-h-[30px] overflow-hidden">{group.join(", ")}</div>}
 
           {open && (
             <div className="absolute bg-zinc-50 font-medium rounded inner-border-[1px] inner-border-slate-400 w-[110%] ml-[-5%] z-20 top-[60px] h-fit p-[4px]">
