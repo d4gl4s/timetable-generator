@@ -17,6 +17,8 @@ const Form = ({ setTimetables, setCurrent }: any) => {
   const [formOpen, setFormOpen] = useState<boolean>(true)
   const [timetableGenerated, setTimetableGenerated] = useState<boolean>(false)
   const [error, setError] = useState<string>("")
+  const [generateError, setGenerateError] = useState<string>("")
+
   const addCourseInputRef = useRef<HTMLInputElement>(null)
 
   const submitForm = async (e: React.SyntheticEvent) => {
@@ -28,16 +30,17 @@ const Form = ({ setTimetables, setCurrent }: any) => {
       try {
         const timetableData: (LessonType | null)[][][] | null = await generateTimetables(selectedCourses, freeDays, freeLessons)
         if (timetableData == null) {
-          setError("Ei olnud võimalik tunniplaani genereerida.")
+          setGenerateError("Ei olnud võimalik tunniplaani genereerida.")
           setTimetables(null)
         } else {
           setFormOpen(false)
           setTimetables(timetableData)
           setTimetableGenerated(true)
           setError("")
+          setGenerateError("")
         }
       } catch (error) {
-        setError("Midagi läks valesti, proovi hiljem uuesti!")
+        setGenerateError("Midagi läks valesti, proovi hiljem uuesti!")
       }
       setLoading(false)
     }
@@ -199,7 +202,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
             </div>
           </div>
 
-          <div className="w-full flex justify-end mt-14 mb-4 items-center text-[0.9em]">
+          <div className="w-full flex justify-end mt-14 mb-2 items-center text-[0.9em]">
             {timetableGenerated ? (
               <motion.div whileHover={{ color: "#94a3b8" }} className="font-bold mr-4 text-[0.85em] cursor-pointer" onClick={() => setFormOpen(false)}>
                 TAGASI
@@ -215,6 +218,11 @@ const Form = ({ setTimetables, setCurrent }: any) => {
               <ScaleLoader color="white" loading={loading} height={14} radius={1} aria-label="Loading Spinner" data-testid="loader" />
             </motion.button>
           </div>
+          {generateError != "" ? (
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-2 mb-4 text-[0.85em] font-medium text-red-500 w-full  flex justify-end">
+              {generateError}
+            </motion.div>
+          ) : null}
         </div>
       ) : (
         <div className="w-full flex justify-end mt-10 mb-10">

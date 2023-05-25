@@ -83,7 +83,7 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
           })}
           <div className="flex h-10">
             <motion.div className={"ml-3 flex items-center  unselectable mb-2 text-slate-400 "} onClick={selectAll} whileHover={{ color: "#cbd5e1" }}>
-              <div className="h-fit cursor-pointer">Vali Kõik</div>
+              <div className="h-fit cursor-pointer">Eemalda Kõik</div>
             </motion.div>
             <motion.div className={"ml-6 flex items-center  unselectable mb-2 text-slate-400 "} onClick={deselectAll} whileHover={{ color: "#cbd5e1" }}>
               <div className="h-fit cursor-pointer">Tagasi</div>
