@@ -68,10 +68,10 @@ const About = () => {
         <li>Daglas Aitsen, Johan Kirikal</li>
         <li>1. aasta informaatika bakalaureus (ATI)</li>
       </ul>
-      <div className="flex items-center">
-        <Image src="/ati.png" width={330} height={88} alt="UT Institute of Computer Science logo" />
-        <a href="https://github.com/d4gl4s/timetable-generator" className="mb-4 ml-2" target="_blank">
-          <FaGithub size={40} />
+      <div className="flex items-center ">
+        <Image src="/ati.png" width={250} height={66} alt="UT Institute of Computer Science logo" />
+        <a href="https://github.com/d4gl4s/timetable-generator" target="_blank">
+          <FaGithub size={35} />
         </a>
       </div>
     </section>

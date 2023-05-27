@@ -44,7 +44,7 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
     <div>
       <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }} className="flex w-full overflow  items-start justify-between">
         <div className="flex items-start">
-          <span className="w-4 text-[1.1em]">{i + 1 + ". "} </span>
+          <span className="w-4 text-[1.1em] mr-2">{i + 1 + ".  "} </span>
           <span className=" text-[1.1em]">
             {course.name}
             <span className="font-semibold ml-4 text-[0.9em] text-gray-300">{course.code}</span>

@@ -51,7 +51,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
     setCourseInput(e.currentTarget.value.toUpperCase())
   }
   const handleInputKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && !buttonDisabled) {
       handleCoursesAdd()
     }
   }
@@ -61,7 +61,6 @@ const Form = ({ setTimetables, setCurrent }: any) => {
     if (courseInput.trim().length < 10 || courseInput.trim().length > 15) setError("Ainet ei leitud!")
     else {
       const courseData = await getCourseData(courseInput.trim())
-
       if (courseData == null) {
         setError("Ainet ei leitud!")
       } else {
