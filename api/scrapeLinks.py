@@ -27,26 +27,26 @@ button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELEC
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "mat-option[title='sügis']"))).click()
 sleep(1)
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button[class='mat-focus-indicator mat-raised-button mat-button-base mat-primary'"))).click()
-ained = WebDriverWait(driver, 3).until(lambda d: d.find_elements(By.CSS_SELECTOR,"div[class='col-12 col-xl-6 mt-3 ng-star-inserted']"))
+courses = WebDriverWait(driver, 3).until(lambda d: d.find_elements(By.CSS_SELECTOR,"div[class='col-12 col-xl-6 mt-3 ng-star-inserted']"))
 eelmine = 0 
 sleep(1)
-lingid = set()
+links = set()
 for i in range(100):
     try:
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        ained = driver.find_elements(By.CSS_SELECTOR, "div[class='col-12 col-xl-6 mt-3 ng-star-inserted']")
-        for aine in ained:
+        courses = driver.find_elements(By.CSS_SELECTOR, "div[class='col-12 col-xl-6 mt-3 ng-star-inserted']")
+        for course in courses:
             try:
-                a = aine.find_element(By.CSS_SELECTOR, "a")
-                lingid.add(a.get_attribute('href'))
+                a = course.find_element(By.CSS_SELECTOR, "a")
+                links.add(a.get_attribute('href'))
             except:
                 pass
     except:
         with open(os.path.join(sys.path[0], "linksAll.txt"), "w") as w:
-            for link in lingid:
+            for link in links:
                 try:
-                    lahku = link.split("/")
-                    w.write(lahku[-1]+"\n")
+                    apart = link.split("/")
+                    w.write(apart[-1]+"\n")
                 except:
                     pass
         break
