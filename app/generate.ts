@@ -1,7 +1,6 @@
 "use server"
 
 import { CourseType, LessonType } from "@/types/types"
-import { courses } from "../api/data.json"
 
 function addGroupPracticals(group: any, name: string, timetable: (LessonType | null)[][], freeDays: boolean[], freeLessons: boolean[]) {
   const practicalSessions = group.practicalSessions
@@ -76,22 +75,8 @@ function recursive(courses: any, index: number, timetables: (LessonType | null)[
   } else recursive(courses, index + 1, timetables, timetable, freeDays, freeLessons)
 }
 
-export async function generateTimetables(selected: CourseType[], freeDays: boolean[], freeLessons: boolean[]) {
+export async function generateTimetables(selectedCourses: CourseType[], freeDays: boolean[], freeLessons: boolean[]) {
   try {
-    const selectedCourses: any[] = []
-
-    for (let i = 0; i < courses.length; i++) {
-      for (let s = 0; s < selected.length; s++) {
-        if (selected[s].code == courses[i].code) {
-          const coursesCopy = JSON.parse(JSON.stringify(courses[i]))
-          Object.assign(coursesCopy, { 'groupsNotWanted': selected[s].groupsNotWanted });
-          selectedCourses.push(coursesCopy)
-          if (selectedCourses.length == selected.length) break
-        }
-      }
-    }
-    if (selectedCourses.length != selected.length) throw "Incorrect course codes!"
-
     const timetableConcrete: (LessonType | null)[][] = [
       [null, null, null, null, null],
       [null, null, null, null, null],
@@ -100,7 +85,6 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
       [null, null, null, null, null],
       [null, null, null, null, null],
     ]
-    var coursesWithOnePractical = 0
 
     for (let i = 0; i < selectedCourses.length; i++) {
       const lectures = selectedCourses[i].lecture
@@ -130,29 +114,26 @@ export async function generateTimetables(selected: CourseType[], freeDays: boole
       const groups = selectedCourses[i].groups
       for (let j = 0; j < groups.length; j++) {
         for (let k = 0; k < groups[j].group.length; k++) {
-          for (let l = 0; l < selectedCourses[i].groupsNotWanted.length; l++) {
-            if (groups[j].group[k] == selectedCourses[i].groupsNotWanted[l]) {
-              groups[j].group.splice(k, 1);
-              k--;
+          for (let l = 0; l < selectedCourses[i].groupsNotWanted!.length; l++) {
+            if (groups[j].group[k] == selectedCourses[i].groupsNotWanted![l]) {
+              groups[j].group.splice(k, 1)
+              k--
             }
           }
         }
         if (groups[j].group.length == 0) {
           groups.splice(j, 1)
-          j--;
+          j--
         }
-
       }
       if (groups.length == 1) {
-        coursesWithOnePractical++
         const added = addGroupPracticals(groups[0], selectedCourses[i].name, timetableConcrete, [false, false, false, false, false], [false, false, false, false, false, false])
-        if (added) selectedCourses.splice(i, 1);
-        else throw "error";
+        if (added) selectedCourses.splice(i, 1)
+        else throw "error"
       }
     }
 
     if (selectedCourses.length == 0) return [timetableConcrete]
-
 
     selectedCourses.sort(compare)
 

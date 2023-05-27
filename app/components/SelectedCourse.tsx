@@ -32,8 +32,8 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
   }
 
   const selectAll = () => {
-    course.groupsNotWanted = course.groups
-    setNotWanted(course.groups)
+    course.groupsNotWanted = course.groupNames
+    setNotWanted(course.groupNames!)
   }
   const deselectAll = () => {
     course.groupsNotWanted = []
@@ -51,7 +51,7 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
           </span>
         </div>
         <div className="flex h-full items-start">
-          {containsGroup(course.groups) && (
+          {containsGroup(course.groupNames!) && (
             <motion.div whileHover={{ color: "#94a3b8", scale: 1.2 }} onClick={() => setOpen(!open)} className=" mr-8 cursor-pointer w-5 mt-[6px]">
               {open ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </motion.div>
@@ -62,9 +62,9 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
         </div>
       </motion.li>
       {/* siin kontrolli, kas vahemalt uks grupp esineb ruhmal */}
-      {open && containsGroup(course.groups) && (
+      {open && containsGroup(course.groupNames!) && (
         <div className="flex flex-wrap font-medium text-[0.8em] mt-4 mb-4">
-          {course.groups.map((group, i) => {
+          {course.groupNames!.map((group, i) => {
             if (group !== null)
               return (
                 <motion.div

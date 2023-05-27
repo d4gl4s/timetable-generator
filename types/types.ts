@@ -1,17 +1,8 @@
-/* export interface TimetableType {
-  eight: (LessonType | null)[]
-  ten: (LessonType | null)[]
-  twelve: (LessonType | null)[]
-  two: (LessonType | null)[]
-  four: (LessonType | null)[]
-  six: (LessonType | null)[]
-} */
-
 export interface LessonType {
   name: string
   startTime: string
   endTime: string
-  place: string[] | null
+  place: string[] | string | null
   lecture: boolean
   lecturer: string[] | null
   group: string[] | null
@@ -22,10 +13,29 @@ export interface CourseType {
   name: string
   code: string
   eap: number
-  groups: string[]
+  lecture: LectureType[]
+  groups: GroupType[]
   groupsNotWanted?: string[]
+  groupNames?: string[]
 }
+
+export interface LectureType {
+  weekday: number
+  startTime: string
+  endTime: string
+  place: string | null
+}
+
 export interface GroupType {
-  name: string
-  labs: LessonType[]
+  group: (string | null)[]
+  lecturer: (string | null)[]
+  practicalSessions: PracticalSession[]
+}
+
+export interface PracticalSession {
+  weekday: number
+  startTime: string
+  endTime: string
+  place: (string | null)[]
+  type: string
 }

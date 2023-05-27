@@ -60,7 +60,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
     setButtonDisabled(true)
     if (courseInput.trim().length < 10 || courseInput.trim().length > 15) setError("Ainet ei leitud!")
     else {
-      const courseData = await getCourseData(courseInput.trim())
+      const courseData: CourseType | null = await getCourseData(courseInput.trim())
       if (courseData == null) {
         setError("Ainet ei leitud!")
       } else {
@@ -71,7 +71,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
             return
           }
         }
-        courseData.groupsNotWanted = []
+
         setSelectedCourses((oldArray: CourseType[]) => [...oldArray, courseData])
         setError("")
         setCourseInput("")
