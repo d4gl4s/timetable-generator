@@ -15,19 +15,29 @@ function getGroups(course: any) {
 
 export async function getCourseData(courseCode: string) {
   try {
-    for (let i = 0; i < courses.length; i++) {
-      if (courses[i].code == courseCode) {
+    let low = 0;
+    let high = courses.length - 1;
+    //binary search
+    while (low <= high) {
+      let mid = low + Math.floor((high - low) / 2);
+      if (courses[mid].code < courseCode) {
+        low = mid + 1;
+      } else if (courses[mid].code > courseCode) {
+        high = mid - 1;
+      } else if (courses[mid].code == courseCode) {
         const courseData: CourseType = {
-          name: courses[i].name,
-          code: courses[i].code,
-          eap: courses[i].eap,
-          groups: getGroups(courses[i])
+          name: courses[mid].name,
+          code: courses[mid].code,
+          eap: courses[mid].eap,
+          groups: getGroups(courses[mid])
         }
         return courseData
       }
     }
     return null
-  } catch (error) {
+  }
+  catch (error) {
+    console.log(error)
     return null
   }
 }
