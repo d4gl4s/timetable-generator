@@ -43,7 +43,8 @@ def lisaTund(event, groups, algusaeg, loppaeg, aine):
 firstPart = "https://ois2.ut.ee/api/timetable/courses/"
 with open(os.path.join(sys.path[0], "linksAll.txt"), "r") as f:
     read = f.read().splitlines()
-
+nimed1 = set()
+nimed2 = []
 ained = {"courses":[]}
 for rida in read:
     if len(rida) < 35:
@@ -64,7 +65,6 @@ for rida in read:
     if 'credits' in data_json['info']:
         eap = data_json['info']['credits']
     aine = {"name":nimi, "code":ainekood, "eap":eap,"lecture":[], "groups":[]}
-
     groups = {}
     lecturers = {}
     if 'groups' in data_json:
@@ -127,7 +127,15 @@ for rida in read:
                 komplekt['practicalSessions'].append({'weekday':b['weekday'], 'startTime':b['startTime'], 'endTime':b['endTime'], 'place':[b['place']], 'type':b['type']})
             uusaine['groups'].append(komplekt)
 
-    ained['courses'].append(uusaine)
+    lisatud = False
+    for koikAined in range(len(ained['courses'])):
+        if uusaine['code'] < ained['courses'][koikAined]['code']:
+            ained['courses'].insert(koikAined, uusaine)
+            lisatud = True
+            break
+    if not lisatud:
+        ained['courses'].append(uusaine)
 
 with open(os.path.join(sys.path[0], "data.json"), "w", encoding='utf-8') as outfile:
     json.dump(ained, outfile)
+ 
