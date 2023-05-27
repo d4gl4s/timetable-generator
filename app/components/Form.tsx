@@ -114,7 +114,7 @@ const Form = ({ setTimetables, setCurrent }: any) => {
       {formOpen ? (
         <div className="flex w-[93%] m-auto sm:w-full flex-col items-start mt-16 text-[0.9em] 2xl:text-[1em]  sm:p-10">
           <h1 className="font-bold text-[1.1em] mb-20 mt-16 w-full flex items-end justify-between">
-            Genereeri kõik võimalikud tunniplaanid{" "}
+            Genereeri kõikvõimalikud sügissemestri tunniplaanid{" "}
             <motion.div whileHover={{ color: "#e2e8f0" }} initial={{ color: "#94a3b8" }} animate={{ color: "#94a3b8" }}>
               <Link href="/projektist" className="font-medium unselectable text-[0.8em] h-fit underline flex items-center">
                 Sissejuhatus <BiRightArrow size={12} className="ml-2" />

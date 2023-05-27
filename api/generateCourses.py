@@ -3,53 +3,51 @@ import json
 import os
 import sys
 
-def lisaTund(event, groups, algusaeg, loppaeg, aine):
-    nadalapaev = int(event['time']['weekday']["code"])-1
-    if nadalapaev < 5:
-        asukoht = None
+def addSession(event, groupNames, startTime, endTime, course):
+    weekday = int(event['time']['weekday']["code"])-1
+    if weekday < 5:
+        location = None
         if 'address' in event['location']:
-            asukoht = event['location']['address']
-        tund = {"weekday":nadalapaev, "startTime":algusaeg,"endTime":loppaeg,"place":asukoht}
-        if tyyp=="loeng":
-            aine["lecture"].append(tund)
+            location = event['location']['address']
+        session = {"weekday":weekday, "startTime":startTime,"endTime":endTime,"place":location}
+        if type=="loeng":
+            course["lecture"].append(session)
         else:
-            grupp = None
             lecturer = None
-            gruppLeidub = False
-            grupid = []
+            groupExists = False
+            sessionGroup = []
             if 'group_uuids' in event:
                 for n in event['group_uuids']:
-                    grupid.append(groups[n])
-                    gruppLeidub = True
-            if not gruppLeidub:
-                grupid.append(grupp)
+                    sessionGroup.append(groupNames[n])
+                    groupExists = True
+            if not groupExists:
+                sessionGroup.append(None)
 
             if 'lecturers' in event:
                 lecturer = lecturers[event['lecturers'][0]['person_uuid']]
 
-            tund["type"] = tyyp
+            session["type"] = type
 
-            for g in grupid:
-                leidub = False
-                for group in aine['groups']:
+            for g in sessionGroup:
+                found = False
+                for group in course['groups']:
                     if group['group'] == g:
-                        group["practicalSessions"].append(tund)
-                        leidub = True
-                if(not leidub):
-                    aine['groups'].append({"group":g, "lecturer":lecturer, "practicalSessions":[tund]})
+                        group["practicalSessions"].append(session)
+                        found = True
+                if(not found):
+                    course['groups'].append({"group":g, "lecturer":lecturer, "practicalSessions":[session]})
         
 
 
 firstPart = "https://ois2.ut.ee/api/timetable/courses/"
 with open(os.path.join(sys.path[0], "linksAll.txt"), "r") as f:
-    read = f.read().splitlines()
-nimed1 = set()
-nimed2 = []
-ained = {"courses":[]}
-for rida in read:
-    if len(rida) < 35:
+    lines = f.read().splitlines()
+
+courses = {"courses":[]}
+for line in lines:
+    if len(line) < 35:
         continue
-    url = firstPart+rida
+    url = firstPart+line
     try:
         response = urlopen(url)
     except:
@@ -59,83 +57,81 @@ for rida in read:
         continue
     if not 'events' in data_json:
         continue
-    ainekood = data_json['info']['course_code']
-    nimi = data_json['info']['title']['et']
+    courseCode = data_json['info']['course_code']
+    courseName = data_json['info']['title']['et']
     eap = 0
     if 'credits' in data_json['info']:
         eap = data_json['info']['credits']
-    aine = {"name":nimi, "code":ainekood, "eap":eap,"lecture":[], "groups":[]}
-    groups = {}
+    course = {"name":courseName, "code":courseCode, "eap":eap,"lecture":[], "groups":[]}
+    groupNames = {}
     lecturers = {}
     if 'groups' in data_json:
         for group in data_json['groups']:
-            groups[group] = data_json['groups'][group]
+            groupNames[group] = data_json['groups'][group]
     if 'lecturers' in data_json:
         for lecturer in data_json['lecturers']:
             lecturers[lecturer["person_uuid"]] = lecturer["person_name"]
     
     for event in data_json['events']:
-        note = ""
         if ("-" in event['time']['academic_weeks'] or event['time']['academic_weeks'].count(",")>3) and event['event_type']['code'] == "lecture" and (event['study_work_type']["code"]=="practice" or event['study_work_type']["code"]=="lecture" or event['study_work_type']["code"]=="seminar"):
-            tyyp = event['study_work_type']["et"]
-            algusaeg = event['time']['begin_time']
-            loppaeg = event['time']['end_time']
+            type = event['study_work_type']["et"]
+            startTime = event['time']['begin_time']
+            endTime = event['time']['end_time']
 
 
-            algusLahku = algusaeg.split(":")
-            loppLahku = loppaeg.split(":")
-            algus = int(algusLahku[0])
-            lopp = int(loppLahku[0])
-            kordaja = 1
-            if(lopp-algus>2):
-                kordaja = int((lopp-algus)/2)
-                for i in range(kordaja):
+            beginningApart = startTime.split(":")
+            endApart = endTime.split(":")
+            beginning = int(beginningApart[0])
+            end = int(endApart[0])
+            multiplier = 1
+            if(end-beginning>2):
+                multiplier = int((end-beginning)/2)
+                for i in range(multiplier):
                     if(i!=0):
-                        algusaeg = str(algus)+":00:00"
-                    loppaeg = str(algus+2)+":00:00"
-                    algus += 2
-                    lisaTund(event, groups, algusaeg, loppaeg, aine)
+                        startTime = str(beginning)+":00:00"
+                    endTime = str(beginning+2)+":00:00"
+                    beginning += 2
+                    addSession(event, groupNames, startTime, endTime, course)
             else:
-                lisaTund(event, groups, algusaeg, loppaeg, aine)
+                addSession(event, groupNames, startTime, endTime, course)
 
-    uusaine = {'name':aine['name'], 'code':aine['code'], 'eap':aine['eap'], 'lecture':aine['lecture'], 'groups':[]}
+    newCourse = {'name':course['name'], 'code':course['code'], 'eap':course['eap'], 'lecture':course['lecture'], 'groups':[]}
 
-    kokku = [] 
-    for a in aine['groups']:
-        kokkuset = set()
-        for b in a['practicalSessions']:            
-            kokkuset.add(b['weekday'])
-            kokkuset.add(b['startTime'])
-            kokkuset.add(b['endTime'])
-        jubaOlnud = False
-        for k in range(len(kokku)):
-            if kokku[k] == kokkuset:
-                jubaOlnud = True
-                #lisab alösdkj
-                uusaine['groups'][k]['group'].append(a['group'])
-                uusaine['groups'][k]['lecturer'].append(a['lecturer'])
-                sessions = uusaine['groups'][k]['practicalSessions']
+    groupsWithSameTimes = [] 
+    for session in course['groups']:
+        timeSet = set()
+        for one in session['practicalSessions']:            
+            timeSet.add(one['weekday'])
+            timeSet.add(one['startTime'])
+            timeSet.add(one['endTime'])
+        alreadyBeen = False
+        for k in range(len(groupsWithSameTimes)):
+            if groupsWithSameTimes[k] == timeSet:
+                alreadyBeen = True
+                newCourse['groups'][k]['group'].append(session['group'])
+                newCourse['groups'][k]['lecturer'].append(session['lecturer'])
+                sessions = newCourse['groups'][k]['practicalSessions']
                 for ax in range(len(sessions)):
-                    for b in range(len(a['practicalSessions'])):
-                        if sessions[ax]['weekday'] == a['practicalSessions'][b]['weekday'] and sessions[ax]['startTime'] == a['practicalSessions'][b]['startTime'] and sessions[ax]['endTime'] == a['practicalSessions'][b]['endTime']:
-                            sessions[ax]['place'].append(a['practicalSessions'][b]['place'])
+                    for b in range(len(session['practicalSessions'])):
+                        if sessions[ax]['weekday'] == session['practicalSessions'][b]['weekday'] and sessions[ax]['startTime'] == session['practicalSessions'][b]['startTime'] and sessions[ax]['endTime'] == session['practicalSessions'][b]['endTime']:
+                            sessions[ax]['place'].append(session['practicalSessions'][b]['place'])
                 break
-        if not jubaOlnud:
-            kokku.append(kokkuset)
-            komplekt = {'group':[a['group']], 'lecturer':[a['lecturer']], 'practicalSessions':[]}  
-            for b in a['practicalSessions']:
-                komplekt['practicalSessions'].append({'weekday':b['weekday'], 'startTime':b['startTime'], 'endTime':b['endTime'], 'place':[b['place']], 'type':b['type']})
-            uusaine['groups'].append(komplekt)
+        if not alreadyBeen:
+            groupsWithSameTimes.append(timeSet)
+            newSession = {'group':[session['group']], 'lecturer':[session['lecturer']], 'practicalSessions':[]}  
+            for s in session['practicalSessions']:
+                newSession['practicalSessions'].append({'weekday':s['weekday'], 'startTime':s['startTime'], 'endTime':s['endTime'], 'place':[s['place']], 'type':s['type']})
+            newCourse['groups'].append(newSession)
 
-    lisatud = False
-    for koikAined in range(len(ained['courses'])):
-        if uusaine['code'] < ained['courses'][koikAined]['code']:
-            ained['courses'].insert(koikAined, uusaine)
-            lisatud = True
+    added = False
+    for allCourses in range(len(courses['courses'])):
+        if newCourse['code'] < courses['courses'][allCourses]['code']:
+            courses['courses'].insert(allCourses, newCourse)
+            added = True
             break
-    if not lisatud:
-        ained['courses'].append(uusaine)
+    if not added:
+        courses['courses'].append(newCourse)
 
 with open(os.path.join(sys.path[0], "data.json"), "w", encoding='utf-8') as outfile:
-    json.dump(ained, outfile)
+    json.dump(courses, outfile)
  

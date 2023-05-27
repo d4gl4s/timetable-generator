@@ -14,7 +14,7 @@ const About = () => {
       </div>
       <h1 className="font-bold mb-8 mt-8 text-[1.2em] ">Genereeri tunniplaan</h1>
       <p>
-        Uut semestrit plaanides tekib tihti olukord, kus soovid palju aineid võtta. Sageli on ainetel aga mitu erinevat rühma ja igal õpilasel on omad soovid, kuidas ta tahaks, et uus tunniplaan võiks
+        Uut semestrit planeerides tekib tihti olukord, kus soovid palju aineid võtta. Sageli on ainetel aga mitu erinevat rühma ja igal õpilasel on omad soovid, kuidas ta tahaks, et uus tunniplaan võiks
         välja näha. ÕIS2 keskkonnas on aga tunniplaanide koostamine tülikas, nagu iga tudeng teab. Selleks, et näha võimalikke tunniplaane, peab hetkel ükshaaval ainete rühmasid muutma. Lisaks sellele
         peab veel vaatama, et tundide ajad ei kattuks valitud rühmade korral.
       </p>
@@ -49,7 +49,7 @@ const About = () => {
       <p className="font-bold mb-6 text-[1.1em]">Kuidas programm töötab?</p>
       <ol className="mb-14">
         <li className="flex w-full mb-1">
-          <p className="mr-3">1.</p> Pythoni programm kogus ÕISist kõikide ainete info(~2700 ainet) ning vormistab nende info JSON faili.
+          <p className="mr-3">1.</p> Pythoni programm kogub ÕISist kõikide ainete info(~2700 ainet) ning vormistab nende info JSON faili.
         </li>
         <li className="flex w-full mb-1">
           <p className="mr-3">2.</p> Veebileht saadab kasutaja sisestatud ainete ja praktikumide parameetrid serverile. Serveripoolne kood loob rekursiivse algoritmiga erinevad kombinatsioonid koos
