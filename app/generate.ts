@@ -128,7 +128,10 @@ export async function generateTimetables(selectedCourses: CourseType[], freeDays
       }
       if (groups.length == 1) {
         const added = addGroupPracticals(groups[0], selectedCourses[i].name, timetableConcrete, [false, false, false, false, false], [false, false, false, false, false, false])
-        if (added) selectedCourses.splice(i, 1)
+        if (added) {
+          selectedCourses.splice(i, 1)
+          i--
+        }
         else throw "error"
       }
     }
