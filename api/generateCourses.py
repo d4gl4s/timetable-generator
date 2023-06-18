@@ -10,7 +10,7 @@ def addSession(event, groupNames, startTime, endTime, course):
         if 'address' in event['location']:
             location = event['location']['address']
         session = {"weekday":weekday, "startTime":startTime,"endTime":endTime,"place":location}
-        if type=="loeng":
+        if type=="lecture" or type=="loeng":
             course["lecture"].append(session)
         else:
             lecturer = None
@@ -58,7 +58,10 @@ for line in lines:
     if not 'events' in data_json:
         continue
     courseCode = data_json['info']['course_code']
-    courseName = data_json['info']['title']['et']
+    if 'en' in data_json['info']['title']:
+        courseName = data_json['info']['title']['en']
+    else:
+        courseName = data_json['info']['title']['et']
     eap = 0
     if 'credits' in data_json['info']:
         eap = data_json['info']['credits']
@@ -74,7 +77,11 @@ for line in lines:
     
     for event in data_json['events']:
         if ("-" in event['time']['academic_weeks'] or event['time']['academic_weeks'].count(",")>3) and event['event_type']['code'] == "lecture" and (event['study_work_type']["code"]=="practice" or event['study_work_type']["code"]=="lecture" or event['study_work_type']["code"]=="seminar"):
-            type = event['study_work_type']["et"]
+
+            if 'en' in event['study_work_type']:
+                type = event['study_work_type']["en"]
+            else:
+                type = event['study_work_type']["et"]
             startTime = event['time']['begin_time']
             endTime = event['time']['end_time']
 
