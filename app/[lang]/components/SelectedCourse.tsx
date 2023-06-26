@@ -1,11 +1,11 @@
 import { motion } from "framer-motion"
 import { FaTimes } from "react-icons/fa"
 
-import { CourseType } from "@/types/types"
+import { CourseType, Dictionary } from "@/types/types"
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io"
 import { useState } from "react"
 
-const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete: (code: string) => void; course: CourseType; i: number }) => {
+const SelectedCourse = ({ handleCourseDelete, course, i, dict }: { handleCourseDelete: (code: string) => void; course: CourseType; i: number; dict: Dictionary }) => {
   const [open, setOpen] = useState<boolean>(false)
   const [notWanted, setNotWanted] = useState(course.groupsNotWanted!)
 
@@ -61,7 +61,6 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
           </motion.div>
         </div>
       </motion.li>
-      {/* siin kontrolli, kas vahemalt uks grupp esineb ruhmal */}
       {open && containsGroup(course.groupNames!) && (
         <div className="flex flex-wrap font-medium text-[0.8em] mt-4 mb-4">
           {course.groupNames!.map((group, i) => {
@@ -83,10 +82,10 @@ const SelectedCourse = ({ handleCourseDelete, course, i }: { handleCourseDelete:
           })}
           <div className="flex h-10">
             <motion.div className={"ml-3 flex items-center  unselectable mb-2 text-slate-400 "} onClick={selectAll} whileHover={{ color: "#cbd5e1" }}>
-              <div className="h-fit cursor-pointer">Eemalda Kõik</div>
+              <div className="h-fit cursor-pointer">{dict.removeAll}</div>
             </motion.div>
             <motion.div className={"ml-6 flex items-center  unselectable mb-2 text-slate-400 "} onClick={deselectAll} whileHover={{ color: "#cbd5e1" }}>
-              <div className="h-fit cursor-pointer">Tagasi</div>
+              <div className="h-fit cursor-pointer">{dict.back}</div>
             </motion.div>
           </div>
         </div>

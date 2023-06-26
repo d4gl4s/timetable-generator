@@ -1,7 +1,8 @@
 "use server"
 
 import { CourseType } from "@/types/types"
-import { courses } from "../api/data.json"
+import { coursesENG } from "../../api/data.json"
+import { coursesEST } from "../../api/dataEst.json"
 
 function getGroups(course: any) {
   const output: string[] = []
@@ -13,8 +14,17 @@ function getGroups(course: any) {
   return output
 }
 
-export async function getCourseData(courseCode: string) {
+const dictionaries = {
+  "en-US": coursesENG, //English
+  "et-EE": coursesEST, //Estonian
+}
+
+export async function getCourseData(courseCode: string, lang: string) {
   try {
+    var language: "et-EE" | "en-US" = "en-US"
+    if (lang == "et") language = "et-EE"
+    const courses = dictionaries[language]
+
     let low = 0
     let high = courses.length - 1
     //binary search

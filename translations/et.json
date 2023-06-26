@@ -1,0 +1,23 @@
+{
+  "et": {
+    "lang": "et",
+    "title": "Genereeri kõikvõimalikud sügissemestri tunniplaanid",
+    "introduction": "Sissejuhatus",
+    "enterCodes": "Sisesta ainete koodid",
+    "selected": "Valitud:",
+    "addButton": "LISA",
+    "timesToAvoid": "Vali kellaajad, millal ei soovi praktikume",
+    "daysToAvoid": "Vali päevad, millal ei soovi praktikume",
+    "generate": "Genereeri",
+    "weekdays": ["Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede"],
+    "generateNew": "Genereeri Uus",
+    "back": "Tagasi",
+    "removeAll": "Eemalda Kõik",
+    "previous": "Eelmine",
+    "next": "Järgmine",
+    "timetable": "Tunniplaan",
+    "lecture": "Loeng",
+    "practicalClass": "Praktikum",
+    "seminar": "Seminar"
+  }
+}
