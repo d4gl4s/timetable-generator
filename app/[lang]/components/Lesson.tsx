@@ -28,7 +28,7 @@ const Lesson = ({ lesson }: { lesson: LessonType }) => {
       onClick={() => setOpen(open ? false : true)}
       className={
         "relative 2xl:text-[0.9em] inner-border-[1px] leading-[16px] cursor-pointer rounded-[4px] z-2  break-all break-words  " +
-        (lecture ? "bg-purple-100 inner-border-purple-400" : type == "praktikum" ? " bg-emerald-100 inner-border-emerald-300" : "bg-orange-100 inner-border-orange-300")
+        (lecture ? "bg-purple-100 inner-border-purple-400" : type == "praktikum" || type == "practical session" ? " bg-emerald-100 inner-border-emerald-300" : "bg-orange-100 inner-border-orange-300")
       }
     >
       <OutsideClickHandler

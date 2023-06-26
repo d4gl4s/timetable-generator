@@ -39,3 +39,24 @@ export interface PracticalSession {
   place: (string | null)[]
   type: string
 }
+export interface Dictionary {
+  lang: string
+  title: string
+  introduction: string
+  enterCodes: string
+  selected: string
+  addButton: string
+  timesToAvoid: string
+  daysToAvoid: string
+  generate: string
+  weekdays: string[]
+  generateNew: string
+  back: string
+  removeAll: string
+  previous: string
+  next: string
+  timetable: string
+  lecture: string
+  practicalClass: string
+  seminar: string
+}
