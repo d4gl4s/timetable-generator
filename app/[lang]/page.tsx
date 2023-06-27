@@ -1,7 +1,7 @@
 import { getDictionary } from "./dictionaries"
 import Index from "./components/Index"
 
-import { locales } from "@/i18n"
+import { locales } from "@/middleware"
 
 export async function generateStaticParams() {
   return locales.map((locale) => {

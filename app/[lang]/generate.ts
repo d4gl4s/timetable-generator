@@ -1,6 +1,6 @@
-"use server"
-
 import { CourseType, LessonType } from "@/types/types"
+
+//Can't use server functions because next js bug https://github.com/vercel/next.js/discussions/37424 https://github.com/facebook/react/issues/19519
 
 function addGroupPracticals(group: any, name: string, timetable: (LessonType | null)[][], freeDays: boolean[], freeLessons: boolean[]) {
   const practicalSessions = group.practicalSessions
@@ -131,8 +131,7 @@ export async function generateTimetables(selectedCourses: CourseType[], freeDays
         if (added) {
           selectedCourses.splice(i, 1)
           i--
-        }
-        else throw "error"
+        } else throw "error"
       }
     }
 
