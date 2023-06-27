@@ -1,5 +1,6 @@
+"server-only"
+
 import { Dictionary } from "./../../types/types"
-;("server-only")
 import { en } from "../../translations/en.json"
 import { et } from "../../translations/et.json"
 
