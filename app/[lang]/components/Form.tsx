@@ -2,6 +2,7 @@ import { useRef, useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { generateTimetables } from "../generate"
+import { generateDemoData } from "../demoData"
 import { CourseType, LessonType, Dictionary } from "@/types/types"
 import ScaleLoader from "react-spinners/ScaleLoader"
 import { getCourseData } from "../courseData"
@@ -24,14 +25,14 @@ const Form = ({ setTimetables, setCurrent, dict }: { setTimetables: any; setCurr
 
   const submitForm = async (e: React.SyntheticEvent) => {
     e.preventDefault()
-    if (selectedCourses.length == 0) setError("Sisesta vähemalt ühe aine kood!")
+    if (selectedCourses.length == 0) setError(dict.lang == "et" ? "Sisesta vähemalt ühe aine kood!" : "Enter at least one course code!")
     else {
       setLoading(true)
       setCurrent(0)
       try {
         const timetableData: (LessonType | null)[][][] | null = await generateTimetables(selectedCourses, freeDays, freeLessons)
         if (timetableData == null) {
-          setGenerateError("Ei olnud võimalik tunniplaani genereerida.")
+          setGenerateError(dict.lang == "et" ? "Ei olnud võimalik tunniplaani genereerida." : "An error occurred whilst generating timetable.")
           setTimetables(null)
         } else {
           setFormOpen(false)
@@ -41,7 +42,7 @@ const Form = ({ setTimetables, setCurrent, dict }: { setTimetables: any; setCurr
           setGenerateError("")
         }
       } catch (error) {
-        setGenerateError("Midagi läks valesti, proovi hiljem uuesti!")
+        setGenerateError(dict.lang == "et" ? "Midagi läks valesti, proovi hiljem uuesti!" : "Something went wrong, try again later!")
       }
       setLoading(false)
     }
@@ -58,15 +59,15 @@ const Form = ({ setTimetables, setCurrent, dict }: { setTimetables: any; setCurr
 
   const handleCoursesAdd = async () => {
     setButtonDisabled(true)
-    if (courseInput.trim().length < 10 || courseInput.trim().length > 15) setError("Ainet ei leitud!")
+    if (courseInput.trim().length < 10 || courseInput.trim().length > 15) setError(dict.lang == "et" ? "Ainet ei leitud!" : "No such course found!")
     else {
       const courseData: CourseType | null = await getCourseData(courseInput.trim(), dict.lang)
       if (courseData == null) {
-        setError("Ainet ei leitud!")
+        setError(dict.lang == "et" ? "Ainet ei leitud!" : "No such course found!")
       } else {
         for (let i = 0; i < selectedCourses.length; i++) {
           if (courseData.code == selectedCourses[i].code) {
-            setError("Aine juba lisatud!")
+            setError(dict.lang == "et" ? "Aine juba lisatud!" : "Course already selected!")
 
             return
           }
@@ -108,6 +109,10 @@ const Form = ({ setTimetables, setCurrent, dict }: { setTimetables: any; setCurr
     }
     return sum
   }
+  const handleDemo = () => {
+    const data: CourseType[] = generateDemoData(dict.lang)
+    setSelectedCourses(data)
+  }
 
   return (
     <div>
@@ -122,10 +127,10 @@ const Form = ({ setTimetables, setCurrent, dict }: { setTimetables: any; setCurr
               <Link href={"./et-EE"}>EST</Link>
             </span>
           </div>
-          <h1 className="font-bold text-[1.1em] mb-20 mt-16 w-full flex items-end justify-between">
+          <h1 className="font-bold text-[1.1em] mb-16 md:mb-20 mt-16 w-full md:flex items-end justify-between">
             {dict.title}
             <motion.div whileHover={{ color: "#e2e8f0" }} initial={{ color: "#94a3b8" }} animate={{ color: "#94a3b8" }}>
-              <Link href="/et-EE/projektist" className="font-medium unselectable text-[0.8em] h-fit underline flex items-center">
+              <Link href="/et-EE/projektist" className="font-medium mt-2 md:mt-0 unselectable text-[0.8em] h-fit underline flex items-center">
                 {dict.introduction} <BiRightArrow size={12} className="ml-2" />
               </Link>
             </motion.div>
@@ -134,11 +139,15 @@ const Form = ({ setTimetables, setCurrent, dict }: { setTimetables: any; setCurr
             <label className="w-full flex justify-between items-center mb-3">
               <div className="flex items-center">
                 {dict.enterCodes}
-                <motion.div whileHover={{ backgroundColor: "#d1fae5", color: "#10b981" }} className="text-emerald-900 ml-4 bg-emerald-200 text-[0.9em] cursor-pointer h-fit px-4 p-1 rounded-[50px]">
+                <motion.div
+                  onClick={handleDemo}
+                  whileHover={{ backgroundColor: "#d1fae5", color: "#10b981" }}
+                  className="text-emerald-900 ml-4 bg-emerald-200 text-[0.9em] cursor-pointer h-fit px-4 p-1 rounded-[50px]"
+                >
                   Demo
                 </motion.div>
               </div>
-              <div className="h-fit font-normal ">
+              <div className="hidden md:block h-fit font-normal ">
                 {dict.selected} <span className="font-bold mr-8">{selectedCourses.length}</span>
                 EAP: <span className="font-bold">{getEAP()}</span>
               </div>

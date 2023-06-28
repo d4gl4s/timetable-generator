@@ -1,5 +1,4 @@
 /* "use server" */
-
 import { CourseType } from "@/types/types"
 import coursesAll from "../../api/data.json"
 import coursesAllEst from "../../api/dataEst.json"
