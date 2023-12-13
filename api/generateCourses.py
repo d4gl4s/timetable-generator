@@ -40,7 +40,7 @@ def addSession(event, groupNames, startTime, endTime, course):
 
 
 firstPart = "https://ois2.ut.ee/api/timetable/courses/"
-with open(os.path.join(sys.path[0], "linksAll.txt"), "r") as f:
+with open(os.path.join(sys.path[0], "linksA.txt"), "r") as f:
     lines = f.read().splitlines()
 
 courses = {"courses":[]}
