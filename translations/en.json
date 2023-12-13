@@ -1,0 +1,23 @@
+{
+  "en": {
+    "lang": "en",
+    "title": "Generate all possible timetable variations",
+    "introduction": "Introduction (est)",
+    "enterCodes": "Enter course codes",
+    "selected": "Selected",
+    "addButton": "ADD",
+    "timesToAvoid": "Choose the times when you don't want lessons.",
+    "daysToAvoid": "Choose the days when you don't want lessons.",
+    "generate": "Generate",
+    "weekdays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "generateNew": "Generate New",
+    "back": "Cancel",
+    "removeAll": "Remove All",
+    "previous": "Previous",
+    "next": "Next",
+    "timetable": "Timetable",
+    "lecture": "Lecture",
+    "practicalClass": "Practical Class",
+    "seminar": "Seminar"
+  }
+}
