@@ -5330,7 +5330,9 @@
           "startTime": "14:15:00",
           "endTime": "16:00:00",
           "place": "Ravila 19 - 0092"
-        },
+        }
+      ],
+      "groups": [
         {
           "group": [
             null
@@ -5785,7 +5787,8 @@
       "name": "Eesti kunst renessansist barokini",
       "code": "FLAJ.05.137",
       "eap": 3,
-      "lecture": [
+      "lecture": [],
+      "groups": [
         {
           "group": [
             null
@@ -14234,8 +14237,7 @@
             }
           ]
         }
-      ],
-      "groups": []
+      ]
     },
     {
       "name": "Komi kultuurilugu",
@@ -21004,7 +21006,8 @@
           "endTime": "12:00:00",
           "place": null
         }
-      ]
+      ],
+      "groups": []
     },
     {
       "name": "Uurimist\u00f6\u00f6 f\u00fcsioteraapia erialal",
@@ -22596,7 +22599,8 @@
       "name": "Arvuti arhitektuur ja riistvara II",
       "code": "LOFY.03.012",
       "eap": 6,
-      "lecture": [
+      "lecture": [],
+      "groups": [
         {
           "group": [
             null
@@ -22616,8 +22620,7 @@
             }
           ]
         }
-      ],
-      "groups": []
+      ]
     },
     {
       "name": "Rakenduslik kvantf\u00fc\u00fcsika",
@@ -23449,7 +23452,8 @@
           "endTime": "18:00:00",
           "place": "Ravila 14A - 1021"
         }
-      ]
+      ],
+      "groups": []
     },
     {
       "name": "F\u00fc\u00fcsikaline keemia",
@@ -25802,8 +25806,7 @@
             }
           ]
         }
-      ],
-      "groups": []
+      ]
     },
     {
       "name": "Mullateadus",
@@ -26825,7 +26828,9 @@
           "startTime": "10:15:00",
           "endTime": "12:00:00",
           "place": "Nooruse 1 - 508b"
-        },
+        }
+      ],
+      "groups": [
         {
           "group": [
             "N12"
@@ -32498,7 +32503,8 @@
       "name": "Molekulaarbioloogia alused",
       "code": "LTMR.05.001",
       "eap": 6,
-      "lecture": [
+      "lecture": [],
+      "groups": [
         {
           "group": [
             "1. r\u00fchm"
@@ -34271,8 +34277,7 @@
             }
           ]
         }
-      ],
-      "groups": []
+      ]
     },
     {
       "name": "S\u00fcnteetilise bioloogia praktikum I",
@@ -35387,7 +35392,8 @@
       "name": "Globaalne majandus",
       "code": "MJRI.08.052",
       "eap": 6,
-      "lecture": [
+      "lecture": [],
+      "groups": [
         {
           "group": [
             null
