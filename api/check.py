@@ -4,7 +4,7 @@ import sys
 
 def read_json():
     try:
-        with open("api\dataEst.json", 'r') as file:
+        with open("api\dataEST.json", 'r') as file:
             data = json.load(file)
 
         return data
@@ -18,6 +18,37 @@ def read_json():
 
 data = read_json()
 x = data["coursesEST"]
+z = 0
+while z < len(x)-1:
+    here = x[z]
+    next1 = x[z+1]
+    try:
+        assert here["code"] < next1["code"]
+    except:
+        print(here["code"])
+    """
+    if here["code"] > next1["code"]:
+        x.remove(here)
+        while True:
+            if here["code"] < x[z]["code"]:
+                x.insert(z,here)
+                z = 0
+                break
+            else:
+                z+=1
+    """
+    z+=1
+    
+
+for d in range(len(x)-1):
+    here = x[d]
+    next1 = x[d+1]
+    try:
+        assert here["code"] < next1["code"]
+    except:
+        print(here["code"])
+    
+    
 for d in range(len(x)):
     roguep = []
     row = x[d]
@@ -67,7 +98,7 @@ for d in range(len(x)):
         """
     except:
         print(row["code"])
-        
-#with open(os.path.join(sys.path[0], "data.json"), "w", encoding='utf-8') as outfile:
+       
+#with open(os.path.join(sys.path[0], "dataEst.json"), "w", encoding='utf-8') as outfile:
 #    json.dump(data, outfile)
        

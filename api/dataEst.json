@@ -1603,6 +1603,33 @@
       "groups": []
     },
     {
+      "name": "Hingamise funktsionaalsed uuringud",
+      "code": "ARFS.01.061",
+      "eap": 2,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Kattri-Liis Eskla"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 2,
+              "startTime": "12:15:00",
+              "endTime": "14:00:00",
+              "place": [
+                "Ravila 19 - 3057"
+              ],
+              "type": "seminar"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Inimese f\u00fcsioloogia",
       "code": "ARFS.01.063",
       "eap": 4,
@@ -1631,47 +1658,6 @@
                 "Ravila 19 - 1015"
               ],
               "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Kaasaegsed uurimismeetodid neurobioloogias 1",
-      "code": "ARFS.01.036",
-      "eap": 6,
-      "lecture": [
-        {
-          "weekday": 2,
-          "startTime": "16:15:00",
-          "endTime": "18:00:00",
-          "place": "Ravila 19 - 3057"
-        }
-      ],
-      "groups": []
-    },
-    {
-      "name": "Hingamise funktsionaalsed uuringud",
-      "code": "ARFS.01.061",
-      "eap": 2,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Kattri-Liis Eskla"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 2,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "Ravila 19 - 3057"
-              ],
-              "type": "seminar"
             }
           ]
         }
@@ -7709,33 +7695,6 @@
       ]
     },
     {
-      "name": "Pedagoogiline praktikum II",
-      "code": "FLFL.00.014",
-      "eap": 2,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Natalja Zagura"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 3,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "Lossi 3 - 117"
-              ],
-              "type": "seminar"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Eesti filosoofia ajalugu",
       "code": "FLFI.05.012",
       "eap": 6,
@@ -7898,6 +7857,33 @@
               "weekday": 0,
               "startTime": "14:15:00",
               "endTime": "16:00:00",
+              "place": [
+                "Lossi 3 - 117"
+              ],
+              "type": "seminar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pedagoogiline praktikum II",
+      "code": "FLFL.00.014",
+      "eap": 2,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Natalja Zagura"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 3,
+              "startTime": "12:15:00",
+              "endTime": "14:00:00",
               "place": [
                 "Lossi 3 - 117"
               ],
@@ -8485,20 +8471,6 @@
       ]
     },
     {
-      "name": "Ladina keele fonoloogia, leksikoloogia ja ladina keele ajalugu",
-      "code": "FLGR.02.522",
-      "eap": 6,
-      "lecture": [
-        {
-          "weekday": 1,
-          "startTime": "16:15:00",
-          "endTime": "18:00:00",
-          "place": "Lossi 3 - 406"
-        }
-      ],
-      "groups": []
-    },
-    {
       "name": "Kreeka teater",
       "code": "FLGR.02.520",
       "eap": 3,
@@ -8524,6 +8496,20 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Ladina keele fonoloogia, leksikoloogia ja ladina keele ajalugu",
+      "code": "FLGR.02.522",
+      "eap": 6,
+      "lecture": [
+        {
+          "weekday": 1,
+          "startTime": "16:15:00",
+          "endTime": "18:00:00",
+          "place": "Lossi 3 - 406"
+        }
+      ],
+      "groups": []
     },
     {
       "name": "Ladina keele morfoloogia ja s\u00fcntaks",
@@ -11802,33 +11788,6 @@
       "groups": []
     },
     {
-      "name": "Uurijaseminar",
-      "code": "FLSE.00.150",
-      "eap": 3,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Silvi Salupere"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 4,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
-              "place": [
-                "Jakobi 2 - 305"
-              ],
-              "type": "seminar"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Sissejuhatus kultuuriteooriatesse",
       "code": "FLSE.00.138",
       "eap": 6,
@@ -11853,15 +11812,15 @@
             null
           ],
           "lecturer": [
-            "Mari-Liis Madisson"
+            "Silvi Salupere"
           ],
           "practicalSessions": [
             {
-              "weekday": 1,
-              "startTime": "10:15:00",
-              "endTime": "12:00:00",
+              "weekday": 4,
+              "startTime": "14:15:00",
+              "endTime": "16:00:00",
               "place": [
-                "Jakobi 2 - 306"
+                "Jakobi 2 - 305"
               ],
               "type": "seminar"
             }
@@ -12247,20 +12206,6 @@
       "groups": []
     },
     {
-      "name": "Kultuurisemiootika ja t\u00e4nap\u00e4ev",
-      "code": "FLSE.00.335",
-      "eap": 6,
-      "lecture": [
-        {
-          "weekday": 3,
-          "startTime": "12:15:00",
-          "endTime": "14:00:00",
-          "place": "Jakobi 2 - 217"
-        }
-      ],
-      "groups": []
-    },
-    {
       "name": "T\u00fcvitekstide seminar",
       "code": "FLSE.00.334",
       "eap": 6,
@@ -12286,6 +12231,20 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Kultuurisemiootika ja t\u00e4nap\u00e4ev",
+      "code": "FLSE.00.335",
+      "eap": 6,
+      "lecture": [
+        {
+          "weekday": 3,
+          "startTime": "12:15:00",
+          "endTime": "14:00:00",
+          "place": "Jakobi 2 - 217"
+        }
+      ],
+      "groups": []
     },
     {
       "name": "Tartu semiootika: J.v. Uexk\u00fcll, J. Lotman ja teised",
@@ -15525,40 +15484,6 @@
       "groups": []
     },
     {
-      "name": "Kirjandus ja ps\u00fchhoanal\u00fc\u00fcs",
-      "code": "HVLC.00.011",
-      "eap": 3,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Sara B\u00e9dard-Goulet"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 3,
-              "startTime": "10:15:00",
-              "endTime": "12:00:00",
-              "place": [
-                "Lossi 3 - 415"
-              ],
-              "type": "seminar"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Inglise keele \u00f5petaja lisaeriala p\u00f5hipraktika",
-      "code": "HVLC.01.004",
-      "eap": 5,
-      "lecture": [],
-      "groups": []
-    },
-    {
       "name": "Meeskonnat\u00f6\u00f6 praktika",
       "code": "HVLC.00.004",
       "eap": 3,
@@ -15587,6 +15512,33 @@
                 "Lossi 3 - 116"
               ],
               "type": "praktikum"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kirjandus ja ps\u00fchhoanal\u00fc\u00fcs",
+      "code": "HVLC.00.011",
+      "eap": 3,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Sara B\u00e9dard-Goulet"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 3,
+              "startTime": "10:15:00",
+              "endTime": "12:00:00",
+              "place": [
+                "Lossi 3 - 415"
+              ],
+              "type": "seminar"
             }
           ]
         }
@@ -15684,6 +15636,13 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Inglise keele \u00f5petaja lisaeriala p\u00f5hipraktika",
+      "code": "HVLC.01.004",
+      "eap": 5,
+      "lecture": [],
+      "groups": []
     },
     {
       "name": "Erialane inglise keel matemaatilise statistika \u00fcli\u00f5pilastele, tase B2 > C1",
@@ -16551,6 +16510,42 @@
       ]
     },
     {
+      "name": "Itaalia keel algtasemele III, tase A1.2 > A2.1",
+      "code": "HVLC.03.022",
+      "eap": 6,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Annika Mikkel"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 2,
+              "startTime": "16:15:00",
+              "endTime": "18:00:00",
+              "place": [
+                "Lossi 3 - 228"
+              ],
+              "type": "praktikum"
+            },
+            {
+              "weekday": 0,
+              "startTime": "16:15:00",
+              "endTime": "18:00:00",
+              "place": [
+                "Lossi 3 - 228"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Itaalia keel eelkesktasemele, tase A2.1 > A2.2",
       "code": "HVLC.03.023",
       "eap": 6,
@@ -16605,42 +16600,6 @@
               "weekday": 0,
               "startTime": "18:15:00",
               "endTime": "20:00:00",
-              "place": [
-                "Lossi 3 - 228"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Itaalia keel algtasemele III, tase A1.2 > A2.1",
-      "code": "HVLC.03.022",
-      "eap": 6,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Annika Mikkel"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 2,
-              "startTime": "16:15:00",
-              "endTime": "18:00:00",
-              "place": [
-                "Lossi 3 - 228"
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 0,
-              "startTime": "16:15:00",
-              "endTime": "18:00:00",
               "place": [
                 "Lossi 3 - 228"
               ],
@@ -18377,52 +18336,6 @@
       "groups": [
         {
           "group": [
-            "vene keel"
-          ],
-          "lecturer": [
-            "Sirje Kupp-Sazonov"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 4,
-              "startTime": "08:30:00",
-              "endTime": "10:00:00",
-              "place": [
-                "Lossi 3 - 325"
-              ],
-              "type": "seminar"
-            }
-          ]
-        },
-        {
-          "group": [
-            "inglise keel"
-          ],
-          "lecturer": [
-            "Piret R\u00e4\u00e4bus"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 4,
-              "startTime": "16:15:00",
-              "endTime": "18:00:00",
-              "place": [
-                "Lossi 3 - 227"
-              ],
-              "type": "seminar"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "\u00d5igustekstide t\u00f5lge teisest v\u00f5\u00f5rkeelest",
-      "code": "HVLC.07.003",
-      "eap": 3,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
             null
           ],
           "lecturer": [
@@ -19427,6 +19340,13 @@
       "groups": []
     },
     {
+      "name": "Produktsioon ja festivalikorraldus",
+      "code": "HVVK.00.013",
+      "eap": 6,
+      "lecture": [],
+      "groups": []
+    },
+    {
       "name": "Artisti karj\u00e4\u00e4ri arendamine",
       "code": "HVVK.00.023",
       "eap": 3,
@@ -19459,13 +19379,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "Produktsioon ja festivalikorraldus",
-      "code": "HVVK.00.013",
-      "eap": 6,
-      "lecture": [],
-      "groups": []
     },
     {
       "name": "K\u00e4sit\u00f6\u00f6 didaktika",
@@ -20696,33 +20609,6 @@
       ]
     },
     {
-      "name": "Rehabilitatsioon spordis",
-      "code": "KKSB.05.085",
-      "eap": 3,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Mati Arend"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 0,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
-              "place": [
-                "Ujula 4 - 3026 (A.Viru auditoorium) "
-              ],
-              "type": "seminar"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Motoorika juhtimine",
       "code": "KKSB.03.013",
       "eap": 3,
@@ -20777,13 +20663,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "F\u00fcsioteraapia ps\u00fchhiaatrias",
-      "code": "KKSB.05.094",
-      "eap": 3,
-      "lecture": [],
-      "groups": []
     },
     {
       "name": "F\u00fcsioterapeutiline hindamine",
@@ -20887,20 +20766,6 @@
       ]
     },
     {
-      "name": "P\u00f5hiliikumise funktsionaalne anal\u00fc\u00fcs",
-      "code": "KKSB.05.099",
-      "eap": 6,
-      "lecture": [
-        {
-          "weekday": 3,
-          "startTime": "10:15:00",
-          "endTime": "12:00:00",
-          "place": "Ujula 4 - 3026 (A.Viru auditoorium) "
-        }
-      ],
-      "groups": []
-    },
-    {
       "name": "Skeleti-lihass\u00fcsteemi f\u00fcsioteraapia",
       "code": "KKSB.05.030",
       "eap": 6,
@@ -20990,24 +20855,31 @@
       ]
     },
     {
-      "name": "Rahva- ja tervisesport",
-      "code": "KKSP.01.058",
+      "name": "Rehabilitatsioon spordis",
+      "code": "KKSB.05.085",
       "eap": 3,
-      "lecture": [
+      "lecture": [],
+      "groups": [
         {
-          "weekday": 0,
-          "startTime": "10:15:00",
-          "endTime": "12:00:00",
-          "place": "Ujula 4 - 3014"
-        },
-        {
-          "weekday": 2,
-          "startTime": "10:15:00",
-          "endTime": "12:00:00",
-          "place": null
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Mati Arend"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 0,
+              "startTime": "14:15:00",
+              "endTime": "16:00:00",
+              "place": [
+                "Ujula 4 - 3026 (A.Viru auditoorium) "
+              ],
+              "type": "seminar"
+            }
+          ]
         }
-      ],
-      "groups": []
+      ]
     },
     {
       "name": "Uurimist\u00f6\u00f6 f\u00fcsioteraapia erialal",
@@ -21057,6 +20929,27 @@
       "groups": []
     },
     {
+      "name": "F\u00fcsioteraapia ps\u00fchhiaatrias",
+      "code": "KKSB.05.094",
+      "eap": 3,
+      "lecture": [],
+      "groups": []
+    },
+    {
+      "name": "P\u00f5hiliikumise funktsionaalne anal\u00fc\u00fcs",
+      "code": "KKSB.05.099",
+      "eap": 6,
+      "lecture": [
+        {
+          "weekday": 3,
+          "startTime": "10:15:00",
+          "endTime": "12:00:00",
+          "place": "Ujula 4 - 3026 (A.Viru auditoorium) "
+        }
+      ],
+      "groups": []
+    },
+    {
       "name": "Laste ps\u00fchhomotoorne areng ja vaimne tervis",
       "code": "KKSB.05.102",
       "eap": 3,
@@ -21096,13 +20989,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "Suhtlemine liigutustegevuse \u00f5petamisel ja juhendamisel",
-      "code": "KKSP.02.025",
-      "eap": 6,
-      "lecture": [],
-      "groups": []
     },
     {
       "name": "Abivahendid ja ortoosid",
@@ -21150,6 +21036,26 @@
       "code": "KKSP.00.025",
       "eap": 3,
       "lecture": [],
+      "groups": []
+    },
+    {
+      "name": "Rahva- ja tervisesport",
+      "code": "KKSP.01.058",
+      "eap": 3,
+      "lecture": [
+        {
+          "weekday": 0,
+          "startTime": "10:15:00",
+          "endTime": "12:00:00",
+          "place": "Ujula 4 - 3014"
+        },
+        {
+          "weekday": 2,
+          "startTime": "10:15:00",
+          "endTime": "12:00:00",
+          "place": null
+        }
+      ],
       "groups": []
     },
     {
@@ -23428,34 +23334,6 @@
       ]
     },
     {
-      "name": "Keemia koolis",
-      "code": "LOKT.03.008",
-      "eap": 3,
-      "lecture": [
-        {
-          "weekday": 4,
-          "startTime": "10:15:00",
-          "endTime": "12:00:00",
-          "place": "Ravila 14A - 1022"
-        }
-      ],
-      "groups": []
-    },
-    {
-      "name": "Kolloid- ja pindn\u00e4htuste keemia I",
-      "code": "LOKT.04.003",
-      "eap": 3,
-      "lecture": [
-        {
-          "weekday": 3,
-          "startTime": "16:15:00",
-          "endTime": "18:00:00",
-          "place": "Ravila 14A - 1021"
-        }
-      ],
-      "groups": []
-    },
-    {
       "name": "F\u00fc\u00fcsikaline keemia",
       "code": "LOKT.02.052",
       "eap": 6,
@@ -23520,6 +23398,34 @@
           "startTime": "14:15:00",
           "endTime": "16:00:00",
           "place": "Ravila 14A - 5041"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "name": "Keemia koolis",
+      "code": "LOKT.03.008",
+      "eap": 3,
+      "lecture": [
+        {
+          "weekday": 4,
+          "startTime": "10:15:00",
+          "endTime": "12:00:00",
+          "place": "Ravila 14A - 1022"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "name": "Kolloid- ja pindn\u00e4htuste keemia I",
+      "code": "LOKT.04.003",
+      "eap": 3,
+      "lecture": [
+        {
+          "weekday": 3,
+          "startTime": "16:15:00",
+          "endTime": "18:00:00",
+          "place": "Ravila 14A - 1021"
         }
       ],
       "groups": []
@@ -24131,20 +24037,6 @@
       ]
     },
     {
-      "name": "Bioorgaaniline keemia",
-      "code": "LOKT.10.012",
-      "eap": 6,
-      "lecture": [
-        {
-          "weekday": 1,
-          "startTime": "14:15:00",
-          "endTime": "16:00:00",
-          "place": "Ravila 14A - 3070"
-        }
-      ],
-      "groups": []
-    },
-    {
       "name": "Orgaanilise keemia alused",
       "code": "LOKT.09.051",
       "eap": 3,
@@ -24154,6 +24046,20 @@
           "startTime": "12:15:00",
           "endTime": "14:00:00",
           "place": "Ravila 14A - 1021"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "name": "Bioorgaaniline keemia",
+      "code": "LOKT.10.012",
+      "eap": 6,
+      "lecture": [
+        {
+          "weekday": 1,
+          "startTime": "14:15:00",
+          "endTime": "16:00:00",
+          "place": "Ravila 14A - 3070"
         }
       ],
       "groups": []
@@ -24175,42 +24081,6 @@
             {
               "weekday": 2,
               "startTime": "16:15:00",
-              "endTime": "18:00:00",
-              "place": [
-                "Vanemuise 46 - 108"
-              ],
-              "type": "seminar"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Probleemidep\u00f5hine \u00f5pe ja interdistsiplinaarsus",
-      "code": "LOLH.00.005",
-      "eap": 3,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Miia Rannikm\u00e4e"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 1,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
-              "place": [
-                "Ravila 14A - 4049"
-              ],
-              "type": "practical session"
-            },
-            {
-              "weekday": 1,
-              "startTime": "16:00:00",
               "endTime": "18:00:00",
               "place": [
                 "Vanemuise 46 - 108"
@@ -24267,6 +24137,42 @@
         }
       ],
       "groups": []
+    },
+    {
+      "name": "Probleemidep\u00f5hine \u00f5pe ja interdistsiplinaarsus",
+      "code": "LOLH.00.005",
+      "eap": 3,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Miia Rannikm\u00e4e"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 1,
+              "startTime": "14:15:00",
+              "endTime": "16:00:00",
+              "place": [
+                "Ravila 14A - 4049"
+              ],
+              "type": "practical session"
+            },
+            {
+              "weekday": 1,
+              "startTime": "16:00:00",
+              "endTime": "18:00:00",
+              "place": [
+                "Vanemuise 46 - 108"
+              ],
+              "type": "seminar"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Loovt\u00f6\u00f6de juhendamine p\u00f5hikoolis",
@@ -26447,6 +26353,112 @@
       "groups": []
     },
     {
+      "name": "\u00dcldine h\u00fcdrobioloogia",
+      "code": "LOOM.04.034",
+      "eap": 3,
+      "lecture": [
+        {
+          "weekday": 0,
+          "startTime": "10:15:00",
+          "endTime": "12:00:00",
+          "place": "J. Liivi  2 - 126"
+        },
+        {
+          "weekday": 2,
+          "startTime": "14:15:00",
+          "endTime": "16:00:00",
+          "place": "J. Liivi  2 - 126"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "name": "K\u00e4itumis\u00f6koloogia",
+      "code": "LOOM.04.038",
+      "eap": 3,
+      "lecture": [],
+      "groups": []
+    },
+    {
+      "name": "Looduskaitsebioloogia",
+      "code": "LOOM.04.084",
+      "eap": 4,
+      "lecture": [],
+      "groups": []
+    },
+    {
+      "name": "Rakuts\u00fckkel",
+      "code": "LOTI.02.013",
+      "eap": 3,
+      "lecture": [
+        {
+          "weekday": 0,
+          "startTime": "10:15:00",
+          "endTime": "12:00:00",
+          "place": "Nooruse 1 - 508b"
+        }
+      ],
+      "groups": [
+        {
+          "group": [
+            "N12"
+          ],
+          "lecturer": [
+            null
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 3,
+              "startTime": "12:15:00",
+              "endTime": "14:00:00",
+              "place": [
+                "W. Ostwaldi tn 1 - A307"
+              ],
+              "type": "practical session"
+            }
+          ]
+        },
+        {
+          "group": [
+            "R8"
+          ],
+          "lecturer": [
+            null
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 4,
+              "startTime": "08:15:00",
+              "endTime": "10:00:00",
+              "place": [
+                "W. Ostwaldi tn 1 - A307"
+              ],
+              "type": "practical session"
+            }
+          ]
+        },
+        {
+          "group": [
+            "R10"
+          ],
+          "lecturer": [
+            null
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 4,
+              "startTime": "10:15:00",
+              "endTime": "12:00:00",
+              "place": [
+                "W. Ostwaldi tn 1 - A307"
+              ],
+              "type": "practical session"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Doktoriseminar proaktiivsetes s\u00fcsteemides ja f\u00fc\u00fcsikalises infotehnoloogias",
       "code": "LOTI.05.001",
       "eap": 0,
@@ -26543,33 +26555,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "\u00dcldine h\u00fcdrobioloogia",
-      "code": "LOOM.04.034",
-      "eap": 3,
-      "lecture": [
-        {
-          "weekday": 0,
-          "startTime": "10:15:00",
-          "endTime": "12:00:00",
-          "place": "J. Liivi  2 - 126"
-        },
-        {
-          "weekday": 2,
-          "startTime": "14:15:00",
-          "endTime": "16:00:00",
-          "place": "J. Liivi  2 - 126"
-        }
-      ],
-      "groups": []
-    },
-    {
-      "name": "K\u00e4itumis\u00f6koloogia",
-      "code": "LOOM.04.038",
-      "eap": 3,
-      "lecture": [],
-      "groups": []
     },
     {
       "name": "Magistriseminar arvutitehnikas ja robootikas",
@@ -26806,85 +26791,6 @@
                 "J. Liivi  2 - 107"
               ],
               "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Looduskaitsebioloogia",
-      "code": "LOOM.04.084",
-      "eap": 4,
-      "lecture": [],
-      "groups": []
-    },
-    {
-      "name": "Rakuts\u00fckkel",
-      "code": "LOTI.02.013",
-      "eap": 3,
-      "lecture": [
-        {
-          "weekday": 0,
-          "startTime": "10:15:00",
-          "endTime": "12:00:00",
-          "place": "Nooruse 1 - 508b"
-        }
-      ],
-      "groups": [
-        {
-          "group": [
-            "N12"
-          ],
-          "lecturer": [
-            null
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 3,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A307"
-              ],
-              "type": "practical session"
-            }
-          ]
-        },
-        {
-          "group": [
-            "R8"
-          ],
-          "lecturer": [
-            null
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 4,
-              "startTime": "08:15:00",
-              "endTime": "10:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A307"
-              ],
-              "type": "practical session"
-            }
-          ]
-        },
-        {
-          "group": [
-            "R10"
-          ],
-          "lecturer": [
-            null
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 4,
-              "startTime": "10:15:00",
-              "endTime": "12:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A307"
-              ],
-              "type": "practical session"
             }
           ]
         }
@@ -27492,6 +27398,92 @@
       ]
     },
     {
+      "name": "Pehmerobootika",
+      "code": "LOTI.05.082",
+      "eap": 3,
+      "lecture": [
+        {
+          "weekday": 2,
+          "startTime": "16:15:00",
+          "endTime": "18:00:00",
+          "place": "Ravila 14A - 1022"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "name": "Manuss\u00fcsteemid",
+      "code": "LOTI.05.085",
+      "eap": 3,
+      "lecture": [
+        {
+          "weekday": 2,
+          "startTime": "12:15:00",
+          "endTime": "14:00:00",
+          "place": "Narva mnt 18 - 2040"
+        }
+      ],
+      "groups": [
+        {
+          "group": [
+            "1. r\u00fchm e\u00f5pe+konsultatsioon"
+          ],
+          "lecturer": [
+            null
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 4,
+              "startTime": "08:15:00",
+              "endTime": "10:00:00",
+              "place": [
+                "Narva mnt 18 - 2027"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        },
+        {
+          "group": [
+            "2. r\u00fchm"
+          ],
+          "lecturer": [
+            null
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 4,
+              "startTime": "10:15:00",
+              "endTime": "12:00:00",
+              "place": [
+                "Narva mnt 18 - 2027"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        },
+        {
+          "group": [
+            "3. r\u00fchm"
+          ],
+          "lecturer": [
+            null
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 4,
+              "startTime": "12:15:00",
+              "endTime": "14:00:00",
+              "place": [
+                "Narva mnt 18 - 2027"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Visuaalprogrammeerimine",
       "code": "LOTI.05.086",
       "eap": 3,
@@ -27736,92 +27728,6 @@
               "endTime": "16:00:00",
               "place": [
                 "Nooruse 1 - 140"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Pehmerobootika",
-      "code": "LOTI.05.082",
-      "eap": 3,
-      "lecture": [
-        {
-          "weekday": 2,
-          "startTime": "16:15:00",
-          "endTime": "18:00:00",
-          "place": "Ravila 14A - 1022"
-        }
-      ],
-      "groups": []
-    },
-    {
-      "name": "Manuss\u00fcsteemid",
-      "code": "LOTI.05.085",
-      "eap": 3,
-      "lecture": [
-        {
-          "weekday": 2,
-          "startTime": "12:15:00",
-          "endTime": "14:00:00",
-          "place": "Narva mnt 18 - 2040"
-        }
-      ],
-      "groups": [
-        {
-          "group": [
-            "1. r\u00fchm e\u00f5pe+konsultatsioon"
-          ],
-          "lecturer": [
-            null
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 4,
-              "startTime": "08:15:00",
-              "endTime": "10:00:00",
-              "place": [
-                "Narva mnt 18 - 2027"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        },
-        {
-          "group": [
-            "2. r\u00fchm"
-          ],
-          "lecturer": [
-            null
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 4,
-              "startTime": "10:15:00",
-              "endTime": "12:00:00",
-              "place": [
-                "Narva mnt 18 - 2027"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        },
-        {
-          "group": [
-            "3. r\u00fchm"
-          ],
-          "lecturer": [
-            null
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 4,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "Narva mnt 18 - 2027"
               ],
               "type": "praktikum"
             }
@@ -28430,6 +28336,20 @@
       "groups": []
     },
     {
+      "name": "Tehislik ja loomulik m\u00f5istus",
+      "code": "LTAT.02.024",
+      "eap": 6,
+      "lecture": [
+        {
+          "weekday": 2,
+          "startTime": "14:15:00",
+          "endTime": "16:00:00",
+          "place": "Narva mnt 18 - 1021"
+        }
+      ],
+      "groups": []
+    },
+    {
       "name": "Andmetehnika mitteinformaatikutele",
       "code": "LTAT.02.026",
       "eap": 6,
@@ -28496,20 +28416,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "Tehislik ja loomulik m\u00f5istus",
-      "code": "LTAT.02.024",
-      "eap": 6,
-      "lecture": [
-        {
-          "weekday": 2,
-          "startTime": "14:15:00",
-          "endTime": "16:00:00",
-          "place": "Narva mnt 18 - 1021"
-        }
-      ],
-      "groups": []
     },
     {
       "name": "Keerukusteadus arvutiteadlastele",
@@ -29053,13 +28959,6 @@
       ]
     },
     {
-      "name": "Automaatide, keelte ja translaatorite s\u00fcvenduspraktikum",
-      "code": "LTAT.03.023",
-      "eap": 3,
-      "lecture": [],
-      "groups": []
-    },
-    {
       "name": "Programmeerimiskeelte alused",
       "code": "LTAT.03.018",
       "eap": 6,
@@ -29147,6 +29046,13 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Automaatide, keelte ja translaatorite s\u00fcvenduspraktikum",
+      "code": "LTAT.03.023",
+      "eap": 3,
+      "lecture": [],
+      "groups": []
     },
     {
       "name": "Objektorienteeritud programmeerimise s\u00fcvenduspraktikum",
@@ -29729,40 +29635,6 @@
       ]
     },
     {
-      "name": "Andmeturve",
-      "code": "LTAT.06.002",
-      "eap": 6,
-      "lecture": [
-        {
-          "weekday": 3,
-          "startTime": "14:15:00",
-          "endTime": "16:00:00",
-          "place": "Narva mnt 18 - 1037"
-        }
-      ],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Roshni Chakraborty"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 0,
-              "startTime": "16:15:00",
-              "endTime": "18:00:00",
-              "place": [
-                "Narva mnt 18 - 1008"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Operatsioonis\u00fcsteemid",
       "code": "LTAT.06.001",
       "eap": 6,
@@ -30019,6 +29891,40 @@
               "endTime": "18:00:00",
               "place": [
                 "Narva mnt 18 - 2003"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Andmeturve",
+      "code": "LTAT.06.002",
+      "eap": 6,
+      "lecture": [
+        {
+          "weekday": 3,
+          "startTime": "14:15:00",
+          "endTime": "16:00:00",
+          "place": "Narva mnt 18 - 1037"
+        }
+      ],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Roshni Chakraborty"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 0,
+              "startTime": "16:15:00",
+              "endTime": "18:00:00",
+              "place": [
+                "Narva mnt 18 - 1008"
               ],
               "type": "praktikum"
             }
@@ -30292,59 +30198,6 @@
       ]
     },
     {
-      "name": "Veebiteenuste ja hajuss\u00fcsteemide arendus",
-      "code": "LTAT.06.018",
-      "eap": 6,
-      "lecture": [
-        {
-          "weekday": 2,
-          "startTime": "12:15:00",
-          "endTime": "14:00:00",
-          "place": "Narva mnt 18 - 1021"
-        }
-      ],
-      "groups": [
-        {
-          "group": [
-            "1. r\u00fchm"
-          ],
-          "lecturer": [
-            "Pelle Jakovits"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 2,
-              "startTime": "16:15:00",
-              "endTime": "18:00:00",
-              "place": [
-                "Narva mnt 18 - 2045"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        },
-        {
-          "group": [
-            "2. r\u00fchm"
-          ],
-          "lecturer": [
-            "Pelle Jakovits"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 3,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "Narva mnt 18 - 2045"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Pervasiivse andmeteaduse seminar",
       "code": "LTAT.06.010",
       "eap": 3,
@@ -30582,79 +30435,24 @@
           "weekday": 2,
           "startTime": "12:15:00",
           "endTime": "14:00:00",
-          "place": "Narva mnt 18 - 1019"
+          "place": "Narva mnt 18 - 1021"
         }
       ],
       "groups": [
         {
           "group": [
-            "A.r\u00fchm"
+            "1. r\u00fchm"
           ],
           "lecturer": [
-            "Irina Bichele"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 0,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A202"
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 0,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A402"
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 0,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A202"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        },
-        {
-          "group": [
-            "B. r\u00fchm"
-          ],
-          "lecturer": [
-            "Irina Bichele"
+            "Pelle Jakovits"
           ],
           "practicalSessions": [
             {
               "weekday": 2,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
+              "startTime": "16:15:00",
+              "endTime": "18:00:00",
               "place": [
-                "W. Ostwaldi tn 1 - A202"
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 1,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A402"
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 1,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A202"
+                "Narva mnt 18 - 2045"
               ],
               "type": "praktikum"
             }
@@ -30662,10 +30460,10 @@
         },
         {
           "group": [
-            "C. r\u00fchm"
+            "2. r\u00fchm"
           ],
           "lecturer": [
-            "Irina Bichele"
+            "Pelle Jakovits"
           ],
           "practicalSessions": [
             {
@@ -30673,62 +30471,7 @@
               "startTime": "12:15:00",
               "endTime": "14:00:00",
               "place": [
-                "W. Ostwaldi tn 1 - A202"
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 3,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A402"
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 3,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A202"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        },
-        {
-          "group": [
-            "D. r\u00fchm"
-          ],
-          "lecturer": [
-            "Irina Bichele"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 2,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A202"
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 4,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A402"
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 4,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A202"
+                "Narva mnt 18 - 2045"
               ],
               "type": "praktikum"
             }
@@ -30999,33 +30742,6 @@
       ]
     },
     {
-      "name": "Magistriseminar materjaliteaduses",
-      "code": "LTFY.02.009",
-      "eap": 3,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Hele Siimon"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 0,
-              "startTime": "16:15:00",
-              "endTime": "18:00:00",
-              "place": [
-                "W. Ostwaldi tn 1 - A102"
-              ],
-              "type": "seminar"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "L\u00f5put\u00f6\u00f6 seminar",
       "code": "LTFY.01.013",
       "eap": 3,
@@ -31264,6 +30980,33 @@
         }
       ],
       "groups": []
+    },
+    {
+      "name": "Magistriseminar materjaliteaduses",
+      "code": "LTFY.02.009",
+      "eap": 3,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Hele Siimon"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 0,
+              "startTime": "16:15:00",
+              "endTime": "18:00:00",
+              "place": [
+                "W. Ostwaldi tn 1 - A102"
+              ],
+              "type": "seminar"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Ettev\u00f5tte loomise, juhtimise ja arendamise seminar II",
@@ -32205,74 +31948,6 @@
       ]
     },
     {
-      "name": "Rakubioloogia",
-      "code": "LTMR.06.001",
-      "eap": 6,
-      "lecture": [
-        {
-          "weekday": 1,
-          "startTime": "12:15:00",
-          "endTime": "14:00:00",
-          "place": "Riia mnt 23b - 105"
-        },
-        {
-          "weekday": 2,
-          "startTime": "12:15:00",
-          "endTime": "14:00:00",
-          "place": "Riia mnt. 23 - 217"
-        },
-        {
-          "weekday": 0,
-          "startTime": "10:15:00",
-          "endTime": "12:00:00",
-          "place": "Riia mnt 23b - 105"
-        },
-        {
-          "weekday": 1,
-          "startTime": "16:15:00",
-          "endTime": "18:00:00",
-          "place": "Riia mnt. 23 - 217"
-        }
-      ],
-      "groups": []
-    },
-    {
-      "name": "Rakubioloogia praktikum",
-      "code": "LTMR.06.002",
-      "eap": 3,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Lilian Kadaja-Saarepuu"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 3,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "Vanemuise 46 - 305"
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 4,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
-              "place": [
-                "Vanemuise 46 - 305"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Genoomi struktuur ja funktsioon",
       "code": "LTMR.01.006",
       "eap": 6,
@@ -32618,6 +32293,74 @@
         }
       ],
       "groups": []
+    },
+    {
+      "name": "Rakubioloogia",
+      "code": "LTMR.06.001",
+      "eap": 6,
+      "lecture": [
+        {
+          "weekday": 1,
+          "startTime": "12:15:00",
+          "endTime": "14:00:00",
+          "place": "Riia mnt 23b - 105"
+        },
+        {
+          "weekday": 2,
+          "startTime": "12:15:00",
+          "endTime": "14:00:00",
+          "place": "Riia mnt. 23 - 217"
+        },
+        {
+          "weekday": 0,
+          "startTime": "10:15:00",
+          "endTime": "12:00:00",
+          "place": "Riia mnt 23b - 105"
+        },
+        {
+          "weekday": 1,
+          "startTime": "16:15:00",
+          "endTime": "18:00:00",
+          "place": "Riia mnt. 23 - 217"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "name": "Rakubioloogia praktikum",
+      "code": "LTMR.06.002",
+      "eap": 3,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Lilian Kadaja-Saarepuu"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 3,
+              "startTime": "12:15:00",
+              "endTime": "14:00:00",
+              "place": [
+                "Vanemuise 46 - 305"
+              ],
+              "type": "praktikum"
+            },
+            {
+              "weekday": 4,
+              "startTime": "14:15:00",
+              "endTime": "16:00:00",
+              "place": [
+                "Vanemuise 46 - 305"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Bioloogilise m\u00f5tte areng, teadusmetodoloogia ja bioeetika",
@@ -33032,40 +32775,6 @@
       ]
     },
     {
-      "name": "Biomeetria bioloogidele",
-      "code": "LTMS.00.038",
-      "eap": 6,
-      "lecture": [
-        {
-          "weekday": 2,
-          "startTime": "08:15:00",
-          "endTime": "10:00:00",
-          "place": "Vanemuise 46 - 246"
-        }
-      ],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Tanel Kaart"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 3,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
-              "place": [
-                "Narva mnt 18 - 2030"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Seminar \u00fcli\u00f5pilaste matemaatika ol\u00fcmpiaadidest",
       "code": "LTMS.00.030",
       "eap": 3,
@@ -33139,6 +32848,40 @@
               "endTime": "10:00:00",
               "place": [
                 "Narva mnt 18 - 1020"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Biomeetria bioloogidele",
+      "code": "LTMS.00.038",
+      "eap": 6,
+      "lecture": [
+        {
+          "weekday": 2,
+          "startTime": "08:15:00",
+          "endTime": "10:00:00",
+          "place": "Vanemuise 46 - 246"
+        }
+      ],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Tanel Kaart"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 3,
+              "startTime": "14:15:00",
+              "endTime": "16:00:00",
+              "place": [
+                "Narva mnt 18 - 2030"
               ],
               "type": "praktikum"
             }
@@ -33515,6 +33258,20 @@
       ]
     },
     {
+      "name": "\u00d6koloogiline maailmak\u00e4sitlus",
+      "code": "LTOM.01.013",
+      "eap": 2,
+      "lecture": [
+        {
+          "weekday": 0,
+          "startTime": "16:15:00",
+          "endTime": "18:00:00",
+          "place": "J. Liivi  2 - 126"
+        }
+      ],
+      "groups": []
+    },
+    {
       "name": "Tarkvara ArcGIS",
       "code": "LTOM.02.015",
       "eap": 3,
@@ -33549,25 +33306,38 @@
       ]
     },
     {
-      "name": "\u00d6koloogiline maailmak\u00e4sitlus",
-      "code": "LTOM.01.013",
-      "eap": 2,
-      "lecture": [
-        {
-          "weekday": 0,
-          "startTime": "16:15:00",
-          "endTime": "18:00:00",
-          "place": "J. Liivi  2 - 126"
-        }
-      ],
-      "groups": []
-    },
-    {
       "name": "Majandusgeograafia",
       "code": "LTOM.02.032",
       "eap": 3,
       "lecture": [],
       "groups": []
+    },
+    {
+      "name": "Loodusgeograafia alused",
+      "code": "LTOM.02.033",
+      "eap": 6,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Raivo Aunap"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 3,
+              "startTime": "09:00:00",
+              "endTime": "11:00:00",
+              "place": [
+                "Vanemuise 46 - 202"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Vabavara QGIS geoinformaatika alustega",
@@ -33672,40 +33442,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "Loodusgeograafia alused",
-      "code": "LTOM.02.033",
-      "eap": 6,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Raivo Aunap"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 3,
-              "startTime": "09:00:00",
-              "endTime": "11:00:00",
-              "place": [
-                "Vanemuise 46 - 202"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Vabavara QGIS geoinformaatika alustega",
-      "code": "LTOM.02.034",
-      "eap": 3,
-      "lecture": [],
-      "groups": []
     },
     {
       "name": "Geograafia, kommunikatsioon ja ruumiline mobiilsus",
@@ -34074,6 +33810,40 @@
       "groups": []
     },
     {
+      "name": "GIS'i kasutamine geoloogias",
+      "code": "LTOM.03.036",
+      "eap": 3,
+      "lecture": [
+        {
+          "weekday": 0,
+          "startTime": "12:15:00",
+          "endTime": "14:00:00",
+          "place": "Ravila 14A - 1052"
+        }
+      ],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Magdaleena M\u00e4nnik"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 4,
+              "startTime": "12:15:00",
+              "endTime": "14:00:00",
+              "place": [
+                "Ravila 14A - 1052"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Andmebaasid geoloogias",
       "code": "LTOM.03.038",
       "eap": 3,
@@ -34121,40 +33891,6 @@
           ],
           "lecturer": [
             "Kairi P\u00f5ldsaar"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 4,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "Ravila 14A - 1052"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "GIS'i kasutamine geoloogias",
-      "code": "LTOM.03.036",
-      "eap": 3,
-      "lecture": [
-        {
-          "weekday": 0,
-          "startTime": "12:15:00",
-          "endTime": "14:00:00",
-          "place": "Ravila 14A - 1052"
-        }
-      ],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Magdaleena M\u00e4nnik"
           ],
           "practicalSessions": [
             {
@@ -35355,6 +35091,20 @@
       ]
     },
     {
+      "name": "Haridus\u00f6konoomika",
+      "code": "MJRI.03.074",
+      "eap": 3,
+      "lecture": [
+        {
+          "weekday": 4,
+          "startTime": "10:15:00",
+          "endTime": "12:00:00",
+          "place": "Narva mnt 18 - 1017"
+        }
+      ],
+      "groups": []
+    },
+    {
       "name": "Majanduspoliitika",
       "code": "MJRI.03.091",
       "eap": 6,
@@ -35493,20 +35243,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "Haridus\u00f6konoomika",
-      "code": "MJRI.03.074",
-      "eap": 3,
-      "lecture": [
-        {
-          "weekday": 4,
-          "startTime": "10:15:00",
-          "endTime": "12:00:00",
-          "place": "Narva mnt 18 - 1017"
-        }
-      ],
-      "groups": []
     },
     {
       "name": "Avaliku sektori \u00f6konoomika",
@@ -35740,6 +35476,33 @@
       "groups": []
     },
     {
+      "name": "Masin\u00f5pe",
+      "code": "MTAT.03.227",
+      "eap": 6,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Anna Aljanaki"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 4,
+              "startTime": "12:15:00",
+              "endTime": "14:00:00",
+              "place": [
+                "Narva mnt 18 - 2006"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Ettev\u00f5ttes\u00fcsteemide integreerimine",
       "code": "MTAT.03.229",
       "eap": 6,
@@ -35811,33 +35574,6 @@
               "endTime": "12:00:00",
               "place": [
                 "Narva mnt 18 - 2045"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Masin\u00f5pe",
-      "code": "MTAT.03.227",
-      "eap": 6,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Anna Aljanaki"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 4,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "Narva mnt 18 - 2006"
               ],
               "type": "praktikum"
             }
@@ -36319,42 +36055,6 @@
       ]
     },
     {
-      "name": "Veebilehtede loomine",
-      "code": "MTAT.03.297",
-      "eap": 3,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Oliver Vilson"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 4,
-              "startTime": "10:15:00",
-              "endTime": "12:00:00",
-              "place": [
-                "Narva mnt 18 - 1022"
-              ],
-              "type": "seminar"
-            },
-            {
-              "weekday": 4,
-              "startTime": "12:00:00",
-              "endTime": "14:00:00",
-              "place": [
-                "Narva mnt 18 - 1022"
-              ],
-              "type": "seminar"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "V\u00e4le tarkvaraarendus",
       "code": "MTAT.03.295",
       "eap": 6,
@@ -36408,8 +36108,8 @@
       ]
     },
     {
-      "name": "Programmeerimine koolis (Python)",
-      "code": "MTAT.03.302",
+      "name": "Veebilehtede loomine",
+      "code": "MTAT.03.297",
       "eap": 3,
       "lecture": [],
       "groups": [
@@ -36418,7 +36118,7 @@
             null
           ],
           "lecturer": [
-            "Tauno Palts"
+            "Oliver Vilson"
           ],
           "practicalSessions": [
             {
@@ -36426,9 +36126,18 @@
               "startTime": "10:15:00",
               "endTime": "12:00:00",
               "place": [
-                "Narva mnt 18 - 2021"
+                "Narva mnt 18 - 1022"
               ],
-              "type": "praktikum"
+              "type": "seminar"
+            },
+            {
+              "weekday": 4,
+              "startTime": "12:00:00",
+              "endTime": "14:00:00",
+              "place": [
+                "Narva mnt 18 - 1022"
+              ],
+              "type": "seminar"
             }
           ]
         }
@@ -36461,6 +36170,33 @@
               "endTime": "16:00:00",
               "place": [
                 "Narva mnt 18 - 1008"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Programmeerimine koolis (Python)",
+      "code": "MTAT.03.302",
+      "eap": 3,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Tauno Palts"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 4,
+              "startTime": "10:15:00",
+              "endTime": "12:00:00",
+              "place": [
+                "Narva mnt 18 - 2021"
               ],
               "type": "praktikum"
             }
@@ -37904,62 +37640,6 @@
       ]
     },
     {
-      "name": "Struktuuriv\u00f5rrandite mudelid",
-      "code": "MTMS.01.014",
-      "eap": 3,
-      "lecture": [
-        {
-          "weekday": 2,
-          "startTime": "12:15:00",
-          "endTime": "14:00:00",
-          "place": "Narva mnt 18 - 2039"
-        },
-        {
-          "weekday": 3,
-          "startTime": "12:15:00",
-          "endTime": "14:00:00",
-          "place": "Narva mnt 18 - 2039"
-        }
-      ],
-      "groups": []
-    },
-    {
-      "name": "Andmet\u00f6\u00f6tlusmeetodid",
-      "code": "MTMS.01.016",
-      "eap": 3,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Ene-Margit Tiit"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 1,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "Narva mnt 18 - 2039"
-              ],
-              "type": "seminar"
-            },
-            {
-              "weekday": 1,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "Narva mnt 18 - 2030"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Andmeanal\u00fc\u00fcs II",
       "code": "MTMS.01.007",
       "eap": 6,
@@ -38073,6 +37753,62 @@
               "endTime": "12:00:00",
               "place": [
                 "Narva mnt 18 - 2039"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Struktuuriv\u00f5rrandite mudelid",
+      "code": "MTMS.01.014",
+      "eap": 3,
+      "lecture": [
+        {
+          "weekday": 2,
+          "startTime": "12:15:00",
+          "endTime": "14:00:00",
+          "place": "Narva mnt 18 - 2039"
+        },
+        {
+          "weekday": 3,
+          "startTime": "12:15:00",
+          "endTime": "14:00:00",
+          "place": "Narva mnt 18 - 2039"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "name": "Andmet\u00f6\u00f6tlusmeetodid",
+      "code": "MTMS.01.016",
+      "eap": 3,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Ene-Margit Tiit"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 1,
+              "startTime": "12:15:00",
+              "endTime": "14:00:00",
+              "place": [
+                "Narva mnt 18 - 2039"
+              ],
+              "type": "seminar"
+            },
+            {
+              "weekday": 1,
+              "startTime": "12:15:00",
+              "endTime": "14:00:00",
+              "place": [
+                "Narva mnt 18 - 2030"
               ],
               "type": "praktikum"
             }
@@ -38519,43 +38255,6 @@
       "groups": []
     },
     {
-      "name": "T\u00f5en\u00e4osusteooria ja matemaatiline statistika",
-      "code": "MTMS.02.059",
-      "eap": 6,
-      "lecture": [
-        {
-          "weekday": 0,
-          "startTime": "14:15:00",
-          "endTime": "16:00:00",
-          "place": "Narva mnt 18 - 1037"
-        }
-      ],
-      "groups": [
-        {
-          "group": [
-            "1. r\u00fchm",
-            "2. r\u00fchm"
-          ],
-          "lecturer": [
-            "Joonas Sova",
-            "Alvin Lepik"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 1,
-              "startTime": "08:15:00",
-              "endTime": "10:00:00",
-              "place": [
-                "Narva mnt 18 - 1007",
-                "Narva mnt 18 - 1026"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Elukindlustusmatemaatika I",
       "code": "MTMS.02.051",
       "eap": 3,
@@ -38688,6 +38387,43 @@
               "endTime": "14:00:00",
               "place": [
                 "Narva mnt 18 - 1025"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "T\u00f5en\u00e4osusteooria ja matemaatiline statistika",
+      "code": "MTMS.02.059",
+      "eap": 6,
+      "lecture": [
+        {
+          "weekday": 0,
+          "startTime": "14:15:00",
+          "endTime": "16:00:00",
+          "place": "Narva mnt 18 - 1037"
+        }
+      ],
+      "groups": [
+        {
+          "group": [
+            "1. r\u00fchm",
+            "2. r\u00fchm"
+          ],
+          "lecturer": [
+            "Joonas Sova",
+            "Alvin Lepik"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 1,
+              "startTime": "08:15:00",
+              "endTime": "10:00:00",
+              "place": [
+                "Narva mnt 18 - 1007",
+                "Narva mnt 18 - 1026"
               ],
               "type": "praktikum"
             }
@@ -38996,60 +38732,6 @@
       ]
     },
     {
-      "name": "Kliinilise teaduse sissejuhatus 1 - andmed",
-      "code": "MVCM.13.003",
-      "eap": 6,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Alastair Forbes"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 0,
-              "startTime": "14:30:00",
-              "endTime": "16:00:00",
-              "place": [
-                null
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 1,
-              "startTime": "14:30:00",
-              "endTime": "16:00:00",
-              "place": [
-                null
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 3,
-              "startTime": "14:30:00",
-              "endTime": "16:00:00",
-              "place": [
-                null
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 4,
-              "startTime": "14:30:00",
-              "endTime": "16:00:00",
-              "place": [
-                null
-              ],
-              "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Dermatoloogia ja veneroloogia ring",
       "code": "MVCM.07.002",
       "eap": 2,
@@ -39083,6 +38765,60 @@
             },
             {
               "weekday": 2,
+              "startTime": "14:30:00",
+              "endTime": "16:00:00",
+              "place": [
+                null
+              ],
+              "type": "praktikum"
+            },
+            {
+              "weekday": 3,
+              "startTime": "14:30:00",
+              "endTime": "16:00:00",
+              "place": [
+                null
+              ],
+              "type": "praktikum"
+            },
+            {
+              "weekday": 4,
+              "startTime": "14:30:00",
+              "endTime": "16:00:00",
+              "place": [
+                null
+              ],
+              "type": "praktikum"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kliinilise teaduse sissejuhatus 1 - andmed",
+      "code": "MVCM.13.003",
+      "eap": 6,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Alastair Forbes"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 0,
+              "startTime": "14:30:00",
+              "endTime": "16:00:00",
+              "place": [
+                null
+              ],
+              "type": "praktikum"
+            },
+            {
+              "weekday": 1,
               "startTime": "14:30:00",
               "endTime": "16:00:00",
               "place": [
@@ -39148,6 +38884,20 @@
       "groups": []
     },
     {
+      "name": "Sissejuhatus doktori\u00f5pingutesse meditsiiniteaduste valdkonnas",
+      "code": "MVMV.00.004",
+      "eap": 1,
+      "lecture": [
+        {
+          "weekday": 2,
+          "startTime": "12:00:00",
+          "endTime": "14:00:00",
+          "place": null
+        }
+      ],
+      "groups": []
+    },
+    {
       "name": "Motiveeriva intervjueerimise ja kodeerimise alused tervishoius",
       "code": "MVPT.00.005",
       "eap": 2,
@@ -39182,20 +38932,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "Sissejuhatus doktori\u00f5pingutesse meditsiiniteaduste valdkonnas",
-      "code": "MVMV.00.004",
-      "eap": 1,
-      "lecture": [
-        {
-          "weekday": 2,
-          "startTime": "12:00:00",
-          "endTime": "14:00:00",
-          "place": null
-        }
-      ],
-      "groups": []
     },
     {
       "name": "Praktiliste oskuste \u00f5petamine meditsiinis - tudengilt tudengile kursus 2",
@@ -41301,6 +41037,13 @@
       "groups": []
     },
     {
+      "name": "Pankroti\u00f5igus",
+      "code": "P2OG.01.113",
+      "eap": 6,
+      "lecture": [],
+      "groups": []
+    },
+    {
       "name": "Andmekaitse",
       "code": "P2OG.01.133",
       "eap": 6,
@@ -41346,13 +41089,6 @@
     {
       "name": "Intellektuaalne omand",
       "code": "P2OG.01.134",
-      "eap": 6,
-      "lecture": [],
-      "groups": []
-    },
-    {
-      "name": "Pankroti\u00f5igus",
-      "code": "P2OG.01.113",
       "eap": 6,
       "lecture": [],
       "groups": []
@@ -42728,6 +42464,13 @@
       ]
     },
     {
+      "name": "Tervis ja heaolu koolieelses lasteasutuses",
+      "code": "SHHI.02.014",
+      "eap": 3,
+      "lecture": [],
+      "groups": []
+    },
+    {
       "name": "L\u00f5imitud aine- ja keele\u00f5pe",
       "code": "SHHI.02.018",
       "eap": 3,
@@ -42762,20 +42505,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "Tervis ja heaolu koolieelses lasteasutuses",
-      "code": "SHHI.02.014",
-      "eap": 3,
-      "lecture": [],
-      "groups": []
-    },
-    {
-      "name": "L\u00f5imitud aine- ja keele\u00f5pe",
-      "code": "SHHI.02.018",
-      "eap": 3,
-      "lecture": [],
-      "groups": []
     },
     {
       "name": "Lapse areng sotsiaalses keskkonnas",
@@ -45459,6 +45188,49 @@
       "groups": []
     },
     {
+      "name": "P\u00f5hjuse ja tagaj\u00e4rje seosed",
+      "code": "SVMJ.04.018",
+      "eap": 6,
+      "lecture": [
+        {
+          "weekday": 2,
+          "startTime": "12:15:00",
+          "endTime": "14:00:00",
+          "place": "Narva mnt 18 - 1037"
+        }
+      ],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Liis Roosaar"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 2,
+              "startTime": "14:15:00",
+              "endTime": "16:00:00",
+              "place": [
+                "Narva mnt 18 - 2029"
+              ],
+              "type": "praktikum"
+            },
+            {
+              "weekday": 2,
+              "startTime": "14:15:00",
+              "endTime": "16:00:00",
+              "place": [
+                "Narva mnt 18 - 2017"
+              ],
+              "type": "praktikum"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "\u00c4rianal\u00fc\u00fctika",
       "code": "SVMJ.04.028",
       "eap": 6,
@@ -45950,49 +45722,6 @@
               "endTime": "18:00:00",
               "place": [
                 "Narva mnt 18 - 2029"
-              ],
-              "type": "praktikum"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "P\u00f5hjuse ja tagaj\u00e4rje seosed",
-      "code": "SVMJ.04.018",
-      "eap": 6,
-      "lecture": [
-        {
-          "weekday": 2,
-          "startTime": "12:15:00",
-          "endTime": "14:00:00",
-          "place": "Narva mnt 18 - 1037"
-        }
-      ],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Liis Roosaar"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 2,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
-              "place": [
-                "Narva mnt 18 - 2029"
-              ],
-              "type": "praktikum"
-            },
-            {
-              "weekday": 2,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
-              "place": [
-                "Narva mnt 18 - 2017"
               ],
               "type": "praktikum"
             }
@@ -48292,6 +48021,43 @@
       "groups": []
     },
     {
+      "name": "\u00dcldised sotsiaalteooriad",
+      "code": "SVUH.00.099",
+      "eap": 4,
+      "lecture": [
+        {
+          "weekday": 1,
+          "startTime": "12:15:00",
+          "endTime": "14:00:00",
+          "place": "Lossi 36 - 215"
+        }
+      ],
+      "groups": [
+        {
+          "group": [
+            "2. r\u00fchm",
+            "1. r\u00fchm"
+          ],
+          "lecturer": [
+            "Kaspar Kruup",
+            "Signe Opermann"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 2,
+              "startTime": "12:15:00",
+              "endTime": "14:00:00",
+              "place": [
+                "Lossi 36 - 207",
+                "Lossi 36 - 205"
+              ],
+              "type": "seminar"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Professionaalne eneseanal\u00fc\u00fcs",
       "code": "SVUH.00.106",
       "eap": 2,
@@ -48453,43 +48219,6 @@
       ]
     },
     {
-      "name": "\u00dcldised sotsiaalteooriad",
-      "code": "SVUH.00.099",
-      "eap": 4,
-      "lecture": [
-        {
-          "weekday": 1,
-          "startTime": "12:15:00",
-          "endTime": "14:00:00",
-          "place": "Lossi 36 - 215"
-        }
-      ],
-      "groups": [
-        {
-          "group": [
-            "2. r\u00fchm",
-            "1. r\u00fchm"
-          ],
-          "lecturer": [
-            "Kaspar Kruup",
-            "Signe Opermann"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 2,
-              "startTime": "12:15:00",
-              "endTime": "14:00:00",
-              "place": [
-                "Lossi 36 - 207",
-                "Lossi 36 - 205"
-              ],
-              "type": "seminar"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Protsessijuhtimine organisatsioonis",
       "code": "SVUH.00.157",
       "eap": 3,
@@ -48538,6 +48267,33 @@
       "eap": 3,
       "lecture": [],
       "groups": []
+    },
+    {
+      "name": "\u00dchiskonna teoreetiline m\u00f5testamine",
+      "code": "SVUH.00.165",
+      "eap": 3,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Kairi Kasearu"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 1,
+              "startTime": "14:15:00",
+              "endTime": "16:00:00",
+              "place": [
+                "Lossi 36 - 206"
+              ],
+              "type": "seminar"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Kogukonnast v\u00e4ljalangemise riskid ja ennetamine",
@@ -48680,6 +48436,33 @@
       "groups": []
     },
     {
+      "name": "Sissejuhatus sotsiaalsesse stratifikatsiooni",
+      "code": "SVUH.00.182",
+      "eap": 6,
+      "lecture": [],
+      "groups": [
+        {
+          "group": [
+            null
+          ],
+          "lecturer": [
+            "Ave Kovaljov"
+          ],
+          "practicalSessions": [
+            {
+              "weekday": 2,
+              "startTime": "16:00:00",
+              "endTime": "18:00:00",
+              "place": [
+                "Lossi 36 - 206"
+              ],
+              "type": "seminar"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Sotsiaalhoolekande korraldus",
       "code": "SVUH.00.183",
       "eap": 6,
@@ -48782,33 +48565,6 @@
       ]
     },
     {
-      "name": "\u00dchiskonna teoreetiline m\u00f5testamine",
-      "code": "SVUH.00.165",
-      "eap": 3,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Kairi Kasearu"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 1,
-              "startTime": "14:15:00",
-              "endTime": "16:00:00",
-              "place": [
-                "Lossi 36 - 206"
-              ],
-              "type": "seminar"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "M\u00f5tlemisharjumuste treening",
       "code": "SVUH.00.206",
       "eap": 6,
@@ -48885,33 +48641,6 @@
               "endTime": "16:00:00",
               "place": [
                 "Lossi 36 - 215"
-              ],
-              "type": "seminar"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Sissejuhatus sotsiaalsesse stratifikatsiooni",
-      "code": "SVUH.00.182",
-      "eap": 6,
-      "lecture": [],
-      "groups": [
-        {
-          "group": [
-            null
-          ],
-          "lecturer": [
-            "Ave Kovaljov"
-          ],
-          "practicalSessions": [
-            {
-              "weekday": 2,
-              "startTime": "16:00:00",
-              "endTime": "18:00:00",
-              "place": [
-                "Lossi 36 - 206"
               ],
               "type": "seminar"
             }
