@@ -1,4 +1,4 @@
-# Generating a timetable (https://ut-timetable-generator.vercel.app/)
+# Timetable generation for the students of University of Tartu (https://ut-timetable-generator.vercel.app/)
 
 Planning a new semester often involves the desire to enroll in many subjects. However, subjects usually have multiple groups, and each student has their own preferences for how they want their new schedule to look. Creating schedules in the ÕIS2 environment is cumbersome, as any student knows. Currently, to view possible schedules, one must change the groups for subjects one by one. Additionally, one must ensure that the times of the classes do not overlap for the chosen groups.
 
