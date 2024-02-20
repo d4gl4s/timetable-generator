@@ -35,3 +35,6 @@ If it is not possible to generate a schedule under certain conditions, the websi
 - Daglas Aitsen, Johan Kirikal
 - 1st year Bachelor's in Computer Science (ATI)
 
+## Preview
+
+![image](https://github.com/d4gl4s/timetable-generator/assets/91371101/8c2a549c-772a-4891-8dbc-8d818bdec999)
