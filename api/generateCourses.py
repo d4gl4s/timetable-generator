@@ -58,10 +58,10 @@ for line in lines:
     if not 'events' in data_json:
         continue
     courseCode = data_json['info']['course_code']
-    if 'en' in data_json['info']['title']:
-        courseName = data_json['info']['title']['en']
-    else:
+    if 'et' in data_json['info']['title']:
         courseName = data_json['info']['title']['et']
+    else:
+        courseName = data_json['info']['title']['en']
     eap = 0
     if 'credits' in data_json['info']:
         eap = data_json['info']['credits']
@@ -78,10 +78,10 @@ for line in lines:
     for event in data_json['events']:
         if ("-" in event['time']['academic_weeks'] or event['time']['academic_weeks'].count(",")>3) and event['event_type']['code'] == "lecture" and (event['study_work_type']["code"]=="practice" or event['study_work_type']["code"]=="lecture" or event['study_work_type']["code"]=="seminar"):
 
-            if 'en' in event['study_work_type']:
-                type = event['study_work_type']["en"]
-            else:
+            if 'et' in event['study_work_type']:
                 type = event['study_work_type']["et"]
+            else:
+                type = event['study_work_type']["en"]
             startTime = event['time']['begin_time']
             endTime = event['time']['end_time']
 
@@ -139,6 +139,6 @@ for line in lines:
     if not added:
         courses['courses'].append(newCourse)
 
-with open(os.path.join(sys.path[0], "data.json"), "w", encoding='utf-8') as outfile:
+with open(os.path.join(sys.path[0], "dataEst.json"), "w", encoding='utf-8') as outfile:
     json.dump(courses, outfile)
  
