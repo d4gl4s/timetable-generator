@@ -4,9 +4,9 @@ import sys
 
 def read_json():
     try:
-        with open("api\dataEST.json", 'r') as file:
+        with open("data.json", 'r') as file:
             data = json.load(file)
-
+        print("Yes")
         return data
 
     except json.JSONDecodeError as err:
@@ -17,7 +17,7 @@ def read_json():
 
 
 data = read_json()
-x = data["coursesEST"]
+x = data["courses"]
 z = 0
 while z < len(x)-1:
     here = x[z]
